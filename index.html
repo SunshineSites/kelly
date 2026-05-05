@@ -3,290 +3,318 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PAIB Pest Control & Air Duct Cleaning | Sarasota, FL</title>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<title>Strong Pressure Cleaning & Pools | Nokomis, FL</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-    --ocean: #006994;
-    --ocean-dark: #004e6e;
-    --ocean-light: #48b5d4;
-    --sky: #87ceeb;
-    --sand: #f5e6c8;
-    --sand-dark: #e8c98a;
-    --palm: #2d6a4f;
-    --sun: #f5a623;
-    --sun-dark: #e07b00;
-    --white: #ffffff;
-    --cream: #fdfaf4;
-    --text: #1a2332;
-    --muted: #5a6a7a;
-    --border: #dde8f0;
+    --dark: #0a1520;
+    --dark2: #111e2b;
+    --blue: #1a6fa8;
+    --blue-mid: #2485c4;
+    --blue-light: #5bb3d8;
+    --silver: #c8d8e4;
+    --cream: #f5f3ee;
+    --warm: #faf8f4;
+    --text: #141f2a;
+    --muted: #6b7a88;
+    --border: rgba(0,0,0,0.08);
+    --border-light: rgba(90,179,216,0.2);
   }
   html { scroll-behavior: smooth; }
-  body { font-family: 'Nunito', sans-serif; color: var(--text); background: var(--cream); line-height: 1.6; }
-  ::-webkit-scrollbar { width: 5px; }
-  ::-webkit-scrollbar-thumb { background: var(--ocean-light); border-radius: 3px; }
+  body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--warm); line-height: 1.6; }
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-thumb { background: var(--blue-light); border-radius: 2px; }
 
+  /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    background: rgba(0,73,110,0.97); backdrop-filter: blur(12px);
+    background: rgba(10,21,32,0.96); backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(90,179,216,0.08);
     display: flex; align-items: center; justify-content: space-between;
-    padding: 0 5%; height: 68px;
-    box-shadow: 0 2px 20px rgba(0,73,110,0.3);
+    padding: 0 6%; height: 72px;
   }
-  .nav-logo-main { font-size: 17px; font-weight: 900; color: #fff; letter-spacing: -0.3px; line-height: 1.2; }
-  .nav-logo-sub { font-size: 10px; color: var(--sky); letter-spacing: 1.5px; text-transform: uppercase; font-weight: 600; opacity: 0.8; }
-  .nav-links { display: flex; gap: 24px; }
-  .nav-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 12px; font-weight: 600; letter-spacing: 0.5px; transition: color 0.2s; }
-  .nav-links a:hover { color: var(--sand-dark); }
-  .nav-cta { background: var(--sun); color: var(--text); font-size: 13px; font-weight: 800; padding: 10px 22px; border-radius: 50px; text-decoration: none; transition: all 0.2s; box-shadow: 0 4px 14px rgba(245,166,35,0.4); }
-  .nav-cta:hover { background: var(--sun-dark); color: #fff; transform: translateY(-1px); }
+  .nav-logo { display: flex; flex-direction: column; line-height: 1.2; }
+  .nav-logo-main { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: #fff; letter-spacing: 0.5px; }
+  .nav-logo-sub { font-size: 10px; color: var(--silver); letter-spacing: 2px; text-transform: uppercase; font-weight: 400; opacity: 0.55; }
+  .nav-center { display: flex; gap: 36px; }
+  .nav-center a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 12px; font-weight: 400; letter-spacing: 1px; text-transform: uppercase; transition: color 0.2s; }
+  .nav-center a:hover { color: var(--silver); }
+  .nav-right { display: flex; align-items: center; gap: 20px; }
+  .nav-phone { font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.75); text-decoration: none; }
+  .nav-cta { background: var(--blue-light); color: #fff; font-size: 11px; font-weight: 500; padding: 10px 24px; letter-spacing: 1.5px; text-decoration: none; text-transform: uppercase; transition: all 0.3s; border: 1px solid var(--blue-light); }
+  .nav-cta:hover { background: transparent; color: var(--blue-light); }
 
+  /* HERO */
   .hero {
     min-height: 100vh; position: relative; overflow: hidden;
-    display: flex; align-items: center;
-    background: linear-gradient(160deg, #004e6e 0%, #006994 35%, #0085b8 65%, #48b5d4 100%);
+    display: flex; align-items: flex-end;
+    background: var(--dark);
   }
-  .hero-sun { position: absolute; top: -60px; right: 8%; width: 320px; height: 320px; border-radius: 50%; background: radial-gradient(circle, #ffd700 0%, #f5a623 40%, rgba(245,166,35,0) 70%); opacity: 0.55; }
-  .hero-palm-l { position: absolute; bottom: 0; left: -20px; font-size: 180px; opacity: 0.08; line-height: 1; }
-  .hero-palm-r { position: absolute; bottom: 0; right: 2%; font-size: 220px; opacity: 0.07; line-height: 1; }
-  .hero-dots { position: absolute; inset: 0; opacity: 0.03; background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 28px 28px; }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background: linear-gradient(145deg, #081220 0%, #0a1a2e 50%, #0d2240 100%);
+  }
+  .hero-glow-1 { position: absolute; top: -80px; right: -80px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(26,111,168,0.18) 0%, transparent 65%); pointer-events: none; }
+  .hero-glow-2 { position: absolute; bottom: -100px; left: -60px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(91,179,216,0.08) 0%, transparent 65%); pointer-events: none; }
+  .hero-lines { position: absolute; inset: 0; opacity: 0.025; background-image: repeating-linear-gradient(90deg, transparent, transparent 80px, #fff 80px, #fff 81px); }
   .hero-wave { position: absolute; bottom: -2px; left: 0; right: 0; }
   .hero-wave svg { display: block; width: 100%; }
-  .hero-inner { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 300px; gap: 60px; align-items: center; padding: 90px 5% 80px; width: 100%; }
-  .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); color: #fff; font-size: 11px; font-weight: 700; padding: 5px 14px; border-radius: 50px; margin-bottom: 22px; letter-spacing: 1px; text-transform: uppercase; }
-  .badge-dot { width: 6px; height: 6px; border-radius: 50%; background: #7fff7f; animation: pulse 2s infinite; }
-  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
-  h1 { font-size: clamp(38px, 6.5vw, 72px); font-weight: 900; color: #fff; line-height: 1.0; letter-spacing: -1px; margin-bottom: 20px; }
-  h1 .script { font-family: 'Lora', serif; font-style: italic; color: var(--sand-dark); display: block; font-size: 0.65em; font-weight: 600; letter-spacing: 0; margin-bottom: 4px; }
-  .hero-sub { font-size: 15px; color: rgba(255,255,255,0.72); font-weight: 400; max-width: 460px; line-height: 1.85; margin-bottom: 36px; }
-  .hero-pills { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 36px; }
-  .hero-pill { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.9); font-size: 11px; font-weight: 700; padding: 5px 14px; border-radius: 50px; }
-  .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
-  .btn-sun { background: var(--sun); color: var(--text); font-size: 13px; font-weight: 800; padding: 14px 32px; border-radius: 50px; text-decoration: none; transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 6px 20px rgba(245,166,35,0.4); }
-  .btn-sun:hover { background: var(--sun-dark); color: #fff; transform: translateY(-2px); }
-  .btn-ghost { background: transparent; color: #fff; font-size: 13px; font-weight: 600; padding: 14px 28px; border-radius: 50px; text-decoration: none; border: 2px solid rgba(255,255,255,0.35); transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; }
-  .btn-ghost:hover { border-color: #fff; }
+  .hero-content { position: relative; z-index: 2; padding: 0 6% 100px; width: 100%; }
+  .hero-overline { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
+  .overline-bar { width: 40px; height: 1px; background: var(--blue-light); }
+  .overline-text { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--blue-light); font-weight: 500; }
+  h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(56px, 8vw, 104px); font-weight: 600; color: #fff; line-height: 0.92; letter-spacing: -1.5px; margin-bottom: 28px; }
+  h1 em { color: var(--silver); font-style: italic; }
+  .hero-sub { font-size: 15px; color: rgba(255,255,255,0.48); font-weight: 300; max-width: 500px; line-height: 1.85; margin-bottom: 44px; }
+  .hero-actions { display: flex; align-items: center; gap: 32px; margin-bottom: 60px; flex-wrap: wrap; }
+  .btn-hero { background: var(--blue-light); color: #fff; font-size: 11px; font-weight: 500; padding: 16px 40px; letter-spacing: 2px; text-decoration: none; text-transform: uppercase; transition: all 0.3s; border: 1px solid var(--blue-light); display: inline-block; }
+  .btn-hero:hover { background: transparent; color: var(--blue-light); }
+  .hero-link { color: rgba(255,255,255,0.4); font-size: 13px; text-decoration: none; display: flex; align-items: center; gap: 8px; transition: color 0.2s; }
+  .hero-link:hover { color: #fff; }
+  .hero-link span { transition: transform 0.2s; }
+  .hero-link:hover span { transform: translateX(4px); }
+  .hero-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.05); }
+  .hstat { padding: 24px 28px; background: rgba(10,21,32,0.85); backdrop-filter: blur(8px); }
+  .hstat-num { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 600; color: #fff; line-height: 1; }
+  .hstat-num span { color: var(--blue-light); }
+  .hstat-label { font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 1px; text-transform: uppercase; margin-top: 6px; }
 
-  .hero-card { background: rgba(255,255,255,0.1); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 32px 28px; display: flex; flex-direction: column; gap: 18px; }
-  .hero-card-label { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--sand-dark); font-weight: 700; margin-bottom: 4px; }
-  .hcard-stat { padding-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,0.1); }
-  .hcard-stat:last-child { border: none; padding: 0; }
-  .hcard-num { font-size: 34px; font-weight: 900; color: #fff; line-height: 1; letter-spacing: -1px; }
-  .hcard-num sup { font-size: 16px; color: var(--sand-dark); }
-  .hcard-label { font-size: 11px; color: rgba(255,255,255,0.5); letter-spacing: 1px; text-transform: uppercase; margin-top: 4px; }
+  /* TICKER */
+  .ticker { background: var(--blue); padding: 13px 0; overflow: hidden; }
+  .ticker-track { display: flex; animation: scroll 28s linear infinite; white-space: nowrap; }
+  @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .ticker-item { font-size: 11px; font-weight: 400; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(255,255,255,0.65); padding: 0 32px; display: flex; align-items: center; gap: 16px; }
+  .tdot { width: 3px; height: 3px; border-radius: 50%; background: var(--blue-light); opacity: 0.7; }
 
-  .trust { background: var(--sun); padding: 14px 5%; display: flex; align-items: center; justify-content: center; gap: 32px; flex-wrap: wrap; }
-  .trust-item { display: flex; align-items: center; gap: 8px; color: var(--ocean-dark); font-size: 12px; font-weight: 800; }
+  /* SECTIONS */
+  section { padding: 100px 6%; }
+  .eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+  .ebar { width: 28px; height: 1px; background: var(--blue-light); }
+  .etag { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--blue-light); font-weight: 500; }
+  .sec-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 4vw, 54px); font-weight: 600; color: var(--text); letter-spacing: -0.5px; line-height: 1.1; margin-bottom: 16px; }
+  .sec-title em { font-style: italic; color: var(--blue); }
+  .sec-sub { color: var(--muted); font-size: 15px; max-width: 500px; line-height: 1.85; margin-bottom: 56px; font-weight: 300; }
 
-  section { padding: 90px 5%; }
-  .stag { display: inline-flex; align-items: center; gap: 8px; background: rgba(0,105,148,0.08); border: 1px solid rgba(0,105,148,0.2); color: var(--ocean); font-size: 11px; font-weight: 700; padding: 5px 14px; border-radius: 50px; margin-bottom: 16px; letter-spacing: 1px; text-transform: uppercase; }
-  .stitle { font-size: clamp(28px, 4vw, 44px); font-weight: 900; color: var(--text); letter-spacing: -0.5px; line-height: 1.1; margin-bottom: 14px; }
-  .stitle em { font-family: 'Lora', serif; font-style: italic; color: var(--ocean); }
-  .ssub { color: var(--muted); font-size: 15px; max-width: 520px; line-height: 1.8; margin-bottom: 52px; font-weight: 400; }
+  /* SERVICES */
+  .services-bg { background: var(--cream); }
+  .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .svc { background: var(--warm); padding: 36px 28px; transition: all 0.3s; position: relative; overflow: hidden; }
+  .svc::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--blue-light); transition: width 0.4s; }
+  .svc:hover { background: #fff; }
+  .svc:hover::after { width: 100%; }
+  .svc-num { font-family: 'Cormorant Garamond', serif; font-size: 11px; color: var(--blue-light); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px; }
+  .svc-icon { font-size: 26px; margin-bottom: 14px; opacity: 0.9; }
+  .svc-name { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--text); margin-bottom: 10px; line-height: 1.2; }
+  .svc-desc { font-size: 13px; color: var(--muted); line-height: 1.75; font-weight: 300; }
 
-  .services-bg { background: #fff; }
-  .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-  .svc { background: var(--cream); border: 2px solid var(--border); border-radius: 16px; padding: 28px; transition: all 0.25s; position: relative; overflow: hidden; }
-  .svc::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--ocean), var(--ocean-light)); transform: scaleX(0); transform-origin: left; transition: transform 0.3s; }
-  .svc:hover { border-color: var(--ocean-light); transform: translateY(-4px); box-shadow: 0 14px 36px rgba(0,105,148,0.1); background: #fff; }
-  .svc:hover::before { transform: scaleX(1); }
-  .svc-icon { font-size: 32px; margin-bottom: 14px; }
-  .svc-name { font-size: 17px; font-weight: 800; color: var(--text); margin-bottom: 8px; }
-  .svc-tag { font-size: 12px; color: var(--ocean); font-weight: 700; margin-bottom: 10px; }
-  .svc-desc { font-size: 13px; color: var(--muted); line-height: 1.7; font-weight: 400; }
+  /* ABOUT */
+  .about-bg { background: var(--dark); position: relative; overflow: hidden; }
+  .about-bg::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.02) 1px, transparent 0); background-size: 32px 32px; }
+  .about-bg .sec-title { color: #fff; }
+  .about-bg .sec-title em { color: var(--silver); }
+  .about-bg .sec-sub { color: rgba(255,255,255,0.42); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; position: relative; z-index: 1; }
+  .about-card { border: 1px solid rgba(90,179,216,0.15); padding: 48px 40px; background: rgba(255,255,255,0.02); }
+  .about-card-title { font-family: 'Cormorant Garamond', serif; font-size: 12px; color: var(--silver); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 28px; opacity: 0.6; }
+  .astat { display: flex; align-items: center; gap: 20px; padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .astat:last-child { border: none; }
+  .astat-num { font-family: 'Cormorant Garamond', serif; font-size: 30px; font-weight: 600; color: #fff; min-width: 80px; line-height: 1; }
+  .astat-num span { color: var(--blue-light); }
+  .astat-label { font-size: 13px; color: rgba(255,255,255,0.4); font-weight: 300; line-height: 1.5; }
+  .values { display: flex; flex-direction: column; }
+  .val { display: flex; gap: 20px; padding: 22px 0; border-bottom: 1px solid rgba(255,255,255,0.06); align-items: flex-start; }
+  .val:first-child { padding-top: 0; }
+  .val:last-child { border: none; }
+  .val-num { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: var(--blue-light); opacity: 0.45; line-height: 1; min-width: 28px; }
+  .val-title { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 600; color: #fff; margin-bottom: 5px; }
+  .val-text { font-size: 13px; color: rgba(255,255,255,0.38); line-height: 1.7; font-weight: 300; }
+  .black-owned-badge { margin-top: 20px; padding: 18px; background: rgba(91,179,216,0.06); border: 1px solid rgba(91,179,216,0.15); }
+  .black-owned-title { font-size: 11px; font-weight: 500; color: var(--blue-light); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 6px; }
+  .black-owned-text { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.65; font-weight: 300; }
 
-  .about-bg { background: linear-gradient(160deg, #004e6e 0%, #006994 100%); position: relative; overflow: hidden; }
-  .about-bg::before { content: '🌴'; position: absolute; right: 2%; bottom: 0; font-size: 200px; opacity: 0.06; line-height: 1; }
-  .about-bg::after { content: '🌴'; position: absolute; left: 1%; bottom: 0; font-size: 140px; opacity: 0.05; line-height: 1; }
-  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; position: relative; z-index: 1; }
-  .about-bg .stag { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color: var(--sand-dark); }
-  .about-bg .stitle { color: #fff; }
-  .about-bg .stitle em { color: var(--sand-dark); }
-  .about-bg .ssub { color: rgba(255,255,255,0.6); }
-  .reasons { display: flex; flex-direction: column; gap: 16px; }
-  .reason { display: flex; gap: 16px; align-items: flex-start; padding: 18px; background: rgba(255,255,255,0.07); border-radius: 14px; border: 1px solid rgba(255,255,255,0.1); }
-  .reason-icon { font-size: 24px; min-width: 30px; }
-  .reason-title { font-size: 14px; font-weight: 800; color: #fff; margin-bottom: 4px; }
-  .reason-text { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.65; }
-  .about-info { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 20px; padding: 40px 36px; backdrop-filter: blur(8px); }
-  .about-info-title { font-size: 12px; font-weight: 700; color: var(--sand-dark); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 24px; }
-  .info-row { display: flex; justify-content: space-between; align-items: flex-start; padding: 13px 0; border-bottom: 1px solid rgba(255,255,255,0.08); gap: 12px; }
-  .info-row:last-child { border: none; }
-  .info-key { font-size: 12px; color: rgba(255,255,255,0.45); font-weight: 600; }
-  .info-val { font-size: 13px; color: #fff; font-weight: 700; text-align: right; }
-  .carlos-badge { margin-top: 20px; padding: 16px; background: rgba(245,166,35,0.12); border: 1px solid rgba(245,166,35,0.3); border-radius: 12px; }
-  .carlos-title { font-size: 12px; font-weight: 700; color: var(--sand-dark); margin-bottom: 6px; }
-  .carlos-text { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.65; }
+  /* REVIEWS */
+  .reviews-bg { background: var(--cream); }
+  .reviews-header { display: flex; align-items: center; gap: 28px; margin-bottom: 48px; flex-wrap: wrap; }
+  .score-num { font-family: 'Cormorant Garamond', serif; font-size: 80px; font-weight: 600; color: var(--text); line-height: 1; letter-spacing: -2px; }
+  .score-stars { color: #c8a84c; font-size: 22px; letter-spacing: 3px; }
+  .score-label { font-size: 12px; color: var(--muted); margin-top: 4px; letter-spacing: 0.5px; }
+  .reviews-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .review-card { background: var(--warm); padding: 36px; position: relative; overflow: hidden; }
+  .review-card::before { content: '"'; font-family: 'Cormorant Garamond', serif; font-size: 72px; color: var(--blue-light); opacity: 0.12; position: absolute; top: 8px; left: 24px; line-height: 1; }
+  .review-stars { color: #c8a84c; font-size: 13px; margin-bottom: 14px; letter-spacing: 1px; }
+  .review-text { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-style: italic; color: var(--text); line-height: 1.7; margin-bottom: 20px; padding-left: 6px; }
+  .review-author { font-size: 13px; font-weight: 500; color: var(--blue); }
+  .review-meta { font-size: 12px; color: var(--muted); margin-top: 2px; font-weight: 300; }
 
-  .reviews-bg { background: var(--sand); }
-  .reviews-top { display: flex; align-items: center; gap: 24px; margin-bottom: 40px; flex-wrap: wrap; }
-  .score-big { font-size: 72px; font-weight: 900; color: var(--text); line-height: 1; letter-spacing: -2px; }
-  .score-stars { color: var(--sun); font-size: 22px; letter-spacing: 2px; }
-  .score-label { font-size: 12px; color: var(--muted); font-weight: 600; margin-top: 4px; }
-  .reviews-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
-  .review-card { background: #fff; border-radius: 16px; padding: 26px; box-shadow: 0 4px 16px rgba(0,0,0,0.06); border: 1px solid var(--border); position: relative; overflow: hidden; }
-  .review-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: linear-gradient(180deg, var(--ocean), var(--ocean-light)); }
-  .review-stars { color: var(--sun); font-size: 14px; margin-bottom: 12px; }
-  .review-text { font-size: 14px; color: var(--text); line-height: 1.7; margin-bottom: 16px; font-style: italic; font-family: 'Lora', serif; }
-  .review-name { font-size: 13px; font-weight: 800; color: var(--ocean-dark); }
-  .review-meta { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  /* CONTACT */
+  .contact-bg { background: var(--warm); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+  .form-wrap { background: var(--dark); padding: 48px; }
+  .form-title { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 600; color: #fff; margin-bottom: 6px; }
+  .form-sub { font-size: 13px; color: rgba(255,255,255,0.35); margin-bottom: 28px; font-weight: 300; }
+  .form-group { margin-bottom: 18px; }
+  .form-group label { display: block; font-size: 10px; font-weight: 500; color: rgba(255,255,255,0.3); margin-bottom: 7px; letter-spacing: 1.5px; text-transform: uppercase; }
+  .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 13px 16px; border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.04); font-family: 'DM Sans', sans-serif; font-size: 14px; color: #fff; outline: none; transition: border-color 0.2s; }
+  .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.18); }
+  .form-group select option { background: var(--dark); }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--blue-light); background: rgba(255,255,255,0.06); }
+  .form-group textarea { resize: vertical; min-height: 100px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .form-submit { width: 100%; background: var(--blue-light); color: #fff; border: none; padding: 16px; font-size: 11px; font-weight: 500; font-family: 'DM Sans', sans-serif; cursor: pointer; letter-spacing: 2px; text-transform: uppercase; transition: all 0.3s; margin-top: 8px; border: 1px solid var(--blue-light); }
+  .form-submit:hover { background: transparent; color: var(--blue-light); }
+  .contact-info { padding-top: 8px; }
+  .contact-title { font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 600; color: var(--text); line-height: 1.1; margin-bottom: 14px; letter-spacing: -0.5px; }
+  .contact-title em { font-style: italic; color: var(--blue); }
+  .contact-sub { font-size: 15px; color: var(--muted); line-height: 1.85; margin-bottom: 40px; font-weight: 300; }
+  .clist { display: flex; flex-direction: column; }
+  .citem { display: flex; gap: 18px; padding: 20px 0; border-bottom: 1px solid var(--border); align-items: flex-start; }
+  .citem:first-child { padding-top: 0; }
+  .citem:last-child { border: none; }
+  .cicon { font-size: 17px; min-width: 24px; margin-top: 2px; }
+  .clabel { font-size: 10px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 5px; }
+  .cval { font-size: 15px; font-weight: 500; color: var(--text); }
+  .cnote { font-size: 13px; color: var(--muted); margin-top: 2px; font-weight: 300; }
+  .open-tag { display: inline-flex; align-items: center; gap: 6px; margin-top: 6px; background: #f0fdf4; border: 1px solid #bbf7d0; color: #15803d; font-size: 11px; font-weight: 500; padding: 4px 12px; }
+  .open-tag::before { content: '●'; font-size: 7px; animation: blink 2s infinite; }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
 
-  .booking-bg { background: linear-gradient(160deg, #003d5c 0%, #005a82 100%); position: relative; overflow: hidden; }
-  .booking-bg::before { content: ''; position: absolute; bottom: -80px; right: -80px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(245,166,35,0.12) 0%, transparent 70%); border-radius: 50%; }
-  .booking-bg .stag { background: rgba(245,166,35,0.15); border-color: rgba(245,166,35,0.3); color: var(--sand-dark); }
-  .booking-bg .stitle { color: #fff; }
-  .booking-bg .stitle em { color: var(--sand-dark); }
-  .booking-bg .ssub { color: rgba(255,255,255,0.55); }
-  .booking-layout { display: grid; grid-template-columns: 1fr 1.1fr; gap: 60px; align-items: start; position: relative; z-index: 1; }
-  .form-card { background: #fff; border-radius: 20px; padding: 40px 36px; box-shadow: 0 24px 64px rgba(0,0,0,0.2); }
-  .form-title { font-size: 20px; font-weight: 900; color: var(--text); margin-bottom: 6px; }
-  .form-sub { font-size: 13px; color: var(--muted); margin-bottom: 28px; }
-  .form-group { margin-bottom: 16px; }
-  .form-group label { display: block; font-size: 10px; font-weight: 700; color: var(--ocean-dark); margin-bottom: 6px; letter-spacing: 1.5px; text-transform: uppercase; }
-  .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 14px; border: 2px solid var(--border); border-radius: 10px; font-family: 'Nunito', sans-serif; font-size: 13px; color: var(--text); background: var(--cream); outline: none; transition: border-color 0.2s; }
-  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--ocean); background: #fff; }
-  .form-group textarea { resize: vertical; min-height: 90px; }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .form-submit { width: 100%; background: linear-gradient(135deg, var(--ocean), var(--ocean-dark)); color: #fff; border: none; padding: 15px; border-radius: 50px; font-size: 13px; font-weight: 800; font-family: 'Nunito', sans-serif; cursor: pointer; transition: all 0.2s; margin-top: 8px; box-shadow: 0 6px 20px rgba(0,105,148,0.35); }
-  .form-submit:hover { transform: translateY(-1px); box-shadow: 0 10px 28px rgba(0,105,148,0.4); }
-  .contact-cards { display: flex; flex-direction: column; gap: 16px; }
-  .contact-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; padding: 20px 22px; display: flex; gap: 14px; align-items: flex-start; }
-  .c-icon { font-size: 20px; min-width: 26px; }
-  .c-label { font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; color: rgba(255,255,255,0.4); margin-bottom: 4px; font-weight: 700; }
-  .c-val { font-size: 15px; font-weight: 800; color: #fff; }
-  .c-note { font-size: 12px; color: rgba(255,255,255,0.45); margin-top: 2px; }
-  .open-badge { display: inline-flex; align-items: center; gap: 6px; margin-top: 6px; background: rgba(127,255,127,0.1); border: 1px solid rgba(127,255,127,0.25); color: #7fff7f; font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 50px; }
-  .open-badge::before { content: '●'; font-size: 7px; animation: pulse 1.5s infinite; }
-
-  footer { background: #00263a; padding: 44px 5% 32px; }
-  .footer-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 32px; padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 28px; }
-  .footer-brand { font-size: 16px; font-weight: 900; color: rgba(255,255,255,0.7); margin-bottom: 4px; }
-  .footer-brand-sub { font-size: 10px; color: rgba(255,255,255,0.3); letter-spacing: 2px; text-transform: uppercase; }
+  /* FOOTER */
+  footer { background: var(--dark2); padding: 52px 6% 36px; }
+  .footer-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px; padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,0.06); margin-bottom: 32px; }
+  .footer-brand { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: rgba(255,255,255,0.55); margin-bottom: 6px; }
+  .footer-brand-sub { font-size: 10px; color: rgba(255,255,255,0.22); letter-spacing: 2px; text-transform: uppercase; }
   .footer-col { display: flex; flex-direction: column; gap: 10px; }
-  .footer-col-title { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--sand-dark); margin-bottom: 4px; opacity: 0.8; }
-  .footer-col a { font-size: 13px; color: rgba(255,255,255,0.35); text-decoration: none; transition: color 0.2s; }
-  .footer-col a:hover { color: rgba(255,255,255,0.8); }
+  .footer-col-title { font-size: 10px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--blue-light); margin-bottom: 4px; opacity: 0.75; }
+  .footer-col a { font-size: 13px; color: rgba(255,255,255,0.3); text-decoration: none; font-weight: 300; transition: color 0.2s; }
+  .footer-col a:hover { color: rgba(255,255,255,0.7); }
   .footer-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; align-items: center; }
-  .footer-copy { font-size: 12px; color: rgba(255,255,255,0.2); }
-  .footer-tag { font-family: 'Lora', serif; font-size: 13px; font-style: italic; color: var(--sand-dark); opacity: 0.5; }
+  .footer-copy { font-size: 12px; color: rgba(255,255,255,0.16); }
+  .footer-tagline { font-family: 'Cormorant Garamond', serif; font-size: 13px; font-style: italic; color: var(--silver); opacity: 0.35; }
 
-  @media (max-width: 860px) {
-    .hero-inner, .about-grid, .booking-layout { grid-template-columns: 1fr; }
-    .hero-card { display: none; }
-    .nav-links { display: none; }
+  @media (max-width: 960px) {
+    .hero-stats { grid-template-columns: repeat(2, 1fr); }
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .about-grid, .contact-grid { grid-template-columns: 1fr; }
+    .nav-center { display: none; }
     .form-row { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 560px) {
+    .services-grid { grid-template-columns: 1fr; }
+    .hero-stats { grid-template-columns: repeat(2, 1fr); }
   }
 </style>
 </head>
 <body>
 
 <nav>
-  <div>
-    <div class="nav-logo-main">🌴 PAIB Services LLC</div>
-    <div class="nav-logo-sub">Sarasota, FL · Open Now</div>
+  <div class="nav-logo">
+    <div class="nav-logo-main">Strong Pressure Cleaning & Pools</div>
+    <div class="nav-logo-sub">Nokomis, Florida</div>
   </div>
-  <div class="nav-links">
+  <div class="nav-center">
     <a href="#services">Services</a>
     <a href="#about">About</a>
     <a href="#reviews">Reviews</a>
-    <a href="#booking">Contact</a>
+    <a href="#contact">Contact</a>
   </div>
-  <a href="tel:2392512698" class="nav-cta">☀️ (239) 251-2698</a>
+  <div class="nav-right">
+    <a href="tel:9416158436" class="nav-phone">(941) 615-8436</a>
+    <a href="#contact" class="nav-cta">Free Estimate</a>
+  </div>
 </nav>
 
 <section class="hero" style="padding:0;">
-  <div class="hero-sun"></div>
-  <div class="hero-palm-l">🌴</div>
-  <div class="hero-palm-r">🌴</div>
-  <div class="hero-dots"></div>
-  <div class="hero-inner">
-    <div>
-      <div class="hero-badge"><div class="badge-dot"></div> Sarasota's Trusted Home Services</div>
-      <h1><span class="script">Protect Your Florida</span>Home & Air.</h1>
-      <p class="hero-sub">PAIB Pest Control & Dryer Vent and Air Duct Cleaning Services — keeping Sarasota homes safe, clean, and comfortable. Responsive, thorough, and reasonably priced.</p>
-      <div class="hero-pills">
-        <div class="hero-pill">⭐ 4.4 Rated · 34 Reviews</div>
-        <div class="hero-pill">🌴 Sarasota, FL</div>
-        <div class="hero-pill">🕐 Open · Closes 9:30 PM</div>
-      </div>
-      <div class="hero-btns">
-        <a href="#booking" class="btn-sun">📋 Book a Service</a>
-        <a href="tel:2392512698" class="btn-ghost">📞 (239) 251-2698</a>
-      </div>
+  <div class="hero-bg"></div>
+  <div class="hero-glow-1"></div>
+  <div class="hero-glow-2"></div>
+  <div class="hero-lines"></div>
+  <div class="hero-content">
+    <div class="hero-overline">
+      <div class="overline-bar"></div>
+      <div class="overline-text">Nokomis & Sarasota Area Specialists</div>
     </div>
-    <div class="hero-card">
-      <div class="hero-card-label">At a Glance</div>
-      <div class="hcard-stat">
-        <div class="hcard-num">4.4<sup>★</sup></div>
-        <div class="hcard-label">Google Rating</div>
+    <h1>Spotless Homes,<br><em>Crystal Clear</em><br>Pools.</h1>
+    <p class="hero-sub">Strong Pressure Cleaning and Pools LLC delivers professional pressure washing and pool services with the dependability and personal care that keeps customers coming back.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-hero">Request a Free Estimate</a>
+      <a href="tel:9416158436" class="hero-link">Call (941) 615-8436 <span>→</span></a>
+    </div>
+    <div class="hero-stats">
+      <div class="hstat">
+        <div class="hstat-num">5.0<span>★</span></div>
+        <div class="hstat-label">Google Rating</div>
       </div>
-      <div class="hcard-stat">
-        <div class="hcard-num">34</div>
-        <div class="hcard-label">Verified Reviews</div>
+      <div class="hstat">
+        <div class="hstat-num">8</div>
+        <div class="hstat-label">Five-Star Reviews</div>
       </div>
-      <div class="hcard-stat">
-        <div class="hcard-num">9:30<sup>PM</sup></div>
-        <div class="hcard-label">Open Until Tonight</div>
+      <div class="hstat">
+        <div class="hstat-num">TJ</div>
+        <div class="hstat-label">Owner On Every Job</div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-num">5<span>PM</span></div>
+        <div class="hstat-label">Open Until 5 PM</div>
       </div>
     </div>
   </div>
   <div class="hero-wave">
     <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg">
-      <path fill="#fdfaf4" d="M0,48L60,42C120,37,240,26,360,28C480,30,600,44,720,50C840,55,960,51,1080,44C1200,37,1320,26,1380,21L1440,16L1440,80L0,80Z"/>
+      <path fill="#faf8f4" d="M0,40L60,45C120,51,240,58,360,55C480,52,600,38,720,32C840,26,960,34,1080,42C1200,50,1320,56,1380,59L1440,61L1440,80L0,80Z"/>
     </svg>
   </div>
 </section>
 
-<div class="trust">
-  <div class="trust-item">☀️ Licensed & Insured</div>
-  <div class="trust-item">✓ Pest Control</div>
-  <div class="trust-item">💨 Air Duct Cleaning</div>
-  <div class="trust-item">🌀 Dryer Vent Cleaning</div>
-  <div class="trust-item">🌴 Sarasota Local</div>
+<div class="ticker">
+  <div class="ticker-track">
+    <span class="ticker-item">Pressure Washing <span class="tdot"></span></span>
+    <span class="ticker-item">Pool Cleaning & Maintenance <span class="tdot"></span></span>
+    <span class="ticker-item">Screen Cleaning <span class="tdot"></span></span>
+    <span class="ticker-item">Pavers & Driveways <span class="tdot"></span></span>
+    <span class="ticker-item">5.0 Star Rated <span class="tdot"></span></span>
+    <span class="ticker-item">Black-Owned Business <span class="tdot"></span></span>
+    <span class="ticker-item">Free Estimates <span class="tdot"></span></span>
+    <span class="ticker-item">Nokomis Local <span class="tdot"></span></span>
+    <span class="ticker-item">Pressure Washing <span class="tdot"></span></span>
+    <span class="ticker-item">Pool Cleaning & Maintenance <span class="tdot"></span></span>
+    <span class="ticker-item">Screen Cleaning <span class="tdot"></span></span>
+    <span class="ticker-item">Pavers & Driveways <span class="tdot"></span></span>
+    <span class="ticker-item">5.0 Star Rated <span class="tdot"></span></span>
+    <span class="ticker-item">Black-Owned Business <span class="tdot"></span></span>
+    <span class="ticker-item">Free Estimates <span class="tdot"></span></span>
+    <span class="ticker-item">Nokomis Local <span class="tdot"></span></span>
+  </div>
 </div>
 
 <section class="services-bg" id="services">
-  <div class="stag">☀️ What We Do</div>
-  <div class="stitle">Pest Control & Air Quality<br><em>Experts in Sarasota</em></div>
-  <p class="ssub">From carpenter bee infestations to full air duct inspections and dryer vent cleaning — we protect your home and the air your family breathes.</p>
+  <div class="eyebrow"><div class="ebar"></div><div class="etag">Our Services</div></div>
+  <div class="sec-title">Complete Exterior Care,<br><em>Done Right.</em></div>
+  <p class="sec-sub">From pool maintenance to full exterior pressure washing — TJ and his team deliver professional results with the personal care and dependability you can count on.</p>
   <div class="services-grid">
     <div class="svc">
-      <div class="svc-icon">🐝</div>
-      <div class="svc-name">Pest Control</div>
-      <div class="svc-tag">Responsive, thorough, effective.</div>
-      <div class="svc-desc">Carpenter bees, ants, roaches, and more. We're responsive when you first contact us and provide prompt appointments. Florida pests don't stand a chance.</div>
+      <div class="svc-num">01 — Pools</div>
+      <div class="svc-icon">🏊</div>
+      <div class="svc-name">Pool Cleaning & Maintenance</div>
+      <div class="svc-desc">Regular pool cleaning and maintenance by TJ — who greets you personally before every visit. He proactively identifies issues like pump problems and resolves them fast, so you always have a clean and functional pool.</div>
     </div>
     <div class="svc">
-      <div class="svc-icon">💨</div>
-      <div class="svc-name">Air Duct Cleaning</div>
-      <div class="svc-tag">Notice the difference immediately.</div>
-      <div class="svc-desc">Thorough air duct inspection before cleaning — so you know exactly what's being done. Customers notice the improvement in air quality right away.</div>
+      <div class="svc-num">02 — Pressure</div>
+      <div class="svc-icon">💦</div>
+      <div class="svc-name">Pressure Washing</div>
+      <div class="svc-desc">Full exterior pressure washing for homes, driveways, pool areas, and more. Reasonably priced, thorough, and done right — customers hire TJ again and again for a reason.</div>
     </div>
     <div class="svc">
-      <div class="svc-icon">🌀</div>
-      <div class="svc-name">Dryer Vent Cleaning</div>
-      <div class="svc-tag">Safer home, better efficiency.</div>
-      <div class="svc-desc">Clogged dryer vents are a leading cause of house fires in Florida. Carlos performs a detailed inspection and thorough cleaning that leaves your home fresher and safer.</div>
+      <div class="svc-num">03 — Screens</div>
+      <div class="svc-icon">🪟</div>
+      <div class="svc-name">Screen Cleaning</div>
+      <div class="svc-desc">Professional cleaning of pool enclosure screens, lanai screens, and window screens. Removes built-up dirt, mold, and grime from Florida's humid climate.</div>
     </div>
     <div class="svc">
-      <div class="svc-icon">🔍</div>
-      <div class="svc-name">Air Duct Inspection</div>
-      <div class="svc-tag">Know before you commit.</div>
-      <div class="svc-desc">Every air duct job starts with a thorough inspection. We show you what we find before we start so there are no surprises.</div>
-    </div>
-    <div class="svc">
-      <div class="svc-icon">🍄</div>
-      <div class="svc-name">Mold Removal</div>
-      <div class="svc-tag">Florida homes need this.</div>
-      <div class="svc-desc">Florida's humidity creates ideal conditions for mold growth in ducts and vents. We identify and treat mold to keep your air clean and your family healthy.</div>
-    </div>
-    <div class="svc" style="background:linear-gradient(135deg,#004e6e,#006994); border-color:#006994;">
-      <div class="svc-icon">🏠</div>
-      <div class="svc-name" style="color:#fff;">Full Home Service</div>
-      <div class="svc-tag" style="color:var(--sand-dark);">One call, complete care.</div>
-      <div class="svc-desc" style="color:rgba(255,255,255,0.65);">Pest control, duct cleaning, dryer vent service — bundle services for one visit and get your whole home protected in a single appointment.</div>
+      <div class="svc-num">04 — Pavers</div>
+      <div class="svc-icon">🧱</div>
+      <div class="svc-name">Pavers & Pool Area</div>
+      <div class="svc-desc">Deep cleaning of pavers, pool decks, and surrounding areas. We restore the look of your outdoor living space and remove mold, algae, and staining.</div>
     </div>
   </div>
 </section>
@@ -294,99 +322,145 @@
 <section class="about-bg" id="about">
   <div class="about-grid">
     <div>
-      <div class="stag">🌴 Who We Are</div>
-      <div class="stitle">Sarasota's <em>Reliable</em><br>Home Protectors.</div>
-      <p class="ssub">PAIB Services LLC is a Sarasota-based contractor known for being responsive, thorough, and reasonably priced. Our technician Carlos delivers detailed, professional service every visit.</p>
-      <div class="reasons">
-        <div class="reason">
-          <div class="reason-icon">⚡</div>
+      <div class="eyebrow"><div class="ebar" style="background:var(--blue-light)"></div><div class="etag">Who We Are</div></div>
+      <div class="sec-title">Built on <em>Dependability</em><br>& Personal Care.</div>
+      <p class="sec-sub">Strong Pressure Cleaning and Pools LLC is a Black-owned business based in Nokomis, FL. TJ is personally involved on every job — greeting customers, identifying issues proactively, and delivering results that speak for themselves.</p>
+      <div class="values">
+        <div class="val">
+          <div class="val-num">I</div>
           <div>
-            <div class="reason-title">Responsive & Prompt</div>
-            <div class="reason-text">We answer when you call and offer prompt appointments. No waiting weeks for service.</div>
+            <div class="val-title">Dependable Every Time</div>
+            <div class="val-text">TJ does what he says he's going to do. Customers count on him because he has never let them down — not once.</div>
           </div>
         </div>
-        <div class="reason">
-          <div class="reason-icon">🔍</div>
+        <div class="val">
+          <div class="val-num">II</div>
           <div>
-            <div class="reason-title">Thorough Inspections</div>
-            <div class="reason-text">Every job starts with a detailed inspection. You know exactly what's happening before we start.</div>
+            <div class="val-title">Personal, Professional Service</div>
+            <div class="val-text">TJ greets every customer personally before starting work. Professional and uniquely concerned about customer satisfaction.</div>
           </div>
         </div>
-        <div class="reason">
-          <div class="reason-icon">💰</div>
+        <div class="val">
+          <div class="val-num">III</div>
           <div>
-            <div class="reason-title">Reasonable Pricing</div>
-            <div class="reason-text">Our customers consistently highlight our fair pricing alongside high quality work. No surprise fees.</div>
+            <div class="val-title">Proactive Problem Solving</div>
+            <div class="val-text">When Tim spots an issue — like a failing pool pump — he lets you know immediately and fixes it fast. No waiting, no surprises.</div>
           </div>
         </div>
-        <div class="reason">
-          <div class="reason-icon">🌴</div>
+        <div class="val">
+          <div class="val-num">IV</div>
           <div>
-            <div class="reason-title">Florida Home Experts</div>
-            <div class="reason-text">We understand Florida homes — the humidity, the pests, the unique challenges of living in paradise.</div>
+            <div class="val-title">Reasonably Priced</div>
+            <div class="val-text">Quality work at fair prices. Our customers say it clearly — reasonably priced and a job well done, every single time.</div>
           </div>
         </div>
       </div>
     </div>
-    <div>
-      <div class="about-info">
-        <div class="about-info-title">Business Info</div>
-        <div class="info-row"><span class="info-key">Phone</span><span class="info-val">(239) 251-2698</span></div>
-        <div class="info-row"><span class="info-key">Address</span><span class="info-val">76 Tall Trees Ct<br>Sarasota, FL 34232</span></div>
-        <div class="info-row"><span class="info-key">Hours</span><span class="info-val">Open · Closes 9:30 PM</span></div>
-        <div class="info-row"><span class="info-key">Google Rating</span><span class="info-val">4.4 ★ (34 Reviews)</span></div>
-        <div class="info-row"><span class="info-key">Specialties</span><span class="info-val">Air Duct · Pest · Dryer Vent</span></div>
-        <div class="carlos-badge">
-          <div class="carlos-title">🏆 Ask for Carlos</div>
-          <div class="carlos-text">Our technician Carlos is known for detailed inspections, efficient work, and leaving your home cleaner than he found it.</div>
-        </div>
+    <div class="about-card">
+      <div class="about-card-title">At a Glance</div>
+      <div class="astat">
+        <div class="astat-num">5.0<span>★</span></div>
+        <div class="astat-label">Perfect Google rating — 8 verified five-star reviews</div>
+      </div>
+      <div class="astat">
+        <div class="astat-num">TJ</div>
+        <div class="astat-label">Owner personally on-site for every single job</div>
+      </div>
+      <div class="astat">
+        <div class="astat-num">Free</div>
+        <div class="astat-label">Complimentary estimates on all services</div>
+      </div>
+      <div class="astat">
+        <div class="astat-num">Repeat</div>
+        <div class="astat-label">Customers hire TJ multiple times — year after year</div>
+      </div>
+      <div class="black-owned-badge">
+        <div class="black-owned-title">Black-Owned Business</div>
+        <div class="black-owned-text">Strong Pressure Cleaning and Pools LLC is a proudly Black-owned business serving the Nokomis and Sarasota area community.</div>
       </div>
     </div>
   </div>
 </section>
 
 <section class="reviews-bg" id="reviews">
-  <div class="stag">⭐ Customer Reviews</div>
-  <div class="stitle">What Sarasota<br><em>Homeowners Say.</em></div>
-  <div class="reviews-top">
-    <div class="score-big">4.4</div>
+  <div class="eyebrow"><div class="ebar"></div><div class="etag">Client Reviews</div></div>
+  <div class="sec-title">What Our Customers<br><em>Are Saying.</em></div>
+  <div class="reviews-header">
+    <div class="score-num">5.0</div>
     <div>
-      <div class="score-stars">★★★★☆</div>
-      <div style="font-size:16px; font-weight:800; color:var(--text); margin-top:4px;">34 Google Reviews</div>
-      <div class="score-label">Sarasota, FL · Verified</div>
+      <div class="score-stars">★★★★★</div>
+      <div style="font-family:'Cormorant Garamond',serif; font-weight:600; font-size:18px; color:var(--text); margin-top:4px;">8 Google Reviews</div>
+      <div class="score-label">Nokomis, FL · Verified · Perfect Rating</div>
     </div>
   </div>
   <div class="reviews-grid">
     <div class="review-card">
       <div class="review-stars">★★★★★</div>
-      <div class="review-text">"I recently hired PAIB for a Dryer Vent Cleaning and I'm extremely satisfied. The technician Carlos started with a detailed inspection. It was a great experience and my home feels much fresher and safer now."</div>
-      <div class="review-name">Love Jones</div>
-      <div class="review-meta">Google Review · 2 reviews · 2 months ago</div>
+      <div class="review-text">"Tim is an absolute professional, very friendly, and dependable. He's never arrived at our house and not greeted us prior to cleaning our pool and screens. I recommend him without a doubt."</div>
+      <div class="review-author">B B</div>
+      <div class="review-meta">Google Review · 12 reviews · 2 years ago</div>
     </div>
     <div class="review-card">
       <div class="review-stars">★★★★★</div>
-      <div class="review-text">"This company provided a thorough Air Duct Inspection before completing the Air Duct Cleaning. The difference in air quality was noticeable right away. My home feels cleaner and more comfortable."</div>
-      <div class="review-name">Annabelle Johnson</div>
-      <div class="review-meta">Google Review · 2 reviews · 1 month ago</div>
+      <div class="review-text">"Tim was very prompt in letting me know that we had an issue with our pool pump and was able to quickly replace it. It's nice to be able to depend on Tim — he does what he says and does it well!"</div>
+      <div class="review-author">Joel Streinz</div>
+      <div class="review-meta">Google Local Guide · 15 reviews · 2 years ago</div>
     </div>
     <div class="review-card">
       <div class="review-stars">★★★★★</div>
-      <div class="review-text">"I had a great experience with PAIB Services. He was very responsive when I first contacted him and gave me a prompt appointment. I had a huge carpenter bee infestation and they took care of it completely."</div>
-      <div class="review-name">Famous Kelvin</div>
-      <div class="review-meta">Google Review · 2 reviews · 5 months ago</div>
+      <div class="review-text">"We are very pleased with the job Tim did for us. This is our second time we had him pressure cleaning our pool area, screens, pavers and house — and we'll hire him again. Highly recommended."</div>
+      <div class="review-author">Anna Delmastro</div>
+      <div class="review-meta">Google Review · 9 reviews · 2 years ago</div>
     </div>
   </div>
 </section>
 
-<section class="booking-bg" id="booking">
-  <div class="stag">📞 Get in Touch</div>
-  <div class="stitle">Book a Service<br><em>Today.</em></div>
-  <p class="ssub">Fill out the form and we'll get back to you promptly. Or call us directly — we're open until 9:30 PM.</p>
-  <div class="booking-layout">
-    <div class="form-card">
-      <div class="form-title">🌴 Book an Appointment</div>
-      <div class="form-sub">We'll confirm your appointment quickly.</div>
-      <form action="https://formspree.io/f/mzdodlwk" method="POST">
+<section class="contact-bg" id="contact">
+  <div class="contact-grid">
+    <div class="contact-info">
+      <div class="eyebrow"><div class="ebar"></div><div class="etag">Get in Touch</div></div>
+      <div class="contact-title">Request a Free<br><em>Estimate.</em></div>
+      <div class="contact-sub">Fill out the form and TJ will be in touch to arrange your free estimate. Or call directly during business hours.</div>
+      <div class="clist">
+        <div class="citem">
+          <div class="cicon">📞</div>
+          <div>
+            <div class="clabel">Phone</div>
+            <div class="cval">(941) 615-8436</div>
+            <div class="cnote">Call during business hours</div>
+            <div class="open-tag">Open · Closes 5 PM</div>
+          </div>
+        </div>
+        <div class="citem">
+          <div class="cicon">📍</div>
+          <div>
+            <div class="clabel">Address</div>
+            <div class="cval">208 Portia St S</div>
+            <div class="cnote">Nokomis, FL 34275</div>
+          </div>
+        </div>
+        <div class="citem">
+          <div class="cicon">⭐</div>
+          <div>
+            <div class="clabel">Rating</div>
+            <div class="cval">5.0 Stars — 8 Verified Reviews</div>
+            <div class="cnote">"I recommend him without a doubt." — B B</div>
+          </div>
+        </div>
+        <div class="citem">
+          <div class="cicon">✊</div>
+          <div>
+            <div class="clabel">Ownership</div>
+            <div class="cval">Black-Owned Business</div>
+            <div class="cnote">Proudly serving the Nokomis & Sarasota community</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-wrap">
+      <div class="form-title">Request a Free Estimate</div>
+      <div class="form-sub">Tell us about your property and we'll get back to you to arrange a visit.</div>
+      <form action="https://formspree.io/f/mzdoepjp" method="POST">
       <div class="form-row">
         <div class="form-group">
           <label>First Name</label>
@@ -402,77 +476,28 @@
         <input type="tel" name="phone" placeholder="(941) 555-0000">
       </div>
       <div class="form-group">
-        <label>Service Address</label>
-        <input type="text" name="address" placeholder="123 Main St, Sarasota FL">
+        <label>Property Address</label>
+        <input type="text" name="address" placeholder="123 Main St, Nokomis FL">
       </div>
       <div class="form-group">
         <label>Service Needed</label>
         <select name="service">
           <option value="">Select a service...</option>
-          <option>Pest Control</option>
-          <option>Air Duct Cleaning</option>
-          <option>Dryer Vent Cleaning</option>
-          <option>Air Duct Inspection</option>
-          <option>Mold Removal</option>
-          <option>Full Home Service Bundle</option>
+          <option>Pool Cleaning & Maintenance</option>
+          <option>Pressure Washing</option>
+          <option>Screen Cleaning</option>
+          <option>Pavers & Pool Area</option>
+          <option>Full Property Service</option>
+          <option>Pool Pump Repair / Replacement</option>
           <option>Other</option>
         </select>
       </div>
-      <div class="form-row">
-        <div class="form-group">
-          <label>Preferred Date</label>
-          <input type="date" name="preferred_date">
-        </div>
-        <div class="form-group">
-          <label>Preferred Time</label>
-          <select name="preferred_time">
-            <option>Morning (8am–12pm)</option>
-            <option>Afternoon (12pm–5pm)</option>
-            <option>Evening (5pm–9:30pm)</option>
-          </select>
-        </div>
-      </div>
       <div class="form-group">
-        <label>Describe the Issue (optional)</label>
-        <textarea name="message" placeholder="e.g. Noticed pests, musty air smell, dryer taking too long..."></textarea>
+        <label>Project Details</label>
+        <textarea name="message" placeholder="Describe your property and what needs to be done..."></textarea>
       </div>
-      <button class="form-submit">☀️ Submit Request</button>
+      <button class="form-submit">Submit Request</button>
       </form>
-    </div>
-    <div class="contact-cards">
-      <div class="contact-card">
-        <div class="c-icon">📞</div>
-        <div>
-          <div class="c-label">Phone</div>
-          <div class="c-val">(239) 251-2698</div>
-          <div class="c-note">Call anytime before 9:30 PM</div>
-          <div class="open-badge">Open Now · Closes 9:30 PM</div>
-        </div>
-      </div>
-      <div class="contact-card">
-        <div class="c-icon">📍</div>
-        <div>
-          <div class="c-label">Address</div>
-          <div class="c-val">76 Tall Trees Ct</div>
-          <div class="c-note">Sarasota, FL 34232</div>
-        </div>
-      </div>
-      <div class="contact-card">
-        <div class="c-icon">⭐</div>
-        <div>
-          <div class="c-label">Rating</div>
-          <div class="c-val">4.4 Stars · 34 Reviews</div>
-          <div class="c-note">"My home feels much fresher and safer now."</div>
-        </div>
-      </div>
-      <div class="contact-card">
-        <div class="c-icon">🏠</div>
-        <div>
-          <div class="c-label">Services</div>
-          <div class="c-val">Pest · Air Duct · Dryer Vent</div>
-          <div class="c-note">Bundle services for one visit · Mold removal available</div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -480,31 +505,31 @@
 <footer>
   <div class="footer-top">
     <div>
-      <div class="footer-brand">🌴 PAIB Pest Control & Air Duct Cleaning Services LLC</div>
-      <div class="footer-brand-sub">76 Tall Trees Ct · Sarasota, FL 34232</div>
+      <div class="footer-brand">Strong Pressure Cleaning and Pools LLC</div>
+      <div class="footer-brand-sub">208 Portia St S · Nokomis, FL 34275 · Black-Owned</div>
     </div>
     <div class="footer-col">
       <div class="footer-col-title">Services</div>
-      <a href="#services">Pest Control</a>
-      <a href="#services">Air Duct Cleaning</a>
-      <a href="#services">Dryer Vent Cleaning</a>
-      <a href="#services">Mold Removal</a>
+      <a href="#services">Pool Cleaning</a>
+      <a href="#services">Pressure Washing</a>
+      <a href="#services">Screen Cleaning</a>
+      <a href="#services">Pavers & Pool Area</a>
     </div>
     <div class="footer-col">
       <div class="footer-col-title">Company</div>
-      <a href="#about">About</a>
+      <a href="#about">About TJ</a>
       <a href="#reviews">Reviews</a>
-      <a href="#booking">Contact</a>
+      <a href="#contact">Contact</a>
     </div>
     <div class="footer-col">
       <div class="footer-col-title">Contact</div>
-      <a href="tel:2392512698">(239) 251-2698</a>
-      <a href="#booking">Book a Service</a>
+      <a href="tel:9416158436">(941) 615-8436</a>
+      <a href="#contact">Free Estimate</a>
     </div>
   </div>
   <div class="footer-bottom">
-    <div class="footer-copy">© 2026 PAIB Pest Control Services and Dryer Vent & Air Duct Cleaning Services LLC Of FL · All Rights Reserved</div>
-    <div class="footer-tag">Protecting Florida Homes, One Visit at a Time.</div>
+    <div class="footer-copy">© 2026 Strong Pressure Cleaning and Pools LLC · Nokomis, FL · All Rights Reserved</div>
+    <div class="footer-tagline">Dependable Service. Spotless Results.</div>
   </div>
 </footer>
 
