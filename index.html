@@ -48,10 +48,7 @@
     display: flex; align-items: flex-end;
     background: var(--dark);
   }
-  .hero-bg {
-    position: absolute; inset: 0;
-    background: linear-gradient(145deg, #050e16 0%, #081420 50%, #0a1c2e 100%);
-  }
+  .hero-bg { position: absolute; inset: 0; background: linear-gradient(145deg, #050e16 0%, #081420 50%, #0a1c2e 100%); }
   .hero-glow { position: absolute; top: -100px; right: -100px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(13,122,138,0.2) 0%, transparent 65%); pointer-events: none; }
   .hero-glow2 { position: absolute; bottom: -150px; left: -80px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(78,201,218,0.07) 0%, transparent 65%); pointer-events: none; }
   .hero-lines { position: absolute; inset: 0; opacity: 0.025; background-image: repeating-linear-gradient(90deg, transparent, transparent 80px, #fff 80px, #fff 81px); }
@@ -91,7 +88,6 @@
   .sec-title em { font-style: italic; color: var(--teal); }
   .sec-sub { color: var(--muted); font-size: 15px; max-width: 500px; line-height: 1.85; margin-bottom: 56px; font-weight: 300; }
 
-  /* SERVICES */
   .services-bg { background: var(--cream); }
   .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
   .svc { background: var(--warm); padding: 36px 28px; transition: all 0.3s; position: relative; overflow: hidden; }
@@ -103,12 +99,11 @@
   .svc-name { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--text); margin-bottom: 10px; line-height: 1.2; }
   .svc-desc { font-size: 13px; color: var(--muted); line-height: 1.75; font-weight: 300; }
 
-  /* 23 POINT */
-  .points-bg { background: var(--dark); position: relative; overflow: hidden; }
-  .points-bg::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.02) 1px, transparent 0); background-size: 32px 32px; }
-  .points-bg .sec-title { color: #fff; }
-  .points-bg .sec-title em { color: var(--silver); }
-  .points-bg .sec-sub { color: rgba(255,255,255,0.42); }
+  .plan-bg { background: var(--dark); position: relative; overflow: hidden; }
+  .plan-bg::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.02) 1px, transparent 0); background-size: 32px 32px; }
+  .plan-bg .sec-title { color: #fff; }
+  .plan-bg .sec-title em { color: var(--silver); }
+  .plan-bg .sec-sub { color: rgba(255,255,255,0.42); }
   .points-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.05); position: relative; z-index: 1; }
   .point-group { background: rgba(8,20,30,0.8); padding: 36px 32px; }
   .point-group-title { font-family: 'Cormorant Garamond', serif; font-size: 13px; color: var(--teal-light); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px; opacity: 0.8; }
@@ -117,7 +112,6 @@
   .point-num { font-family: 'Cormorant Garamond', serif; font-size: 13px; color: var(--teal-light); opacity: 0.5; min-width: 22px; line-height: 1.6; }
   .point-text { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.6; font-weight: 300; }
 
-  /* ABOUT */
   .about-bg { background: var(--warm); }
   .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
   .about-card { border: 1px solid var(--border-light); padding: 48px 40px; background: var(--dark); }
@@ -128,8 +122,8 @@
   .astat-num span { color: var(--teal-light); }
   .astat-label { font-size: 13px; color: rgba(255,255,255,0.4); font-weight: 300; line-height: 1.5; }
   .brands-row { margin-top: 20px; padding: 18px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); }
-  .brands-title { font-size: 10px; color: rgba(255,255,255,0.3); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }
-  .brands-list { font-size: 13px; color: rgba(255,255,255,0.55); font-weight: 300; line-height: 1.7; }
+  .brands-title { font-size: 10px; color: rgba(255,255,255,0.3); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
+  .brands-list { font-size: 13px; color: rgba(255,255,255,0.5); font-weight: 300; }
   .values { display: flex; flex-direction: column; }
   .val { display: flex; gap: 20px; padding: 22px 0; border-bottom: 1px solid rgba(0,0,0,0.06); align-items: flex-start; }
   .val:first-child { padding-top: 0; }
@@ -138,7 +132,6 @@
   .val-title { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 600; color: var(--text); margin-bottom: 5px; }
   .val-text { font-size: 13px; color: var(--muted); line-height: 1.7; font-weight: 300; }
 
-  /* REVIEWS */
   .reviews-bg { background: var(--cream); }
   .reviews-header { display: flex; align-items: center; gap: 28px; margin-bottom: 48px; flex-wrap: wrap; }
   .score-num { font-family: 'Cormorant Garamond', serif; font-size: 80px; font-weight: 600; color: var(--text); line-height: 1; letter-spacing: -2px; }
@@ -152,7 +145,6 @@
   .review-author { font-size: 13px; font-weight: 500; color: var(--teal); }
   .review-meta { font-size: 12px; color: var(--muted); margin-top: 2px; font-weight: 300; }
 
-  /* CONTACT */
   .contact-bg { background: var(--warm); }
   .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
   .form-wrap { background: var(--dark); padding: 48px; }
@@ -251,7 +243,7 @@
       </div>
       <div class="hstat">
         <div class="hstat-num">32</div>
-        <div class="hstat-label">Reviews</div>
+        <div class="hstat-label">Five-Star Reviews</div>
       </div>
       <div class="hstat">
         <div class="hstat-num">23<span>pt</span></div>
@@ -276,18 +268,20 @@
     <span class="ticker-item">Pool Equipment Repairs <span class="tdot"></span></span>
     <span class="ticker-item">Smart Pool Upgrades <span class="tdot"></span></span>
     <span class="ticker-item">Pebble Tec Finishes <span class="tdot"></span></span>
+    <span class="ticker-item">Pool Deck Renovation <span class="tdot"></span></span>
     <span class="ticker-item">Licensed · Bonded · Insured <span class="tdot"></span></span>
     <span class="ticker-item">100% Satisfaction Guarantee <span class="tdot"></span></span>
-    <span class="ticker-item">Venice Chamber Member <span class="tdot"></span></span>
     <span class="ticker-item">Pentair · Jandy · Hayward · Polaris <span class="tdot"></span></span>
+    <span class="ticker-item">Venice Chamber Member <span class="tdot"></span></span>
     <span class="ticker-item">Weekly Pool Service <span class="tdot"></span></span>
     <span class="ticker-item">Pool Equipment Repairs <span class="tdot"></span></span>
     <span class="ticker-item">Smart Pool Upgrades <span class="tdot"></span></span>
     <span class="ticker-item">Pebble Tec Finishes <span class="tdot"></span></span>
+    <span class="ticker-item">Pool Deck Renovation <span class="tdot"></span></span>
     <span class="ticker-item">Licensed · Bonded · Insured <span class="tdot"></span></span>
     <span class="ticker-item">100% Satisfaction Guarantee <span class="tdot"></span></span>
-    <span class="ticker-item">Venice Chamber Member <span class="tdot"></span></span>
     <span class="ticker-item">Pentair · Jandy · Hayward · Polaris <span class="tdot"></span></span>
+    <span class="ticker-item">Venice Chamber Member <span class="tdot"></span></span>
   </div>
 </div>
 
@@ -312,18 +306,18 @@
       <div class="svc-num">03 — Repairs</div>
       <div class="svc-icon">🔧</div>
       <div class="svc-name">Pool Equipment Repairs</div>
-      <div class="svc-desc">Valves, filters, timers, motors, and pump repairs and replacements. We charge a $99 diagnosis fee applied toward any approved repair. Fast, reliable, done right.</div>
+      <div class="svc-desc">Valves, filters, timers, motors, and pump repairs. We charge a $99 diagnosis fee applied toward any approved repair. Fast, reliable, done right every time.</div>
     </div>
     <div class="svc">
       <div class="svc-num">04 — Renovation</div>
       <div class="svc-icon">✨</div>
       <div class="svc-name">Pool Renovation & Upgrades</div>
-      <div class="svc-desc">Pebble Tec finishes, smart pool automation, deck renovation, and complete pool makeovers. Jonah helps plan every detail so you know exactly what to expect.</div>
+      <div class="svc-desc">Pebble Tec finishes, smart pool automation, deck renovation and complete pool makeovers. Jonah helps you plan every detail from start to finish.</div>
     </div>
   </div>
 </section>
 
-<section class="points-bg" id="plan">
+<section class="plan-bg" id="plan">
   <div class="eyebrow" style="position:relative;z-index:1;"><div class="ebar"></div><div class="etag">The 23-Point Plan</div></div>
   <div class="sec-title">Every Week,<br><em>Without Exception.</em></div>
   <p class="sec-sub">Our Complete Pool Service Plan covers 23 essential checks and operations on every single visit — so your pool is always clean, balanced, and protected.</p>
@@ -331,13 +325,13 @@
     <div class="point-group">
       <div class="point-group-title">Chemical & Water Balancing</div>
       <div class="point-list">
-        <div class="point-item"><div class="point-num">01</div><div class="point-text">Cyanuric Acid — stabilizer/conditioner check</div></div>
-        <div class="point-item"><div class="point-num">02</div><div class="point-text">Salt Content — managed on saltwater pools</div></div>
-        <div class="point-item"><div class="point-num">03</div><div class="point-text">Chlorine — sanitizing your pool water</div></div>
+        <div class="point-item"><div class="point-num">01</div><div class="point-text">Cyanuric Acid — stabilizer check</div></div>
+        <div class="point-item"><div class="point-num">02</div><div class="point-text">Salt Content — saltwater pools managed</div></div>
+        <div class="point-item"><div class="point-num">03</div><div class="point-text">Chlorine — pool water sanitized</div></div>
         <div class="point-item"><div class="point-num">04</div><div class="point-text">Total Alkalinity — managed</div></div>
-        <div class="point-item"><div class="point-num">05</div><div class="point-text">Saturation Index — calcium precipitation check</div></div>
+        <div class="point-item"><div class="point-num">05</div><div class="point-text">Saturation Index — calcium check</div></div>
         <div class="point-item"><div class="point-num">06</div><div class="point-text">Chloramines — checked and removed</div></div>
-        <div class="point-item"><div class="point-num">07</div><div class="point-text">Total Dissolved Solids — impurity measure</div></div>
+        <div class="point-item"><div class="point-num">07</div><div class="point-text">Total Dissolved Solids — measured</div></div>
         <div class="point-item"><div class="point-num">08</div><div class="point-text">Total Chlorine including chloramines</div></div>
         <div class="point-item"><div class="point-num">09</div><div class="point-text">Temperature — for accurate pH calculations</div></div>
         <div class="point-item"><div class="point-num">10</div><div class="point-text">pH Factor — managed</div></div>
@@ -365,9 +359,9 @@
         <div class="point-item"><div class="point-num">22</div><div class="point-text">Weekly leaf & debris vacuuming *</div></div>
         <div class="point-item"><div class="point-num">23</div><div class="point-text">Brush walls and steps</div></div>
       </div>
-      <div style="margin-top:24px; padding:16px; background:rgba(78,201,218,0.06); border:1px solid rgba(78,201,218,0.12);">
-        <div style="font-size:10px; color:rgba(255,255,255,0.3); letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px;">* Complete Plan Only</div>
-        <div style="font-size:13px; color:rgba(255,255,255,0.45); line-height:1.65; font-weight:300;">Items marked with * are included in the Complete Pool Service Plan. All 23 points are performed on every visit — no exceptions.</div>
+      <div style="margin-top:24px; padding:16px; background:rgba(78,201,218,0.05); border:1px solid rgba(78,201,218,0.1);">
+        <div style="font-size:10px; color:rgba(255,255,255,0.28); letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px;">* Complete Plan Only</div>
+        <div style="font-size:13px; color:rgba(255,255,255,0.4); line-height:1.65; font-weight:300;">Items marked * are included in the Complete Pool Service Plan only. All 23 points performed on every visit — no exceptions.</div>
       </div>
     </div>
   </div>
@@ -391,7 +385,7 @@
           <div class="val-num">II</div>
           <div>
             <div class="val-title">Faster Than You Expect</div>
-            <div class="val-text">When urgency is needed — like a damaged pool deck — the team delivers even faster than promised. Reliability you can count on.</div>
+            <div class="val-text">When urgency is needed — like a damaged pool deck — the team delivers even faster than promised. Reliability that earns repeat customers.</div>
           </div>
         </div>
         <div class="val">
@@ -418,7 +412,7 @@
       </div>
       <div class="astat">
         <div class="astat-num">23<span>pt</span></div>
-        <div class="astat-label">Points checked on every single weekly visit</div>
+        <div class="astat-label">Points checked on every weekly visit</div>
       </div>
       <div class="astat">
         <div class="astat-num">100<span>%</span></div>
@@ -450,13 +444,13 @@
   <div class="reviews-grid">
     <div class="review-card">
       <div class="review-stars">★★★★★</div>
-      <div class="review-text">"We wanted a new Pebble Tec finish and to make the pool a smart pool so we could control everything from our phones. The team delivered exactly that — it was a great experience and our home feels much fresher."</div>
+      <div class="review-text">"We wanted a new Pebble Tec finish and to make the pool a smart pool so we could control everything from our phones. The team delivered exactly what we envisioned."</div>
       <div class="review-author">Janet Schultz</div>
       <div class="review-meta">Google Review · 4 months ago</div>
     </div>
     <div class="review-card">
       <div class="review-stars">★★★★★</div>
-      <div class="review-text">"We hired Tranquil Pool Care for a full pool deck renovation after damage from poor workmanship by another installer. We needed it done quickly — and Jonah and the team got it done even faster than expected."</div>
+      <div class="review-text">"We hired Tranquil Pool Care for a full pool deck renovation after damage from poor workmanship by another installer. We needed it done quickly — Jonah and the team got it done even faster than expected."</div>
       <div class="review-author">Camden Sexton</div>
       <div class="review-meta">Google Review · 3 months ago</div>
     </div>
