@@ -3,49 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Strong Pressure Cleaning & Pools | Nokomis, FL</title>
+<title>Tranquil Waters Pool Care | Venice, FL</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-    --dark: #0a1520;
-    --dark2: #111e2b;
-    --blue: #1a6fa8;
-    --blue-mid: #2485c4;
-    --blue-light: #5bb3d8;
-    --silver: #c8d8e4;
-    --cream: #f5f3ee;
-    --warm: #faf8f4;
-    --text: #141f2a;
-    --muted: #6b7a88;
+    --dark: #08141e;
+    --dark2: #0e1c28;
+    --teal: #0d7a8a;
+    --teal-mid: #159aae;
+    --teal-light: #4ec9da;
+    --silver: #c0d8e0;
+    --cream: #f4f2ee;
+    --warm: #f9f7f3;
+    --text: #111e28;
+    --muted: #627080;
     --border: rgba(0,0,0,0.08);
-    --border-light: rgba(90,179,216,0.2);
+    --border-light: rgba(78,201,218,0.18);
   }
   html { scroll-behavior: smooth; }
   body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--warm); line-height: 1.6; }
   ::-webkit-scrollbar { width: 4px; }
-  ::-webkit-scrollbar-thumb { background: var(--blue-light); border-radius: 2px; }
+  ::-webkit-scrollbar-thumb { background: var(--teal-light); border-radius: 2px; }
 
-  /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    background: rgba(10,21,32,0.96); backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(90,179,216,0.08);
+    background: rgba(8,20,30,0.96); backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(78,201,218,0.08);
     display: flex; align-items: center; justify-content: space-between;
     padding: 0 6%; height: 72px;
   }
-  .nav-logo { display: flex; flex-direction: column; line-height: 1.2; }
-  .nav-logo-main { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: #fff; letter-spacing: 0.5px; }
+  .nav-logo-main { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: #fff; letter-spacing: 0.5px; line-height: 1.2; }
   .nav-logo-sub { font-size: 10px; color: var(--silver); letter-spacing: 2px; text-transform: uppercase; font-weight: 400; opacity: 0.55; }
   .nav-center { display: flex; gap: 36px; }
   .nav-center a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 12px; font-weight: 400; letter-spacing: 1px; text-transform: uppercase; transition: color 0.2s; }
   .nav-center a:hover { color: var(--silver); }
   .nav-right { display: flex; align-items: center; gap: 20px; }
   .nav-phone { font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.75); text-decoration: none; }
-  .nav-cta { background: var(--blue-light); color: #fff; font-size: 11px; font-weight: 500; padding: 10px 24px; letter-spacing: 1.5px; text-decoration: none; text-transform: uppercase; transition: all 0.3s; border: 1px solid var(--blue-light); }
-  .nav-cta:hover { background: transparent; color: var(--blue-light); }
+  .nav-cta { background: var(--teal-light); color: var(--dark); font-size: 11px; font-weight: 500; padding: 10px 24px; letter-spacing: 1.5px; text-decoration: none; text-transform: uppercase; transition: all 0.3s; border: 1px solid var(--teal-light); }
+  .nav-cta:hover { background: transparent; color: var(--teal-light); }
 
-  /* HERO */
   .hero {
     min-height: 100vh; position: relative; overflow: hidden;
     display: flex; align-items: flex-end;
@@ -53,98 +50,106 @@
   }
   .hero-bg {
     position: absolute; inset: 0;
-    background: linear-gradient(145deg, #081220 0%, #0a1a2e 50%, #0d2240 100%);
+    background: linear-gradient(145deg, #050e16 0%, #081420 50%, #0a1c2e 100%);
   }
-  .hero-glow-1 { position: absolute; top: -80px; right: -80px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(26,111,168,0.18) 0%, transparent 65%); pointer-events: none; }
-  .hero-glow-2 { position: absolute; bottom: -100px; left: -60px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(91,179,216,0.08) 0%, transparent 65%); pointer-events: none; }
+  .hero-glow { position: absolute; top: -100px; right: -100px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(13,122,138,0.2) 0%, transparent 65%); pointer-events: none; }
+  .hero-glow2 { position: absolute; bottom: -150px; left: -80px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(78,201,218,0.07) 0%, transparent 65%); pointer-events: none; }
   .hero-lines { position: absolute; inset: 0; opacity: 0.025; background-image: repeating-linear-gradient(90deg, transparent, transparent 80px, #fff 80px, #fff 81px); }
   .hero-wave { position: absolute; bottom: -2px; left: 0; right: 0; }
   .hero-wave svg { display: block; width: 100%; }
   .hero-content { position: relative; z-index: 2; padding: 0 6% 100px; width: 100%; }
   .hero-overline { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
-  .overline-bar { width: 40px; height: 1px; background: var(--blue-light); }
-  .overline-text { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--blue-light); font-weight: 500; }
+  .overline-bar { width: 40px; height: 1px; background: var(--teal-light); }
+  .overline-text { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--teal-light); font-weight: 500; }
   h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(56px, 8vw, 104px); font-weight: 600; color: #fff; line-height: 0.92; letter-spacing: -1.5px; margin-bottom: 28px; }
   h1 em { color: var(--silver); font-style: italic; }
   .hero-sub { font-size: 15px; color: rgba(255,255,255,0.48); font-weight: 300; max-width: 500px; line-height: 1.85; margin-bottom: 44px; }
   .hero-actions { display: flex; align-items: center; gap: 32px; margin-bottom: 60px; flex-wrap: wrap; }
-  .btn-hero { background: var(--blue-light); color: #fff; font-size: 11px; font-weight: 500; padding: 16px 40px; letter-spacing: 2px; text-decoration: none; text-transform: uppercase; transition: all 0.3s; border: 1px solid var(--blue-light); display: inline-block; }
-  .btn-hero:hover { background: transparent; color: var(--blue-light); }
+  .btn-hero { background: var(--teal-light); color: var(--dark); font-size: 11px; font-weight: 500; padding: 16px 40px; letter-spacing: 2px; text-decoration: none; text-transform: uppercase; transition: all 0.3s; border: 1px solid var(--teal-light); display: inline-block; }
+  .btn-hero:hover { background: transparent; color: var(--teal-light); }
   .hero-link { color: rgba(255,255,255,0.4); font-size: 13px; text-decoration: none; display: flex; align-items: center; gap: 8px; transition: color 0.2s; }
   .hero-link:hover { color: #fff; }
   .hero-link span { transition: transform 0.2s; }
   .hero-link:hover span { transform: translateX(4px); }
   .hero-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.05); }
-  .hstat { padding: 24px 28px; background: rgba(10,21,32,0.85); backdrop-filter: blur(8px); }
+  .hstat { padding: 24px 28px; background: rgba(8,20,30,0.85); backdrop-filter: blur(8px); }
   .hstat-num { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 600; color: #fff; line-height: 1; }
-  .hstat-num span { color: var(--blue-light); }
+  .hstat-num span { color: var(--teal-light); }
   .hstat-label { font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 1px; text-transform: uppercase; margin-top: 6px; }
 
-  /* TICKER */
-  .ticker { background: var(--blue); padding: 13px 0; overflow: hidden; }
-  .ticker-track { display: flex; animation: scroll 28s linear infinite; white-space: nowrap; }
+  .ticker { background: var(--teal); padding: 13px 0; overflow: hidden; }
+  .ticker-track { display: flex; animation: scroll 30s linear infinite; white-space: nowrap; }
   @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
   .ticker-item { font-size: 11px; font-weight: 400; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(255,255,255,0.65); padding: 0 32px; display: flex; align-items: center; gap: 16px; }
-  .tdot { width: 3px; height: 3px; border-radius: 50%; background: var(--blue-light); opacity: 0.7; }
+  .tdot { width: 3px; height: 3px; border-radius: 50%; background: var(--teal-light); opacity: 0.7; }
 
-  /* SECTIONS */
   section { padding: 100px 6%; }
   .eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
-  .ebar { width: 28px; height: 1px; background: var(--blue-light); }
-  .etag { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--blue-light); font-weight: 500; }
+  .ebar { width: 28px; height: 1px; background: var(--teal-light); }
+  .etag { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--teal-light); font-weight: 500; }
   .sec-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 4vw, 54px); font-weight: 600; color: var(--text); letter-spacing: -0.5px; line-height: 1.1; margin-bottom: 16px; }
-  .sec-title em { font-style: italic; color: var(--blue); }
+  .sec-title em { font-style: italic; color: var(--teal); }
   .sec-sub { color: var(--muted); font-size: 15px; max-width: 500px; line-height: 1.85; margin-bottom: 56px; font-weight: 300; }
 
   /* SERVICES */
   .services-bg { background: var(--cream); }
   .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
   .svc { background: var(--warm); padding: 36px 28px; transition: all 0.3s; position: relative; overflow: hidden; }
-  .svc::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--blue-light); transition: width 0.4s; }
+  .svc::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--teal-light); transition: width 0.4s; }
   .svc:hover { background: #fff; }
   .svc:hover::after { width: 100%; }
-  .svc-num { font-family: 'Cormorant Garamond', serif; font-size: 11px; color: var(--blue-light); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px; }
+  .svc-num { font-family: 'Cormorant Garamond', serif; font-size: 11px; color: var(--teal-light); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px; }
   .svc-icon { font-size: 26px; margin-bottom: 14px; opacity: 0.9; }
   .svc-name { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--text); margin-bottom: 10px; line-height: 1.2; }
   .svc-desc { font-size: 13px; color: var(--muted); line-height: 1.75; font-weight: 300; }
 
+  /* 23 POINT */
+  .points-bg { background: var(--dark); position: relative; overflow: hidden; }
+  .points-bg::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.02) 1px, transparent 0); background-size: 32px 32px; }
+  .points-bg .sec-title { color: #fff; }
+  .points-bg .sec-title em { color: var(--silver); }
+  .points-bg .sec-sub { color: rgba(255,255,255,0.42); }
+  .points-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.05); position: relative; z-index: 1; }
+  .point-group { background: rgba(8,20,30,0.8); padding: 36px 32px; }
+  .point-group-title { font-family: 'Cormorant Garamond', serif; font-size: 13px; color: var(--teal-light); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px; opacity: 0.8; }
+  .point-list { display: flex; flex-direction: column; gap: 10px; }
+  .point-item { display: flex; gap: 12px; align-items: flex-start; }
+  .point-num { font-family: 'Cormorant Garamond', serif; font-size: 13px; color: var(--teal-light); opacity: 0.5; min-width: 22px; line-height: 1.6; }
+  .point-text { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.6; font-weight: 300; }
+
   /* ABOUT */
-  .about-bg { background: var(--dark); position: relative; overflow: hidden; }
-  .about-bg::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.02) 1px, transparent 0); background-size: 32px 32px; }
-  .about-bg .sec-title { color: #fff; }
-  .about-bg .sec-title em { color: var(--silver); }
-  .about-bg .sec-sub { color: rgba(255,255,255,0.42); }
-  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; position: relative; z-index: 1; }
-  .about-card { border: 1px solid rgba(90,179,216,0.15); padding: 48px 40px; background: rgba(255,255,255,0.02); }
+  .about-bg { background: var(--warm); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+  .about-card { border: 1px solid var(--border-light); padding: 48px 40px; background: var(--dark); }
   .about-card-title { font-family: 'Cormorant Garamond', serif; font-size: 12px; color: var(--silver); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 28px; opacity: 0.6; }
   .astat { display: flex; align-items: center; gap: 20px; padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
   .astat:last-child { border: none; }
   .astat-num { font-family: 'Cormorant Garamond', serif; font-size: 30px; font-weight: 600; color: #fff; min-width: 80px; line-height: 1; }
-  .astat-num span { color: var(--blue-light); }
+  .astat-num span { color: var(--teal-light); }
   .astat-label { font-size: 13px; color: rgba(255,255,255,0.4); font-weight: 300; line-height: 1.5; }
+  .brands-row { margin-top: 20px; padding: 18px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); }
+  .brands-title { font-size: 10px; color: rgba(255,255,255,0.3); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }
+  .brands-list { font-size: 13px; color: rgba(255,255,255,0.55); font-weight: 300; line-height: 1.7; }
   .values { display: flex; flex-direction: column; }
-  .val { display: flex; gap: 20px; padding: 22px 0; border-bottom: 1px solid rgba(255,255,255,0.06); align-items: flex-start; }
+  .val { display: flex; gap: 20px; padding: 22px 0; border-bottom: 1px solid rgba(0,0,0,0.06); align-items: flex-start; }
   .val:first-child { padding-top: 0; }
   .val:last-child { border: none; }
-  .val-num { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: var(--blue-light); opacity: 0.45; line-height: 1; min-width: 28px; }
-  .val-title { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 600; color: #fff; margin-bottom: 5px; }
-  .val-text { font-size: 13px; color: rgba(255,255,255,0.38); line-height: 1.7; font-weight: 300; }
-  .black-owned-badge { margin-top: 20px; padding: 18px; background: rgba(91,179,216,0.06); border: 1px solid rgba(91,179,216,0.15); }
-  .black-owned-title { font-size: 11px; font-weight: 500; color: var(--blue-light); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 6px; }
-  .black-owned-text { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.65; font-weight: 300; }
+  .val-num { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: var(--teal-light); opacity: 0.45; line-height: 1; min-width: 28px; }
+  .val-title { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 600; color: var(--text); margin-bottom: 5px; }
+  .val-text { font-size: 13px; color: var(--muted); line-height: 1.7; font-weight: 300; }
 
   /* REVIEWS */
   .reviews-bg { background: var(--cream); }
   .reviews-header { display: flex; align-items: center; gap: 28px; margin-bottom: 48px; flex-wrap: wrap; }
   .score-num { font-family: 'Cormorant Garamond', serif; font-size: 80px; font-weight: 600; color: var(--text); line-height: 1; letter-spacing: -2px; }
   .score-stars { color: #c8a84c; font-size: 22px; letter-spacing: 3px; }
-  .score-label { font-size: 12px; color: var(--muted); margin-top: 4px; letter-spacing: 0.5px; }
+  .score-label { font-size: 12px; color: var(--muted); margin-top: 4px; }
   .reviews-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); }
   .review-card { background: var(--warm); padding: 36px; position: relative; overflow: hidden; }
-  .review-card::before { content: '"'; font-family: 'Cormorant Garamond', serif; font-size: 72px; color: var(--blue-light); opacity: 0.12; position: absolute; top: 8px; left: 24px; line-height: 1; }
+  .review-card::before { content: '"'; font-family: 'Cormorant Garamond', serif; font-size: 72px; color: var(--teal-light); opacity: 0.12; position: absolute; top: 8px; left: 24px; line-height: 1; }
   .review-stars { color: #c8a84c; font-size: 13px; margin-bottom: 14px; letter-spacing: 1px; }
   .review-text { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-style: italic; color: var(--text); line-height: 1.7; margin-bottom: 20px; padding-left: 6px; }
-  .review-author { font-size: 13px; font-weight: 500; color: var(--blue); }
+  .review-author { font-size: 13px; font-weight: 500; color: var(--teal); }
   .review-meta { font-size: 12px; color: var(--muted); margin-top: 2px; font-weight: 300; }
 
   /* CONTACT */
@@ -158,14 +163,14 @@
   .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 13px 16px; border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.04); font-family: 'DM Sans', sans-serif; font-size: 14px; color: #fff; outline: none; transition: border-color 0.2s; }
   .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.18); }
   .form-group select option { background: var(--dark); }
-  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--blue-light); background: rgba(255,255,255,0.06); }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--teal-light); background: rgba(255,255,255,0.06); }
   .form-group textarea { resize: vertical; min-height: 100px; }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-  .form-submit { width: 100%; background: var(--blue-light); color: #fff; border: none; padding: 16px; font-size: 11px; font-weight: 500; font-family: 'DM Sans', sans-serif; cursor: pointer; letter-spacing: 2px; text-transform: uppercase; transition: all 0.3s; margin-top: 8px; border: 1px solid var(--blue-light); }
-  .form-submit:hover { background: transparent; color: var(--blue-light); }
+  .form-submit { width: 100%; background: var(--teal-light); color: var(--dark); border: none; padding: 16px; font-size: 11px; font-weight: 500; font-family: 'DM Sans', sans-serif; cursor: pointer; letter-spacing: 2px; text-transform: uppercase; transition: all 0.3s; margin-top: 8px; border: 1px solid var(--teal-light); }
+  .form-submit:hover { background: transparent; color: var(--teal-light); }
   .contact-info { padding-top: 8px; }
   .contact-title { font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 600; color: var(--text); line-height: 1.1; margin-bottom: 14px; letter-spacing: -0.5px; }
-  .contact-title em { font-style: italic; color: var(--blue); }
+  .contact-title em { font-style: italic; color: var(--teal); }
   .contact-sub { font-size: 15px; color: var(--muted); line-height: 1.85; margin-bottom: 40px; font-weight: 300; }
   .clist { display: flex; flex-direction: column; }
   .citem { display: flex; gap: 18px; padding: 20px 0; border-bottom: 1px solid var(--border); align-items: flex-start; }
@@ -179,13 +184,12 @@
   .open-tag::before { content: '●'; font-size: 7px; animation: blink 2s infinite; }
   @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
 
-  /* FOOTER */
   footer { background: var(--dark2); padding: 52px 6% 36px; }
   .footer-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px; padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,0.06); margin-bottom: 32px; }
   .footer-brand { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: rgba(255,255,255,0.55); margin-bottom: 6px; }
   .footer-brand-sub { font-size: 10px; color: rgba(255,255,255,0.22); letter-spacing: 2px; text-transform: uppercase; }
   .footer-col { display: flex; flex-direction: column; gap: 10px; }
-  .footer-col-title { font-size: 10px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--blue-light); margin-bottom: 4px; opacity: 0.75; }
+  .footer-col-title { font-size: 10px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--teal-light); margin-bottom: 4px; opacity: 0.75; }
   .footer-col a { font-size: 13px; color: rgba(255,255,255,0.3); text-decoration: none; font-weight: 300; transition: color 0.2s; }
   .footer-col a:hover { color: rgba(255,255,255,0.7); }
   .footer-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; align-items: center; }
@@ -194,13 +198,13 @@
 
   @media (max-width: 960px) {
     .hero-stats { grid-template-columns: repeat(2, 1fr); }
-    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .services-grid, .points-grid { grid-template-columns: repeat(2, 1fr); }
     .about-grid, .contact-grid { grid-template-columns: 1fr; }
     .nav-center { display: none; }
     .form-row { grid-template-columns: 1fr; }
   }
   @media (max-width: 560px) {
-    .services-grid { grid-template-columns: 1fr; }
+    .services-grid, .points-grid { grid-template-columns: 1fr; }
     .hero-stats { grid-template-columns: repeat(2, 1fr); }
   }
 </style>
@@ -208,113 +212,163 @@
 <body>
 
 <nav>
-  <div class="nav-logo">
-    <div class="nav-logo-main">Strong Pressure Cleaning & Pools</div>
-    <div class="nav-logo-sub">Nokomis, Florida</div>
+  <div>
+    <div class="nav-logo-main">Tranquil Waters Pool Care</div>
+    <div class="nav-logo-sub">Venice, Florida</div>
   </div>
   <div class="nav-center">
     <a href="#services">Services</a>
-    <a href="#about">About</a>
+    <a href="#plan">23-Point Plan</a>
     <a href="#reviews">Reviews</a>
     <a href="#contact">Contact</a>
   </div>
   <div class="nav-right">
-    <a href="tel:9416158436" class="nav-phone">(941) 615-8436</a>
-    <a href="#contact" class="nav-cta">Free Estimate</a>
+    <a href="tel:9413401779" class="nav-phone">(941) 340-1779</a>
+    <a href="#contact" class="nav-cta">Get a Quote</a>
   </div>
 </nav>
 
 <section class="hero" style="padding:0;">
   <div class="hero-bg"></div>
-  <div class="hero-glow-1"></div>
-  <div class="hero-glow-2"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
   <div class="hero-lines"></div>
   <div class="hero-content">
     <div class="hero-overline">
       <div class="overline-bar"></div>
-      <div class="overline-text">Nokomis & Sarasota Area Specialists</div>
+      <div class="overline-text">Venice & Sarasota Area Pool Specialists</div>
     </div>
-    <h1>Spotless Homes,<br><em>Crystal Clear</em><br>Pools.</h1>
-    <p class="hero-sub">Strong Pressure Cleaning and Pools LLC delivers professional pressure washing and pool services with the dependability and personal care that keeps customers coming back.</p>
+    <h1>Clean Blue Water,<br><em>Every Single</em><br>Week.</h1>
+    <p class="hero-sub">Tranquil Waters Pool Care is Venice's most trusted professional pool service — licensed, bonded, insured, and backed by a 100% satisfaction guarantee on every visit.</p>
     <div class="hero-actions">
-      <a href="#contact" class="btn-hero">Request a Free Estimate</a>
-      <a href="tel:9416158436" class="hero-link">Call (941) 615-8436 <span>→</span></a>
+      <a href="#contact" class="btn-hero">Get a Free Quote</a>
+      <a href="tel:9413401779" class="hero-link">Call (941) 340-1779 <span>→</span></a>
     </div>
     <div class="hero-stats">
       <div class="hstat">
-        <div class="hstat-num">5.0<span>★</span></div>
+        <div class="hstat-num">4.8<span>★</span></div>
         <div class="hstat-label">Google Rating</div>
       </div>
       <div class="hstat">
-        <div class="hstat-num">8</div>
-        <div class="hstat-label">Five-Star Reviews</div>
+        <div class="hstat-num">32</div>
+        <div class="hstat-label">Reviews</div>
       </div>
       <div class="hstat">
-        <div class="hstat-num">TJ</div>
-        <div class="hstat-label">Owner On Every Job</div>
+        <div class="hstat-num">23<span>pt</span></div>
+        <div class="hstat-label">Weekly Service Plan</div>
       </div>
       <div class="hstat">
-        <div class="hstat-num">5<span>PM</span></div>
-        <div class="hstat-label">Open Until 5 PM</div>
+        <div class="hstat-num">100<span>%</span></div>
+        <div class="hstat-label">Satisfaction Guarantee</div>
       </div>
     </div>
   </div>
   <div class="hero-wave">
     <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg">
-      <path fill="#faf8f4" d="M0,40L60,45C120,51,240,58,360,55C480,52,600,38,720,32C840,26,960,34,1080,42C1200,50,1320,56,1380,59L1440,61L1440,80L0,80Z"/>
+      <path fill="#f9f7f3" d="M0,40L60,45C120,51,240,58,360,55C480,52,600,38,720,32C840,26,960,34,1080,42C1200,50,1320,56,1380,59L1440,61L1440,80L0,80Z"/>
     </svg>
   </div>
 </section>
 
 <div class="ticker">
   <div class="ticker-track">
-    <span class="ticker-item">Pressure Washing <span class="tdot"></span></span>
-    <span class="ticker-item">Pool Cleaning & Maintenance <span class="tdot"></span></span>
-    <span class="ticker-item">Screen Cleaning <span class="tdot"></span></span>
-    <span class="ticker-item">Pavers & Driveways <span class="tdot"></span></span>
-    <span class="ticker-item">5.0 Star Rated <span class="tdot"></span></span>
-    <span class="ticker-item">Black-Owned Business <span class="tdot"></span></span>
-    <span class="ticker-item">Free Estimates <span class="tdot"></span></span>
-    <span class="ticker-item">Nokomis Local <span class="tdot"></span></span>
-    <span class="ticker-item">Pressure Washing <span class="tdot"></span></span>
-    <span class="ticker-item">Pool Cleaning & Maintenance <span class="tdot"></span></span>
-    <span class="ticker-item">Screen Cleaning <span class="tdot"></span></span>
-    <span class="ticker-item">Pavers & Driveways <span class="tdot"></span></span>
-    <span class="ticker-item">5.0 Star Rated <span class="tdot"></span></span>
-    <span class="ticker-item">Black-Owned Business <span class="tdot"></span></span>
-    <span class="ticker-item">Free Estimates <span class="tdot"></span></span>
-    <span class="ticker-item">Nokomis Local <span class="tdot"></span></span>
+    <span class="ticker-item">Weekly Pool Service <span class="tdot"></span></span>
+    <span class="ticker-item">Pool Equipment Repairs <span class="tdot"></span></span>
+    <span class="ticker-item">Smart Pool Upgrades <span class="tdot"></span></span>
+    <span class="ticker-item">Pebble Tec Finishes <span class="tdot"></span></span>
+    <span class="ticker-item">Licensed · Bonded · Insured <span class="tdot"></span></span>
+    <span class="ticker-item">100% Satisfaction Guarantee <span class="tdot"></span></span>
+    <span class="ticker-item">Venice Chamber Member <span class="tdot"></span></span>
+    <span class="ticker-item">Pentair · Jandy · Hayward · Polaris <span class="tdot"></span></span>
+    <span class="ticker-item">Weekly Pool Service <span class="tdot"></span></span>
+    <span class="ticker-item">Pool Equipment Repairs <span class="tdot"></span></span>
+    <span class="ticker-item">Smart Pool Upgrades <span class="tdot"></span></span>
+    <span class="ticker-item">Pebble Tec Finishes <span class="tdot"></span></span>
+    <span class="ticker-item">Licensed · Bonded · Insured <span class="tdot"></span></span>
+    <span class="ticker-item">100% Satisfaction Guarantee <span class="tdot"></span></span>
+    <span class="ticker-item">Venice Chamber Member <span class="tdot"></span></span>
+    <span class="ticker-item">Pentair · Jandy · Hayward · Polaris <span class="tdot"></span></span>
   </div>
 </div>
 
 <section class="services-bg" id="services">
   <div class="eyebrow"><div class="ebar"></div><div class="etag">Our Services</div></div>
-  <div class="sec-title">Complete Exterior Care,<br><em>Done Right.</em></div>
-  <p class="sec-sub">From pool maintenance to full exterior pressure washing — TJ and his team deliver professional results with the personal care and dependability you can count on.</p>
+  <div class="sec-title">Complete Pool Care,<br><em>Expertly Delivered.</em></div>
+  <p class="sec-sub">From weekly maintenance to full pool renovations — Jonah and the team handle everything with the same professionalism and personal attention on every job.</p>
   <div class="services-grid">
     <div class="svc">
-      <div class="svc-num">01 — Pools</div>
+      <div class="svc-num">01 — Weekly</div>
       <div class="svc-icon">🏊</div>
-      <div class="svc-name">Pool Cleaning & Maintenance</div>
-      <div class="svc-desc">Regular pool cleaning and maintenance by TJ — who greets you personally before every visit. He proactively identifies issues like pump problems and resolves them fast, so you always have a clean and functional pool.</div>
+      <div class="svc-name">Complete Pool Service</div>
+      <div class="svc-desc">Full 23-point weekly service including chemical balancing, vacuuming, brushing, debris removal, and complete equipment checks. Protecting your investment every single week.</div>
     </div>
     <div class="svc">
-      <div class="svc-num">02 — Pressure</div>
-      <div class="svc-icon">💦</div>
-      <div class="svc-name">Pressure Washing</div>
-      <div class="svc-desc">Full exterior pressure washing for homes, driveways, pool areas, and more. Reasonably priced, thorough, and done right — customers hire TJ again and again for a reason.</div>
+      <div class="svc-num">02 — Regular</div>
+      <div class="svc-icon">🔵</div>
+      <div class="svc-name">Regular Pool Service</div>
+      <div class="svc-desc">Essential weekly maintenance covering chemical management, equipment checks, and basket cleaning. A streamlined plan for pools that need reliable routine care.</div>
     </div>
     <div class="svc">
-      <div class="svc-num">03 — Screens</div>
-      <div class="svc-icon">🪟</div>
-      <div class="svc-name">Screen Cleaning</div>
-      <div class="svc-desc">Professional cleaning of pool enclosure screens, lanai screens, and window screens. Removes built-up dirt, mold, and grime from Florida's humid climate.</div>
+      <div class="svc-num">03 — Repairs</div>
+      <div class="svc-icon">🔧</div>
+      <div class="svc-name">Pool Equipment Repairs</div>
+      <div class="svc-desc">Valves, filters, timers, motors, and pump repairs and replacements. We charge a $99 diagnosis fee applied toward any approved repair. Fast, reliable, done right.</div>
     </div>
     <div class="svc">
-      <div class="svc-num">04 — Pavers</div>
-      <div class="svc-icon">🧱</div>
-      <div class="svc-name">Pavers & Pool Area</div>
-      <div class="svc-desc">Deep cleaning of pavers, pool decks, and surrounding areas. We restore the look of your outdoor living space and remove mold, algae, and staining.</div>
+      <div class="svc-num">04 — Renovation</div>
+      <div class="svc-icon">✨</div>
+      <div class="svc-name">Pool Renovation & Upgrades</div>
+      <div class="svc-desc">Pebble Tec finishes, smart pool automation, deck renovation, and complete pool makeovers. Jonah helps plan every detail so you know exactly what to expect.</div>
+    </div>
+  </div>
+</section>
+
+<section class="points-bg" id="plan">
+  <div class="eyebrow" style="position:relative;z-index:1;"><div class="ebar"></div><div class="etag">The 23-Point Plan</div></div>
+  <div class="sec-title">Every Week,<br><em>Without Exception.</em></div>
+  <p class="sec-sub">Our Complete Pool Service Plan covers 23 essential checks and operations on every single visit — so your pool is always clean, balanced, and protected.</p>
+  <div class="points-grid">
+    <div class="point-group">
+      <div class="point-group-title">Chemical & Water Balancing</div>
+      <div class="point-list">
+        <div class="point-item"><div class="point-num">01</div><div class="point-text">Cyanuric Acid — stabilizer/conditioner check</div></div>
+        <div class="point-item"><div class="point-num">02</div><div class="point-text">Salt Content — managed on saltwater pools</div></div>
+        <div class="point-item"><div class="point-num">03</div><div class="point-text">Chlorine — sanitizing your pool water</div></div>
+        <div class="point-item"><div class="point-num">04</div><div class="point-text">Total Alkalinity — managed</div></div>
+        <div class="point-item"><div class="point-num">05</div><div class="point-text">Saturation Index — calcium precipitation check</div></div>
+        <div class="point-item"><div class="point-num">06</div><div class="point-text">Chloramines — checked and removed</div></div>
+        <div class="point-item"><div class="point-num">07</div><div class="point-text">Total Dissolved Solids — impurity measure</div></div>
+        <div class="point-item"><div class="point-num">08</div><div class="point-text">Total Chlorine including chloramines</div></div>
+        <div class="point-item"><div class="point-num">09</div><div class="point-text">Temperature — for accurate pH calculations</div></div>
+        <div class="point-item"><div class="point-num">10</div><div class="point-text">pH Factor — managed</div></div>
+        <div class="point-item"><div class="point-num">11</div><div class="point-text">Calcium Hardness — checked</div></div>
+      </div>
+    </div>
+    <div class="point-group">
+      <div class="point-group-title">Equipment Checks</div>
+      <div class="point-list">
+        <div class="point-item"><div class="point-num">12</div><div class="point-text">Sweep finger screen / wall screen cleaned</div></div>
+        <div class="point-item"><div class="point-num">13</div><div class="point-text">Pump strainer baskets — checked & emptied</div></div>
+        <div class="point-item"><div class="point-num">14</div><div class="point-text">Skimmer baskets — checked & emptied</div></div>
+        <div class="point-item"><div class="point-num">15</div><div class="point-text">Filter backwashes — DE monthly, sand weekly</div></div>
+        <div class="point-item"><div class="point-num">16</div><div class="point-text">Sweep finger screen — inspected</div></div>
+        <div class="point-item"><div class="point-num">17</div><div class="point-text">Sweep debris bags — checked & emptied</div></div>
+        <div class="point-item"><div class="point-num">18</div><div class="point-text">Valves adjusted</div></div>
+      </div>
+    </div>
+    <div class="point-group">
+      <div class="point-group-title">General Pool Service</div>
+      <div class="point-list">
+        <div class="point-item"><div class="point-num">19</div><div class="point-text">Net pool surface and pool bottom *</div></div>
+        <div class="point-item"><div class="point-num">20</div><div class="point-text">Weekly hose vacuum *</div></div>
+        <div class="point-item"><div class="point-num">21</div><div class="point-text">Brush spa</div></div>
+        <div class="point-item"><div class="point-num">22</div><div class="point-text">Weekly leaf & debris vacuuming *</div></div>
+        <div class="point-item"><div class="point-num">23</div><div class="point-text">Brush walls and steps</div></div>
+      </div>
+      <div style="margin-top:24px; padding:16px; background:rgba(78,201,218,0.06); border:1px solid rgba(78,201,218,0.12);">
+        <div style="font-size:10px; color:rgba(255,255,255,0.3); letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px;">* Complete Plan Only</div>
+        <div style="font-size:13px; color:rgba(255,255,255,0.45); line-height:1.65; font-weight:300;">Items marked with * are included in the Complete Pool Service Plan. All 23 points are performed on every visit — no exceptions.</div>
+      </div>
     </div>
   </div>
 </section>
@@ -322,36 +376,36 @@
 <section class="about-bg" id="about">
   <div class="about-grid">
     <div>
-      <div class="eyebrow"><div class="ebar" style="background:var(--blue-light)"></div><div class="etag">Who We Are</div></div>
-      <div class="sec-title">Built on <em>Dependability</em><br>& Personal Care.</div>
-      <p class="sec-sub">Strong Pressure Cleaning and Pools LLC is a Black-owned business based in Nokomis, FL. TJ is personally involved on every job — greeting customers, identifying issues proactively, and delivering results that speak for themselves.</p>
+      <div class="eyebrow"><div class="ebar"></div><div class="etag">Who We Are</div></div>
+      <div class="sec-title">Venice's <em>Most Trusted</em><br>Pool Company.</div>
+      <p class="sec-sub">Tranquil Waters Pool Care has earned the trust of Venice homeowners through transparent communication, meticulous planning, and results that consistently exceed expectations.</p>
       <div class="values">
         <div class="val">
           <div class="val-num">I</div>
           <div>
-            <div class="val-title">Dependable Every Time</div>
-            <div class="val-text">TJ does what he says he's going to do. Customers count on him because he has never let them down — not once.</div>
+            <div class="val-title">Transparent from Start to Finish</div>
+            <div class="val-text">Jonah helps you plan every detail, answering all questions and making sure you understand each step before anything begins.</div>
           </div>
         </div>
         <div class="val">
           <div class="val-num">II</div>
           <div>
-            <div class="val-title">Personal, Professional Service</div>
-            <div class="val-text">TJ greets every customer personally before starting work. Professional and uniquely concerned about customer satisfaction.</div>
+            <div class="val-title">Faster Than You Expect</div>
+            <div class="val-text">When urgency is needed — like a damaged pool deck — the team delivers even faster than promised. Reliability you can count on.</div>
           </div>
         </div>
         <div class="val">
           <div class="val-num">III</div>
           <div>
-            <div class="val-title">Proactive Problem Solving</div>
-            <div class="val-text">When Tim spots an issue — like a failing pool pump — he lets you know immediately and fixes it fast. No waiting, no surprises.</div>
+            <div class="val-title">100% Satisfaction Guarantee</div>
+            <div class="val-text">Every service plan and renovation is backed by our workmanship guarantee. We stand behind everything we do.</div>
           </div>
         </div>
         <div class="val">
           <div class="val-num">IV</div>
           <div>
-            <div class="val-title">Reasonably Priced</div>
-            <div class="val-text">Quality work at fair prices. Our customers say it clearly — reasonably priced and a job well done, every single time.</div>
+            <div class="val-title">Licensed · Bonded · Insured</div>
+            <div class="val-text">Fully licensed, bonded, and insured. A proud member of the Venice Chamber of Commerce serving zip codes 34293, 34285, and 34292.</div>
           </div>
         </div>
       </div>
@@ -359,24 +413,24 @@
     <div class="about-card">
       <div class="about-card-title">At a Glance</div>
       <div class="astat">
-        <div class="astat-num">5.0<span>★</span></div>
-        <div class="astat-label">Perfect Google rating — 8 verified five-star reviews</div>
+        <div class="astat-num">4.8<span>★</span></div>
+        <div class="astat-label">Google rating — 32 verified reviews</div>
       </div>
       <div class="astat">
-        <div class="astat-num">TJ</div>
-        <div class="astat-label">Owner personally on-site for every single job</div>
+        <div class="astat-num">23<span>pt</span></div>
+        <div class="astat-label">Points checked on every single weekly visit</div>
       </div>
       <div class="astat">
-        <div class="astat-num">Free</div>
-        <div class="astat-label">Complimentary estimates on all services</div>
+        <div class="astat-num">100<span>%</span></div>
+        <div class="astat-label">Satisfaction guarantee on all work</div>
       </div>
       <div class="astat">
-        <div class="astat-num">Repeat</div>
-        <div class="astat-label">Customers hire TJ multiple times — year after year</div>
+        <div class="astat-num">$99</div>
+        <div class="astat-label">Diagnosis fee — applied toward approved repairs</div>
       </div>
-      <div class="black-owned-badge">
-        <div class="black-owned-title">Black-Owned Business</div>
-        <div class="black-owned-text">Strong Pressure Cleaning and Pools LLC is a proudly Black-owned business serving the Nokomis and Sarasota area community.</div>
+      <div class="brands-row">
+        <div class="brands-title">Brands We Service</div>
+        <div class="brands-list">Pentair · Jandy · Hayward · Polaris</div>
       </div>
     </div>
   </div>
@@ -384,33 +438,33 @@
 
 <section class="reviews-bg" id="reviews">
   <div class="eyebrow"><div class="ebar"></div><div class="etag">Client Reviews</div></div>
-  <div class="sec-title">What Our Customers<br><em>Are Saying.</em></div>
+  <div class="sec-title">What Venice Homeowners<br><em>Are Saying.</em></div>
   <div class="reviews-header">
-    <div class="score-num">5.0</div>
+    <div class="score-num">4.8</div>
     <div>
       <div class="score-stars">★★★★★</div>
-      <div style="font-family:'Cormorant Garamond',serif; font-weight:600; font-size:18px; color:var(--text); margin-top:4px;">8 Google Reviews</div>
-      <div class="score-label">Nokomis, FL · Verified · Perfect Rating</div>
+      <div style="font-family:'Cormorant Garamond',serif; font-weight:600; font-size:18px; color:var(--text); margin-top:4px;">32 Google Reviews</div>
+      <div class="score-label">Venice, FL · Verified</div>
     </div>
   </div>
   <div class="reviews-grid">
     <div class="review-card">
       <div class="review-stars">★★★★★</div>
-      <div class="review-text">"Tim is an absolute professional, very friendly, and dependable. He's never arrived at our house and not greeted us prior to cleaning our pool and screens. I recommend him without a doubt."</div>
-      <div class="review-author">B B</div>
-      <div class="review-meta">Google Review · 12 reviews · 2 years ago</div>
+      <div class="review-text">"We wanted a new Pebble Tec finish and to make the pool a smart pool so we could control everything from our phones. The team delivered exactly that — it was a great experience and our home feels much fresher."</div>
+      <div class="review-author">Janet Schultz</div>
+      <div class="review-meta">Google Review · 4 months ago</div>
     </div>
     <div class="review-card">
       <div class="review-stars">★★★★★</div>
-      <div class="review-text">"Tim was very prompt in letting me know that we had an issue with our pool pump and was able to quickly replace it. It's nice to be able to depend on Tim — he does what he says and does it well!"</div>
-      <div class="review-author">Joel Streinz</div>
-      <div class="review-meta">Google Local Guide · 15 reviews · 2 years ago</div>
+      <div class="review-text">"We hired Tranquil Pool Care for a full pool deck renovation after damage from poor workmanship by another installer. We needed it done quickly — and Jonah and the team got it done even faster than expected."</div>
+      <div class="review-author">Camden Sexton</div>
+      <div class="review-meta">Google Review · 3 months ago</div>
     </div>
     <div class="review-card">
       <div class="review-stars">★★★★★</div>
-      <div class="review-text">"We are very pleased with the job Tim did for us. This is our second time we had him pressure cleaning our pool area, screens, pavers and house — and we'll hire him again. Highly recommended."</div>
-      <div class="review-author">Anna Delmastro</div>
-      <div class="review-meta">Google Review · 9 reviews · 2 years ago</div>
+      <div class="review-text">"From the very beginning, Jonah helped us plan everything out, answering all our questions and making sure we understood each step. During construction, Samuel was our main contact and kept us informed throughout."</div>
+      <div class="review-author">Cindy M</div>
+      <div class="review-meta">Google Review · 1 photo · 6 months ago</div>
     </div>
   </div>
 </section>
@@ -419,47 +473,46 @@
   <div class="contact-grid">
     <div class="contact-info">
       <div class="eyebrow"><div class="ebar"></div><div class="etag">Get in Touch</div></div>
-      <div class="contact-title">Request a Free<br><em>Estimate.</em></div>
-      <div class="contact-sub">Fill out the form and TJ will be in touch to arrange your free estimate. Or call directly during business hours.</div>
+      <div class="contact-title">Get a Free<br><em>Quote Today.</em></div>
+      <div class="contact-sub">Fill out the form and we'll be in touch to discuss your pool and arrange a free estimate. Or call us directly — we're available 24 hours.</div>
       <div class="clist">
         <div class="citem">
           <div class="cicon">📞</div>
           <div>
             <div class="clabel">Phone</div>
-            <div class="cval">(941) 615-8436</div>
-            <div class="cnote">Call during business hours</div>
-            <div class="open-tag">Open · Closes 5 PM</div>
+            <div class="cval">(941) 340-1779</div>
+            <div class="cnote">Call anytime — available 24 hours</div>
+            <div class="open-tag">Open 24 Hours</div>
+          </div>
+        </div>
+        <div class="citem">
+          <div class="cicon">🌐</div>
+          <div>
+            <div class="clabel">Website</div>
+            <div class="cval">tranquilwaterspoolcare.homes</div>
           </div>
         </div>
         <div class="citem">
           <div class="cicon">📍</div>
           <div>
             <div class="clabel">Address</div>
-            <div class="cval">208 Portia St S</div>
-            <div class="cnote">Nokomis, FL 34275</div>
+            <div class="cval">101 Venice Palms Blvd</div>
+            <div class="cnote">Venice, FL 34292</div>
           </div>
         </div>
         <div class="citem">
-          <div class="cicon">⭐</div>
+          <div class="cicon">🗺️</div>
           <div>
-            <div class="clabel">Rating</div>
-            <div class="cval">5.0 Stars — 8 Verified Reviews</div>
-            <div class="cnote">"I recommend him without a doubt." — B B</div>
-          </div>
-        </div>
-        <div class="citem">
-          <div class="cicon">✊</div>
-          <div>
-            <div class="clabel">Ownership</div>
-            <div class="cval">Black-Owned Business</div>
-            <div class="cnote">Proudly serving the Nokomis & Sarasota community</div>
+            <div class="clabel">Service Area</div>
+            <div class="cval">Venice & Sarasota Area</div>
+            <div class="cnote">Zip codes 34293, 34285, 34292 & surrounding neighborhoods</div>
           </div>
         </div>
       </div>
     </div>
     <div class="form-wrap">
-      <div class="form-title">Request a Free Estimate</div>
-      <div class="form-sub">Tell us about your property and we'll get back to you to arrange a visit.</div>
+      <div class="form-title">Request a Free Quote</div>
+      <div class="form-sub">Tell us about your pool and we'll be in touch shortly.</div>
       <form action="https://formspree.io/f/mzdodlwk" method="POST">
       <div class="form-row">
         <div class="form-group">
@@ -477,24 +530,25 @@
       </div>
       <div class="form-group">
         <label>Property Address</label>
-        <input type="text" name="address" placeholder="123 Main St, Nokomis FL">
+        <input type="text" name="address" placeholder="123 Main St, Venice FL">
       </div>
       <div class="form-group">
-        <label>Service Needed</label>
+        <label>Service Interested In</label>
         <select name="service">
           <option value="">Select a service...</option>
-          <option>Pool Cleaning & Maintenance</option>
-          <option>Pressure Washing</option>
-          <option>Screen Cleaning</option>
-          <option>Pavers & Pool Area</option>
-          <option>Full Property Service</option>
-          <option>Pool Pump Repair / Replacement</option>
-          <option>Other</option>
+          <option>Complete Pool Service Plan</option>
+          <option>Regular Pool Service Plan</option>
+          <option>Pool Equipment Repair</option>
+          <option>Pool Renovation / Pebble Tec</option>
+          <option>Smart Pool Upgrade</option>
+          <option>Pool Deck Renovation</option>
+          <option>Leak Detection & Repair</option>
+          <option>General Consultation</option>
         </select>
       </div>
       <div class="form-group">
-        <label>Project Details</label>
-        <textarea name="message" placeholder="Describe your property and what needs to be done..."></textarea>
+        <label>Tell Us About Your Pool</label>
+        <textarea name="message" placeholder="Pool size, current issues, what you're looking to improve..."></textarea>
       </div>
       <button class="form-submit">Submit Request</button>
       </form>
@@ -505,31 +559,33 @@
 <footer>
   <div class="footer-top">
     <div>
-      <div class="footer-brand">Strong Pressure Cleaning and Pools LLC</div>
-      <div class="footer-brand-sub">208 Portia St S · Nokomis, FL 34275 · Black-Owned</div>
+      <div class="footer-brand">Tranquil Waters Pool Care</div>
+      <div class="footer-brand-sub">101 Venice Palms Blvd · Venice, FL 34292 · Licensed · Bonded · Insured</div>
     </div>
     <div class="footer-col">
       <div class="footer-col-title">Services</div>
-      <a href="#services">Pool Cleaning</a>
-      <a href="#services">Pressure Washing</a>
-      <a href="#services">Screen Cleaning</a>
-      <a href="#services">Pavers & Pool Area</a>
+      <a href="#services">Complete Pool Service</a>
+      <a href="#services">Regular Pool Service</a>
+      <a href="#services">Equipment Repairs</a>
+      <a href="#services">Pool Renovation</a>
     </div>
     <div class="footer-col">
       <div class="footer-col-title">Company</div>
-      <a href="#about">About TJ</a>
+      <a href="#plan">23-Point Plan</a>
+      <a href="#about">About</a>
       <a href="#reviews">Reviews</a>
       <a href="#contact">Contact</a>
     </div>
     <div class="footer-col">
       <div class="footer-col-title">Contact</div>
-      <a href="tel:9416158436">(941) 615-8436</a>
-      <a href="#contact">Free Estimate</a>
+      <a href="tel:9413401779">(941) 340-1779</a>
+      <a href="https://tranquilwaterspoolcare.homes">tranquilwaterspoolcare.homes</a>
+      <a href="#contact">Free Quote</a>
     </div>
   </div>
   <div class="footer-bottom">
-    <div class="footer-copy">© 2026 Strong Pressure Cleaning and Pools LLC · Nokomis, FL · All Rights Reserved</div>
-    <div class="footer-tagline">Dependable Service. Spotless Results.</div>
+    <div class="footer-copy">© 2025 Tranquil Waters Pool Care · Venice, FL · All Rights Reserved</div>
+    <div class="footer-tagline">Our Passion is Clean & Blue Pool Water.</div>
   </div>
 </footer>
 
