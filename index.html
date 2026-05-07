@@ -3,198 +3,176 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Infinity Pressure Washing & Sealing | Sarasota, FL</title>
+<title>Blue Box Handyman | Sarasota, FL</title>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-    --deep: #0a1628;
-    --navy: #0e2040;
     --blue: #1565c0;
+    --blue-dark: #0d47a1;
+    --blue-deep: #082040;
     --blue-light: #2196f3;
-    --blue-pale: #90caf9;
-    --teal: #00acc1;
-    --teal-light: #4dd0e1;
+    --blue-pale: #bbdefb;
+    --sky: #03a9f4;
     --sun: #f59e0b;
-    --sun-light: #fbbf24;
     --cream: #fdfaf4;
-    --sand: #f8f5ee;
-    --text: #0c1a2e;
+    --sand: #f5f0e8;
+    --text: #0c1e30;
     --muted: #3d5a70;
     --border: rgba(21,101,192,0.15);
   }
   html { scroll-behavior: smooth; }
   body { font-family: 'Nunito', sans-serif; color: var(--text); background: var(--cream); line-height: 1.6; }
   ::-webkit-scrollbar { width: 5px; }
-  ::-webkit-scrollbar-thumb { background: var(--teal); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb { background: var(--blue-light); border-radius: 3px; }
 
   /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    background: rgba(10,22,40,0.97); backdrop-filter: blur(16px);
-    border-bottom: 3px solid var(--teal);
+    background: rgba(8,32,64,0.97); backdrop-filter: blur(16px);
+    border-bottom: 3px solid var(--sky);
     display: flex; align-items: center; justify-content: space-between;
     padding: 0 5%; height: 68px;
-    box-shadow: 0 2px 24px rgba(10,22,40,0.5);
+    box-shadow: 0 2px 24px rgba(8,32,64,0.5);
   }
   .nav-logo-main { font-size: 18px; font-weight: 900; color: #fff; line-height: 1.2; }
-  .nav-logo-main span { color: var(--teal-light); }
+  .nav-logo-main span { color: var(--blue-pale); }
   .nav-logo-sub { font-size: 10px; color: rgba(255,255,255,0.4); letter-spacing: 1.5px; text-transform: uppercase; }
-  .nav-links { display: flex; gap: 28px; }
+  .nav-links { display: flex; gap: 24px; }
   .nav-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 13px; font-weight: 600; transition: color 0.2s; }
-  .nav-links a:hover { color: var(--teal-light); }
-  .nav-cta { background: var(--teal); color: #fff; font-size: 13px; font-weight: 800; padding: 10px 22px; border-radius: 50px; text-decoration: none; transition: all 0.2s; box-shadow: 0 4px 14px rgba(0,172,193,0.4); white-space: nowrap; }
-  .nav-cta:hover { transform: translateY(-1px); background: var(--teal-light); color: var(--deep); }
+  .nav-links a:hover { color: var(--blue-pale); }
+  .nav-cta { background: var(--sky); color: #fff; font-size: 13px; font-weight: 800; padding: 10px 22px; border-radius: 50px; text-decoration: none; transition: all 0.2s; box-shadow: 0 4px 14px rgba(3,169,244,0.4); white-space: nowrap; }
+  .nav-cta:hover { transform: translateY(-1px); }
 
   /* HERO */
   .hero {
     min-height: 100vh; position: relative; overflow: hidden;
     display: flex; align-items: flex-end;
-    background: var(--deep);
+    background: var(--blue-deep);
   }
   .hero-bg {
     position: absolute; inset: 0;
-    background: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1800&q=80') center/cover no-repeat;
-    opacity: 0.28;
+    background: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1800&q=80') center/cover no-repeat;
+    opacity: 0.25;
   }
-  .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,22,40,0.99) 0%, rgba(10,22,40,0.65) 45%, rgba(10,22,40,0.18) 100%); }
-  /* Florida sun glow top right */
-  .hero-sun { position: absolute; top: -60px; right: 5%; width: 360px; height: 360px; background: radial-gradient(circle, rgba(245,158,11,0.18) 0%, rgba(245,158,11,0.06) 45%, transparent 70%); pointer-events: none; }
-  /* Water shimmer effect bottom */
-  .hero-water { position: absolute; bottom: 0; left: 0; right: 0; height: 160px; background: linear-gradient(to top, rgba(0,172,193,0.12) 0%, transparent 100%); pointer-events: none; }
+  .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(8,32,64,0.99) 0%, rgba(8,32,64,0.65) 45%, rgba(8,32,64,0.2) 100%); }
+  .hero-glow { position: absolute; top: -80px; right: -80px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(3,169,244,0.15) 0%, transparent 65%); pointer-events: none; }
   .hero-wave { position: absolute; bottom: -2px; left: 0; right: 0; z-index: 2; }
   .hero-wave svg { display: block; width: 100%; }
-  .hero-content { position: relative; z-index: 3; padding: 0 5% 90px; width: 100%; display: grid; grid-template-columns: 1fr 300px; gap: 60px; align-items: end; }
-  .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(0,172,193,0.12); border: 1px solid rgba(0,172,193,0.35); color: var(--teal-light); font-size: 11px; font-weight: 700; padding: 5px 14px; border-radius: 50px; margin-bottom: 20px; letter-spacing: 1px; text-transform: uppercase; }
-  .edot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal-light); animation: pulse 2s infinite; }
+  .hero-content { position: relative; z-index: 3; padding: 0 5% 90px; width: 100%; }
+  .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(3,169,244,0.12); border: 1px solid rgba(3,169,244,0.35); color: var(--blue-pale); font-size: 11px; font-weight: 700; padding: 5px 14px; border-radius: 50px; margin-bottom: 20px; letter-spacing: 1px; text-transform: uppercase; }
+  .edot { width: 6px; height: 6px; border-radius: 50%; background: #90ff90; animation: pulse 2s infinite; }
   @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
   h1 { font-size: clamp(44px, 7vw, 84px); font-weight: 900; color: #fff; line-height: 1.0; letter-spacing: -1px; margin-bottom: 20px; text-shadow: 0 2px 20px rgba(0,0,0,0.4); }
-  h1 .script { font-family: 'Lora', serif; font-style: italic; color: var(--teal-light); display: block; font-size: 0.62em; font-weight: 600; margin-bottom: 4px; }
-  h1 .accent { color: var(--teal-light); }
-  .hero-sub { font-size: 15px; color: rgba(255,255,255,0.7); max-width: 500px; line-height: 1.85; margin-bottom: 36px; font-weight: 400; }
+  h1 .script { font-family: 'Lora', serif; font-style: italic; color: var(--blue-pale); display: block; font-size: 0.62em; font-weight: 600; margin-bottom: 4px; }
+  .hero-sub { font-size: 15px; color: rgba(255,255,255,0.72); max-width: 500px; line-height: 1.85; margin-bottom: 36px; }
   .hero-pills { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 36px; }
   .hero-pill { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.85); font-size: 11px; font-weight: 700; padding: 5px 14px; border-radius: 50px; }
   .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 52px; }
-  .btn-teal { background: var(--teal); color: #fff; font-size: 13px; font-weight: 800; padding: 14px 32px; border-radius: 50px; text-decoration: none; transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 6px 20px rgba(0,172,193,0.4); }
-  .btn-teal:hover { transform: translateY(-2px); background: var(--teal-light); color: var(--deep); }
+  .btn-sky { background: var(--sky); color: #fff; font-size: 13px; font-weight: 800; padding: 14px 32px; border-radius: 50px; text-decoration: none; transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 6px 20px rgba(3,169,244,0.4); }
+  .btn-sky:hover { transform: translateY(-2px); }
   .btn-ghost { background: rgba(255,255,255,0.1); color: #fff; font-size: 13px; font-weight: 700; padding: 14px 28px; border-radius: 50px; text-decoration: none; border: 2px solid rgba(255,255,255,0.3); transition: all 0.2s; }
-  .btn-ghost:hover { border-color: var(--teal-light); color: var(--teal-light); }
-  .hero-card { background: rgba(10,22,40,0.8); backdrop-filter: blur(12px); border: 1px solid rgba(0,172,193,0.2); border-top: 3px solid var(--teal); padding: 32px 28px; display: flex; flex-direction: column; gap: 0; }
-  .hero-card-label { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--teal-light); font-weight: 700; margin-bottom: 20px; }
-  .hstat { padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.07); display: flex; align-items: flex-end; gap: 10px; }
-  .hstat:last-child { border: none; padding-bottom: 0; }
-  .hstat-num { font-size: 42px; font-weight: 900; color: #fff; line-height: 1; letter-spacing: -1px; }
-  .hstat-num span { color: var(--teal-light); font-size: 18px; }
-  .hstat-label { font-size: 11px; color: rgba(255,255,255,0.4); letter-spacing: 1px; text-transform: uppercase; line-height: 1.4; padding-bottom: 5px; }
+  .btn-ghost:hover { border-color: var(--blue-pale); color: var(--blue-pale); }
+  .hero-stats { display: flex; gap: 0; }
+  .hstat { padding: 20px 32px; background: rgba(8,32,64,0.75); backdrop-filter: blur(12px); border: 1px solid rgba(3,169,244,0.2); border-right: none; }
+  .hstat:last-child { border-right: 1px solid rgba(3,169,244,0.2); }
+  .hstat-num { font-size: 30px; font-weight: 900; color: #fff; line-height: 1; }
+  .hstat-num span { color: var(--blue-pale); font-size: 16px; }
+  .hstat-label { font-size: 10px; color: rgba(255,255,255,0.45); letter-spacing: 1.5px; text-transform: uppercase; margin-top: 4px; }
 
   /* TRUST */
-  .trust { background: var(--teal); padding: 14px 5%; display: flex; align-items: center; justify-content: center; gap: 28px; flex-wrap: wrap; }
+  .trust { background: var(--sky); padding: 14px 5%; display: flex; align-items: center; justify-content: center; gap: 28px; flex-wrap: wrap; }
   .trust-item { display: flex; align-items: center; gap: 8px; color: #fff; font-size: 12px; font-weight: 800; }
 
   /* SECTIONS */
   section { padding: 90px 5%; }
-  .stag { display: inline-flex; align-items: center; gap: 8px; background: rgba(0,172,193,0.08); border: 1px solid var(--border); color: var(--teal); font-size: 11px; font-weight: 700; padding: 5px 14px; border-radius: 50px; margin-bottom: 16px; letter-spacing: 1px; text-transform: uppercase; }
+  .stag { display: inline-flex; align-items: center; gap: 8px; background: rgba(3,169,244,0.08); border: 1px solid var(--border); color: var(--blue); font-size: 11px; font-weight: 700; padding: 5px 14px; border-radius: 50px; margin-bottom: 16px; letter-spacing: 1px; text-transform: uppercase; }
   .stitle { font-size: clamp(28px, 4vw, 46px); font-weight: 900; color: var(--text); letter-spacing: -0.5px; line-height: 1.1; margin-bottom: 14px; }
-  .stitle em { font-family: 'Lora', serif; font-style: italic; color: var(--teal); }
+  .stitle em { font-family: 'Lora', serif; font-style: italic; color: var(--blue); }
   .ssub { color: var(--muted); font-size: 15px; max-width: 520px; line-height: 1.8; margin-bottom: 52px; }
-
-  /* ABOUT */
-  .about-bg {
-    position: relative; overflow: hidden;
-    background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1800&q=80') center/cover no-repeat fixed;
-  }
-  .about-overlay { position: absolute; inset: 0; background: rgba(10,22,40,0.92); }
-  .about-inner { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
-  .about-bg .stag { background: rgba(0,172,193,0.12); border-color: rgba(0,172,193,0.3); color: var(--teal-light); }
-  .about-bg .stitle { color: #fff; }
-  .about-bg .stitle em { color: var(--teal-light); }
-  .about-bg .ssub { color: rgba(255,255,255,0.55); }
-  .reasons { display: flex; flex-direction: column; gap: 16px; }
-  .reason { display: flex; gap: 14px; align-items: flex-start; padding: 18px; background: rgba(255,255,255,0.06); border-radius: 14px; border: 1px solid rgba(255,255,255,0.08); transition: background 0.2s; }
-  .reason:hover { background: rgba(255,255,255,0.1); }
-  .reason-icon { font-size: 22px; min-width: 28px; }
-  .reason-title { font-size: 14px; font-weight: 800; color: #fff; margin-bottom: 4px; }
-  .reason-text { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.65; }
-  .about-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(0,172,193,0.25); border-radius: 20px; padding: 44px 40px; }
-  .about-card-title { font-size: 12px; font-weight: 700; color: var(--teal-light); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 24px; }
-  .astat { display: flex; align-items: center; gap: 16px; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.07); }
-  .astat:last-child { border: none; }
-  .astat-num { font-size: 30px; font-weight: 900; color: #fff; min-width: 70px; line-height: 1; }
-  .astat-num span { color: var(--teal-light); font-size: 16px; }
-  .astat-label { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.5; }
-  .promise-badge { margin-top: 20px; padding: 16px; background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.25); border-radius: 10px; }
-  .promise-title { font-size: 12px; font-weight: 700; color: var(--sun-light); margin-bottom: 6px; letter-spacing: 0.5px; }
-  .promise-text { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.65; font-style: italic; font-family: 'Lora', serif; }
 
   /* SERVICES */
   .services-bg { background: var(--sand); }
   .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-  .svc { background: #fff; border: 2px solid var(--border); border-radius: 16px; padding: 28px; transition: all 0.25s; position: relative; overflow: hidden; box-shadow: 0 4px 16px rgba(21,101,192,0.05); }
-  .svc::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--teal), var(--blue-light)); transform: scaleX(0); transform-origin: left; transition: transform 0.3s; }
-  .svc:hover { border-color: var(--teal); transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,172,193,0.12); }
+  .svc { background: #fff; border: 2px solid var(--border); border-radius: 16px; padding: 28px; transition: all 0.25s; position: relative; overflow: hidden; }
+  .svc::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--blue-dark), var(--sky)); transform: scaleX(0); transform-origin: left; transition: transform 0.3s; }
+  .svc:hover { border-color: var(--sky); transform: translateY(-4px); box-shadow: 0 16px 40px rgba(3,169,244,0.1); }
   .svc:hover::before { transform: scaleX(1); }
   .svc-icon { font-size: 32px; margin-bottom: 14px; }
   .svc-name { font-size: 17px; font-weight: 800; color: var(--text); margin-bottom: 6px; }
-  .svc-tag { font-size: 12px; color: var(--teal); font-weight: 700; margin-bottom: 10px; }
+  .svc-tag { font-size: 12px; color: var(--blue); font-weight: 700; margin-bottom: 10px; }
   .svc-desc { font-size: 13px; color: var(--muted); line-height: 1.7; }
 
-  /* GALLERY */
-  .gallery-bg { background: var(--deep); }
-  .gallery-bg .stag { background: rgba(0,172,193,0.1); border-color: rgba(0,172,193,0.3); color: var(--teal-light); }
-  .gallery-bg .stitle { color: #fff; }
-  .gallery-bg .stitle em { color: var(--teal-light); }
-  .gallery-bg .ssub { color: rgba(255,255,255,0.45); }
-  .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: 260px 260px; gap: 12px; }
-  .gitem { position: relative; overflow: hidden; border-radius: 12px; }
-  .gitem img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; display: block; }
-  .gitem:hover img { transform: scale(1.05); }
-  .gitem-label { position: absolute; bottom: 0; left: 0; right: 0; padding: 14px 16px; background: linear-gradient(to top, rgba(10,22,40,0.92), transparent); color: #fff; font-size: 13px; font-weight: 700; }
-  .gitem.tall { grid-row: span 2; }
+  /* ABOUT */
+  .about-bg {
+    position: relative; overflow: hidden;
+    background: url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1800&q=80') center/cover no-repeat fixed;
+  }
+  .about-overlay { position: absolute; inset: 0; background: rgba(8,32,64,0.92); }
+  .about-inner { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+  .about-bg .stag { background: rgba(3,169,244,0.12); border-color: rgba(3,169,244,0.3); color: var(--blue-pale); }
+  .about-bg .stitle { color: #fff; }
+  .about-bg .stitle em { color: var(--blue-pale); }
+  .about-bg .ssub { color: rgba(255,255,255,0.55); }
+  .reasons { display: flex; flex-direction: column; gap: 16px; }
+  .reason { display: flex; gap: 14px; align-items: flex-start; padding: 18px; background: rgba(255,255,255,0.06); border-radius: 14px; border: 1px solid rgba(255,255,255,0.08); }
+  .reason:hover { background: rgba(255,255,255,0.1); }
+  .reason-icon { font-size: 22px; min-width: 28px; }
+  .reason-title { font-size: 14px; font-weight: 800; color: #fff; margin-bottom: 4px; }
+  .reason-text { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.65; }
+  .about-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(3,169,244,0.25); border-radius: 20px; padding: 44px 40px; }
+  .about-card-title { font-size: 12px; font-weight: 700; color: var(--blue-pale); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 24px; }
+  .astat { display: flex; align-items: center; gap: 16px; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.07); }
+  .astat:last-child { border: none; }
+  .astat-num { font-size: 30px; font-weight: 900; color: #fff; min-width: 70px; line-height: 1; }
+  .astat-num span { color: var(--blue-pale); font-size: 16px; }
+  .astat-label { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.5; }
+  .emergency-badge { margin-top: 20px; padding: 16px; background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.25); border-radius: 10px; }
+  .emergency-title { font-size: 12px; font-weight: 700; color: var(--sun); margin-bottom: 6px; }
+  .emergency-text { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.65; }
 
   /* REVIEWS */
   .reviews-bg {
     position: relative; overflow: hidden;
-    background: url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1800&q=80') center/cover no-repeat;
+    background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1800&q=80') center/cover no-repeat;
   }
-  .reviews-overlay { position: absolute; inset: 0; background: linear-gradient(145deg, rgba(10,22,40,0.95), rgba(14,32,64,0.92)); }
+  .reviews-overlay { position: absolute; inset: 0; background: linear-gradient(145deg, rgba(8,32,64,0.95), rgba(13,71,161,0.9)); }
   .reviews-inner { position: relative; z-index: 1; }
-  .reviews-bg .stag { background: rgba(0,172,193,0.12); border-color: rgba(0,172,193,0.3); color: var(--teal-light); }
+  .reviews-bg .stag { background: rgba(3,169,244,0.12); border-color: rgba(3,169,244,0.3); color: var(--blue-pale); }
   .reviews-bg .stitle { color: #fff; }
-  .reviews-bg .stitle em { color: var(--teal-light); }
+  .reviews-bg .stitle em { color: var(--blue-pale); }
   .reviews-top { display: flex; align-items: center; gap: 24px; margin-bottom: 40px; flex-wrap: wrap; }
   .score-big { font-size: 72px; font-weight: 900; color: #fff; line-height: 1; letter-spacing: -2px; }
   .score-stars { color: var(--sun); font-size: 22px; letter-spacing: 2px; }
   .score-label { font-size: 12px; color: rgba(255,255,255,0.5); font-weight: 600; margin-top: 4px; }
   .reviews-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 16px; }
-  .review-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 28px; backdrop-filter: blur(12px); border-top: 3px solid transparent; transition: border-top-color 0.2s; }
-  .review-card:hover { border-top-color: var(--teal); }
+  .review-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 28px; backdrop-filter: blur(12px); }
   .review-stars { color: var(--sun); font-size: 14px; margin-bottom: 12px; letter-spacing: 1px; }
   .review-text { font-size: 14px; color: rgba(255,255,255,0.9); line-height: 1.75; margin-bottom: 16px; font-style: italic; font-family: 'Lora', serif; }
-  .review-name { font-size: 13px; font-weight: 800; color: var(--teal-light); }
+  .review-name { font-size: 13px; font-weight: 800; color: var(--blue-pale); }
   .review-meta { font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 2px; }
-  .review-response { margin-top: 14px; padding: 12px 14px; background: rgba(0,172,193,0.08); border-left: 2px solid var(--teal); font-size: 12px; color: rgba(255,255,255,0.5); font-style: italic; line-height: 1.6; }
-  .review-response strong { color: var(--teal-light); font-style: normal; font-weight: 700; }
+  .review-response { margin-top: 14px; padding: 12px 14px; background: rgba(3,169,244,0.08); border-left: 2px solid var(--sky); font-size: 12px; color: rgba(255,255,255,0.5); font-style: italic; line-height: 1.6; }
+  .review-response strong { color: var(--blue-pale); font-style: normal; font-weight: 700; }
 
   /* BOOKING */
   .booking-bg { background: var(--cream); position: relative; overflow: hidden; }
-  .booking-bg::before { content: ''; position: absolute; bottom: -80px; right: -80px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(0,172,193,0.06) 0%, transparent 70%); }
-  .booking-layout { display: grid; grid-template-columns: 1fr 1.1fr; gap: 60px; align-items: start; position: relative; z-index: 1; }
-  .form-card { background: var(--deep); border-radius: 20px; padding: 44px 40px; box-shadow: 0 24px 64px rgba(10,22,40,0.2); border-top: 3px solid var(--teal); }
+  .booking-layout { display: grid; grid-template-columns: 1fr 1.1fr; gap: 60px; align-items: start; }
+  .form-card { background: var(--blue-deep); border-radius: 20px; padding: 44px 40px; box-shadow: 0 24px 64px rgba(8,32,64,0.2); border-top: 3px solid var(--sky); }
   .form-title { font-size: 22px; font-weight: 900; color: #fff; margin-bottom: 6px; }
   .form-sub { font-size: 13px; color: rgba(255,255,255,0.45); margin-bottom: 28px; }
   .form-group { margin-bottom: 16px; }
   .form-group label { display: block; font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.4); margin-bottom: 6px; letter-spacing: 1.5px; text-transform: uppercase; }
   .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 14px; border: 1.5px solid rgba(255,255,255,0.1); border-radius: 10px; font-family: 'Nunito', sans-serif; font-size: 13px; color: #fff; background: rgba(255,255,255,0.06); outline: none; transition: border-color 0.2s; }
-  .form-group select option { background: var(--deep); }
+  .form-group select option { background: var(--blue-deep); }
   .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.22); }
-  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--teal); background: rgba(255,255,255,0.09); }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--sky); }
   .form-group textarea { resize: vertical; min-height: 90px; }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .form-submit { width: 100%; background: var(--teal); color: #fff; border: none; padding: 15px; border-radius: 50px; font-size: 13px; font-weight: 800; font-family: 'Nunito', sans-serif; cursor: pointer; transition: all 0.2s; margin-top: 8px; box-shadow: 0 6px 20px rgba(0,172,193,0.35); }
-  .form-submit:hover { transform: translateY(-1px); background: var(--teal-light); color: var(--deep); }
+  .form-submit { width: 100%; background: var(--sky); color: #fff; border: none; padding: 15px; border-radius: 50px; font-size: 13px; font-weight: 800; font-family: 'Nunito', sans-serif; cursor: pointer; transition: all 0.2s; margin-top: 8px; }
+  .form-submit:hover { transform: translateY(-1px); }
   .contact-info { padding-top: 8px; }
   .contact-title { font-size: 38px; font-weight: 900; color: var(--text); line-height: 1.1; margin-bottom: 14px; }
-  .contact-title em { font-family: 'Lora', serif; font-style: italic; color: var(--teal); }
+  .contact-title em { font-family: 'Lora', serif; font-style: italic; color: var(--blue); }
   .contact-sub { font-size: 15px; color: var(--muted); line-height: 1.8; margin-bottom: 36px; }
   .clist { display: flex; flex-direction: column; }
   .citem { display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid var(--border); align-items: flex-start; }
@@ -207,30 +185,32 @@
   .open-pill { display: inline-flex; align-items: center; gap: 6px; margin-top: 6px; background: #f0fdf4; border: 1px solid #bbf7d0; color: #15803d; font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 50px; }
   .open-pill::before { content: '●'; font-size: 7px; animation: pulse 2s infinite; }
 
+  /* OUR WORK LINK BANNER */
+  .work-banner { background: linear-gradient(135deg, var(--blue-dark), var(--blue)); padding: 60px 5%; text-align: center; }
+  .work-banner-title { font-size: clamp(28px, 4vw, 42px); font-weight: 900; color: #fff; margin-bottom: 12px; }
+  .work-banner-sub { font-size: 15px; color: rgba(255,255,255,0.65); margin-bottom: 32px; max-width: 480px; margin-left: auto; margin-right: auto; }
+  .work-btn { background: #fff; color: var(--blue-dark); font-size: 14px; font-weight: 800; padding: 16px 40px; border-radius: 50px; text-decoration: none; transition: all 0.2s; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
+  .work-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,0,0,0.25); }
+
   /* FOOTER */
-  footer { background: var(--deep); padding: 44px 5% 32px; border-top: 3px solid var(--teal); }
+  footer { background: var(--blue-deep); padding: 44px 5% 32px; border-top: 3px solid var(--sky); }
   .footer-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 32px; padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,0.07); margin-bottom: 28px; }
   .footer-brand { font-size: 18px; font-weight: 900; color: rgba(255,255,255,0.7); margin-bottom: 4px; }
-  .footer-brand span { color: var(--teal-light); }
+  .footer-brand span { color: var(--blue-pale); }
   .footer-brand-sub { font-size: 10px; color: rgba(255,255,255,0.28); letter-spacing: 2px; text-transform: uppercase; }
   .footer-col { display: flex; flex-direction: column; gap: 10px; }
-  .footer-col-title { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--teal-light); margin-bottom: 4px; opacity: 0.75; }
+  .footer-col-title { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--blue-pale); margin-bottom: 4px; opacity: 0.75; }
   .footer-col a { font-size: 13px; color: rgba(255,255,255,0.32); text-decoration: none; transition: color 0.2s; }
   .footer-col a:hover { color: rgba(255,255,255,0.8); }
   .footer-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
   .footer-copy { font-size: 12px; color: rgba(255,255,255,0.18); }
-  .footer-tag { font-family: 'Lora', serif; font-size: 13px; font-style: italic; color: var(--teal-light); opacity: 0.4; }
+  .footer-tag { font-family: 'Lora', serif; font-size: 13px; font-style: italic; color: var(--blue-pale); opacity: 0.4; }
 
   @media (max-width: 860px) {
-    .hero-content, .about-inner, .booking-layout { grid-template-columns: 1fr; }
-    .hero-card { display: none; }
+    .about-inner, .booking-layout { grid-template-columns: 1fr; }
     .nav-links { display: none; }
     .form-row { grid-template-columns: 1fr; }
-    .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
-    .gitem.tall { grid-row: span 1; height: 240px; }
-  }
-  @media (max-width: 560px) {
-    .gallery-grid { grid-template-columns: 1fr; }
+    .hero-stats { flex-wrap: wrap; }
   }
 </style>
 </head>
@@ -238,68 +218,77 @@
 
 <nav>
   <div>
-    <div class="nav-logo-main">Infinity <span>Pressure Washing & Sealing</span></div>
+    <div class="nav-logo-main">Blue Box <span>Handyman</span></div>
     <div class="nav-logo-sub">Sarasota, FL · Open Now</div>
   </div>
   <div class="nav-links">
-    <a href="#about">About</a>
     <a href="#services">Services</a>
+    <a href="#about">About</a>
     <a href="#reviews">Reviews</a>
+    <a href="gallery.html">Our Work</a>
     <a href="#booking">Contact</a>
   </div>
-  <a href="tel:9412509067" class="nav-cta">💧 Free Estimate</a>
+  <a href="tel:9412795317" class="nav-cta">🔧 Free Estimate</a>
 </nav>
 
 <!-- HERO -->
 <section class="hero" style="padding:0;">
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
-  <div class="hero-sun"></div>
-  <div class="hero-water"></div>
+  <div class="hero-glow"></div>
   <div class="hero-content">
-    <div>
-      <div class="hero-eyebrow"><div class="edot"></div> Sarasota's Pressure Washing & Sealing Experts</div>
-      <h1><span class="script">Fast, Efficient & Done Right —</span>Infinite Clean.<br><span class="accent">Every Time.</span></h1>
-      <p class="hero-sub">Infinity Pressure Washing & Sealing LLC delivers fast, efficient, and professional pressure washing and sealing across Sarasota. On time, every time — with results that speak for themselves.</p>
-      <div class="hero-pills">
-        <div class="hero-pill">⭐ 5.0 · 3 Reviews</div>
-        <div class="hero-pill">🌴 Sarasota, FL</div>
-        <div class="hero-pill">💦 Pressure Washing & Sealing</div>
-        <div class="hero-pill">🕙 Open Until 10 PM</div>
-      </div>
-      <div class="hero-btns">
-        <a href="#booking" class="btn-teal">💧 Get a Free Estimate</a>
-        <a href="tel:9412509067" class="btn-ghost">📞 (941) 250-9067</a>
-      </div>
-      <div class="hero-stats" style="display:flex;gap:0;">
-        <div class="hstat" style="padding:20px 32px;background:rgba(10,22,40,0.75);backdrop-filter:blur(12px);border:1px solid rgba(0,172,193,0.2);border-right:none;"><div class="hstat-num">5.0<span>★</span></div><div class="hstat-label">Google Rating</div></div>
-        <div class="hstat" style="padding:20px 32px;background:rgba(10,22,40,0.75);backdrop-filter:blur(12px);border:1px solid rgba(0,172,193,0.2);border-right:none;"><div class="hstat-num">10<span>PM</span></div><div class="hstat-label">Open Until</div></div>
-        <div class="hstat" style="padding:20px 32px;background:rgba(10,22,40,0.75);backdrop-filter:blur(12px);border:1px solid rgba(0,172,193,0.2);"><div class="hstat-num">Free</div><div class="hstat-label">Estimates</div></div>
-      </div>
+    <div class="hero-eyebrow"><div class="edot"></div> Sarasota's Trusted Handyman Team</div>
+    <h1><span class="script">Reliable, On Time & Done Right —</span>Your Home,<br>In Good Hands.</h1>
+    <p class="hero-sub">Blue Box Handyman delivers quality workmanship and exceptional customer service across Sarasota. Reliable, on time, and ready for anything — from emergency flooding to everyday repairs.</p>
+    <div class="hero-pills">
+      <div class="hero-pill">⭐ 5.0 · 9 Reviews</div>
+      <div class="hero-pill">🌴 Sarasota, FL</div>
+      <div class="hero-pill">🔧 All Home Services</div>
+      <div class="hero-pill">⚡ Emergency Response</div>
     </div>
-    <div class="hero-card">
-      <div class="hero-card-label">At a Glance</div>
+    <div class="hero-btns">
+      <a href="#booking" class="btn-sky">🔧 Get a Free Estimate</a>
+      <a href="tel:9412795317" class="btn-ghost">📞 (941) 279-5317</a>
+    </div>
+    <div class="hero-stats">
       <div class="hstat"><div class="hstat-num">5.0<span>★</span></div><div class="hstat-label">Google Rating</div></div>
-      <div class="hstat"><div class="hstat-num">10<span>PM</span></div><div class="hstat-label">Open Until Tonight</div></div>
-      <div class="hstat"><div class="hstat-num">Free</div><div class="hstat-label">Estimates Always</div></div>
+      <div class="hstat"><div class="hstat-num">30<span>min</span></div><div class="hstat-label">Emergency Response</div></div>
+      <div class="hstat"><div class="hstat-num">Free</div><div class="hstat-label">Estimates</div></div>
     </div>
   </div>
   <div class="hero-wave">
     <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg">
-      <path fill="#00acc1" d="M0,48L60,42C120,37,240,26,360,28C480,30,600,44,720,50C840,55,960,51,1080,44C1200,37,1320,26,1380,21L1440,16L1440,80L0,80Z"/>
+      <path fill="#03a9f4" d="M0,48L60,42C120,37,240,26,360,28C480,30,600,44,720,50C840,55,960,51,1080,44C1200,37,1320,26,1380,21L1440,16L1440,80L0,80Z"/>
     </svg>
   </div>
 </section>
 
 <!-- TRUST -->
 <div class="trust">
-  <div class="trust-item">💦 Pressure Washing</div>
-  <div class="trust-item">🔒 Sealing</div>
-  <div class="trust-item">🏠 Driveways & Homes</div>
+  <div class="trust-item">🔧 General Repairs</div>
+  <div class="trust-item">💧 Flood & Water Damage</div>
+  <div class="trust-item">🪟 Windows & Doors</div>
+  <div class="trust-item">🎨 Painting</div>
   <div class="trust-item">⭐ 5.0 Perfect Rating</div>
   <div class="trust-item">🌴 Sarasota Local</div>
-  <div class="trust-item">🕙 Open Until 10 PM</div>
 </div>
+
+<!-- SERVICES -->
+<section class="services-bg" id="services">
+  <div class="stag">🔧 Services</div>
+  <div class="stitle">Every Job Done<br><em>Right.</em></div>
+  <p class="ssub">From emergency flood cleanup to everyday home repairs — Blue Box Handyman handles it all with the reliability and quality that earns five-star reviews every time.</p>
+  <div class="services-grid">
+    <div class="svc"><div class="svc-icon">🔧</div><div class="svc-name">General Repairs</div><div class="svc-tag">No job too small.</div><div class="svc-desc">From squeaky doors to broken fixtures — Blue Box handles everyday home repairs quickly, professionally, and at a reasonable price.</div></div>
+    <div class="svc"><div class="svc-icon">💧</div><div class="svc-name">Flood & Water Damage</div><div class="svc-tag">30-minute emergency response.</div><div class="svc-desc">Flooding? We came within half an hour for one Sarasota customer — assessed the damage, gave a fair price, and cleaned everything in half a day. Call us first.</div></div>
+    <div class="svc"><div class="svc-icon">🎨</div><div class="svc-name">Painting</div><div class="svc-tag">Interior & exterior.</div><div class="svc-desc">Professional interior and exterior painting for homes. Clean lines, quality finishes, and no mess left behind.</div></div>
+    <div class="svc"><div class="svc-icon">🪟</div><div class="svc-name">Windows & Doors</div><div class="svc-tag">Installation & repair.</div><div class="svc-desc">Window and door installation, repair, and weatherproofing. Keeps Florida's heat and humidity where it belongs — outside.</div></div>
+    <div class="svc"><div class="svc-icon">🏗️</div><div class="svc-name">Drywall & Patching</div><div class="svc-tag">Smooth walls, every time.</div><div class="svc-desc">Drywall repair, patching, and finishing. Damage from water, impact, or age — we restore walls to like-new condition.</div></div>
+    <div class="svc"><div class="svc-icon">🔌</div><div class="svc-name">Assembly & Installation</div><div class="svc-tag">Built right the first time.</div><div class="svc-desc">Furniture assembly, fixture installation, shelving, fans, and more. Blue Box does it right so you don't have to worry about it.</div></div>
+    <div class="svc"><div class="svc-icon">🧹</div><div class="svc-name">Cleanup & Hauling</div><div class="svc-tag">We leave it spotless.</div><div class="svc-desc">Post-repair cleanup, debris removal, and hauling. Whether it's flood cleanup or construction mess — we leave your property spotless.</div></div>
+    <div class="svc"><div class="svc-icon">🏠</div><div class="svc-name">Home Maintenance</div><div class="svc-tag">Protect your investment.</div><div class="svc-desc">Routine home maintenance checks and fixes. Catching small problems early saves big money later — Blue Box keeps your home in shape year-round.</div></div>
+  </div>
+</section>
 
 <!-- ABOUT -->
 <section class="about-bg" id="about">
@@ -307,69 +296,25 @@
   <div class="about-inner">
     <div>
       <div class="stag">🌴 About Us</div>
-      <div class="stitle">Fast, Efficient,<br><em>Done Right.</em></div>
-      <p class="ssub">Infinity Pressure Washing & Sealing LLC brings professional-grade results to Sarasota homes and businesses. We show up when promised, work fast, and leave your property looking brand new.</p>
+      <div class="stitle">Reliable, <em>On Time,</em><br>& Really Know Their Work.</div>
+      <p class="ssub">Blue Box Handyman has earned the trust of Sarasota homeowners through consistent quality, fair pricing, and the kind of customer service that makes you call them back every time.</p>
       <div class="reasons">
-        <div class="reason"><div class="reason-icon">⏰</div><div><div class="reason-title">Here When Promised</div><div class="reason-text">We show up on time, every time. Customers love that we stick to our schedule — no waiting around all day for someone to show up.</div></div></div>
-        <div class="reason"><div class="reason-icon">⚡</div><div><div class="reason-title">Fast & Efficient</div><div class="reason-text">We work efficiently without cutting corners. Fast turnaround means less disruption to your day — and spotless results.</div></div></div>
-        <div class="reason"><div class="reason-icon">💯</div><div><div class="reason-title">Results That Speak for Themselves</div><div class="reason-text">Our customers don't just say it was great — they say they'll use us again and again. That's the standard we hold ourselves to.</div></div></div>
-        <div class="reason"><div class="reason-icon">🌴</div><div><div class="reason-title">Sarasota Local</div><div class="reason-text">Based right here in Sarasota — we know Florida's weather, grime, and what it takes to keep your property looking its best year-round.</div></div></div>
+        <div class="reason"><div class="reason-icon">✅</div><div><div class="reason-title">Reliable & On Time</div><div class="reason-text">Customers love that Blue Box shows up when they say they will. Reliability is rare in the trades — Blue Box makes it standard.</div></div></div>
+        <div class="reason"><div class="reason-icon">💰</div><div><div class="reason-title">Reasonable Pricing</div><div class="reason-text">Fair, transparent pricing on every job. Customers check the situation, get a price, and are consistently impressed by the value.</div></div></div>
+        <div class="reason"><div class="reason-icon">⚡</div><div><div class="reason-title">Fast Emergency Response</div><div class="reason-text">Flooding or emergency? Blue Box arrived within 30 minutes for one customer — assessed, quoted, and had everything cleaned up in half a day.</div></div></div>
+        <div class="reason"><div class="reason-icon">🤝</div><div><div class="reason-title">Quality & Customer Service</div><div class="reason-text">"Not easy to find someone who cares about both quality and customer service — but they do." That says it all.</div></div></div>
       </div>
     </div>
     <div class="about-card">
-      <div class="about-card-title">Why Infinity Stands Out</div>
-      <div class="astat"><div class="astat-num">5.0<span>★</span></div><div class="astat-label">Perfect Google rating from verified Sarasota customers</div></div>
-      <div class="astat"><div class="astat-num">10<span>PM</span></div><div class="astat-label">Open late — we work around your schedule</div></div>
-      <div class="astat"><div class="astat-num">Fast</div><div class="astat-label">Efficient service with no shortcuts on quality</div></div>
-      <div class="astat"><div class="astat-num">Free</div><div class="astat-label">Complimentary estimates on all jobs — no obligation</div></div>
-      <div class="promise-badge">
-        <div class="promise-title">💬 "It was our privilege to have worked for you."</div>
-        <div class="promise-text">That's how we feel about every customer. It's not just a job — it's a commitment to your satisfaction.</div>
+      <div class="about-card-title">Blue Box At a Glance</div>
+      <div class="astat"><div class="astat-num">5.0<span>★</span></div><div class="astat-label">Perfect Google rating — 9 verified reviews</div></div>
+      <div class="astat"><div class="astat-num">30<span>min</span></div><div class="astat-label">Emergency response time for flooding calls</div></div>
+      <div class="astat"><div class="astat-num">Fair</div><div class="astat-label">Transparent, reasonable pricing on every job</div></div>
+      <div class="astat"><div class="astat-num">Free</div><div class="astat-label">Estimates on all jobs — no obligation</div></div>
+      <div class="emergency-badge">
+        <div class="emergency-title">⚡ Emergency Services Available</div>
+        <div class="emergency-text">Flooding, water damage, or urgent repairs — Blue Box responds fast. Call (941) 279-5317 anytime.</div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section class="services-bg" id="services">
-  <div class="stag">💦 Services</div>
-  <div class="stitle">Complete Exterior<br><em>Cleaning & Sealing.</em></div>
-  <p class="ssub">From driveways to home exteriors — Infinity handles it all with the fast, efficient professionalism Sarasota customers trust.</p>
-  <div class="services-grid">
-    <div class="svc"><div class="svc-icon">🏠</div><div class="svc-name">House Washing</div><div class="svc-tag">Fresh exterior from top to bottom.</div><div class="svc-desc">Professional pressure washing of home exteriors — removing mold, mildew, algae, and built-up grime from siding, stucco, and painted surfaces.</div></div>
-    <div class="svc"><div class="svc-icon">🚗</div><div class="svc-name">Driveway Cleaning</div><div class="svc-tag">Like new in one visit.</div><div class="svc-desc">Deep pressure washing of concrete and paver driveways. Removes oil stains, tire marks, mold, and years of built-up Florida grime in a single efficient visit.</div></div>
-    <div class="svc"><div class="svc-icon">🔒</div><div class="svc-name">Concrete & Paver Sealing</div><div class="svc-tag">Protect your investment.</div><div class="svc-desc">Professional sealing of driveways, walkways, and patios after cleaning. Sealing prevents future staining, extends surface life, and enhances appearance.</div></div>
-    <div class="svc"><div class="svc-icon">🏊</div><div class="svc-name">Pool Deck Cleaning</div><div class="svc-tag">Safe, slip-free, and spotless.</div><div class="svc-desc">Pool deck pressure washing removes algae, calcium deposits, and slippery buildup. Safe for all deck materials including pavers, concrete, and tile.</div></div>
-    <div class="svc"><div class="svc-icon">🧱</div><div class="svc-name">Sidewalk & Walkway Cleaning</div><div class="svc-tag">Curb appeal starts at the path.</div><div class="svc-desc">Pressure washing of sidewalks, walkways, and entryways. Makes a powerful first impression and keeps your property looking sharp year-round.</div></div>
-    <div class="svc"><div class="svc-icon">🏢</div><div class="svc-name">Commercial Pressure Washing</div><div class="svc-tag">Professional results for business.</div><div class="svc-desc">Commercial property pressure washing for storefronts, parking lots, and building exteriors. Available late — open until 10 PM to work around your business hours.</div></div>
-  </div>
-</section>
-
-<!-- GALLERY -->
-<section class="gallery-bg" id="gallery">
-  <div class="stag">💦 Our Work</div>
-  <div class="stitle">Sarasota Homes,<br><em>Transformed.</em></div>
-  <p class="ssub">Fast, efficient, and done right — every property we touch looks brand new when we leave.</p>
-  <div class="gallery-grid">
-    <div class="gitem tall">
-      <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&q=80" alt="Florida home exterior">
-      <div class="gitem-label">Spotless Results</div>
-    </div>
-    <div class="gitem">
-      <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80" alt="Clean Florida home">
-      <div class="gitem-label">Professional & Efficient</div>
-    </div>
-    <div class="gitem">
-      <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80" alt="Home exterior Sarasota">
-      <div class="gitem-label">Sarasota Locals Trust Infinity</div>
-    </div>
-    <div class="gitem">
-      <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&q=80" alt="Florida home clean">
-      <div class="gitem-label">Here When Promised</div>
-    </div>
-    <div class="gitem">
-      <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80" alt="Beautiful home exterior">
-      <div class="gitem-label">Done Right Every Time</div>
     </div>
   </div>
 </section>
@@ -379,39 +324,46 @@
   <div class="reviews-overlay"></div>
   <div class="reviews-inner">
     <div class="stag">⭐ Reviews</div>
-    <div class="stitle">What Sarasota<br><em>Customers Say.</em></div>
+    <div class="stitle">What Sarasota<br><em>Homeowners Say.</em></div>
     <div class="reviews-top">
       <div class="score-big">5.0</div>
       <div>
         <div class="score-stars">★★★★★</div>
-        <div style="font-size:16px; font-weight:800; color:#fff; margin-top:4px;">3 Google Reviews · Perfect Rating</div>
+        <div style="font-size:16px; font-weight:800; color:#fff; margin-top:4px;">9 Google Reviews · Perfect Rating</div>
         <div class="score-label">Sarasota, FL · Verified</div>
       </div>
     </div>
     <div class="reviews-grid">
       <div class="review-card">
         <div class="review-stars">★★★★★</div>
-        <div class="review-text">"Infinity was great! They were here when promised, fast, efficient and did a great job. I will definitely use them again — and again."</div>
-        <div class="review-name">David</div>
-        <div class="review-meta">Google Review · 3 reviews</div>
-        <div class="review-response"><strong>Infinity:</strong> "Thank you so much!! That truly means a lot to us! It was our privilege to have worked for you sir!!"</div>
+        <div class="review-text">"They are reliable, on time, and really know their work. It's not easy to find someone who cares about both quality and customer service — but they do. Definitely recommend them to anyone looking for handyman services."</div>
+        <div class="review-name">Samar Bibi</div>
+        <div class="review-meta">Google Review · 2 reviews · 8 months ago</div>
       </div>
       <div class="review-card">
         <div class="review-stars">★★★★★</div>
-        <div class="review-text">"Outstanding service from start to finish. Professional, on time, and the results were exactly what we needed."</div>
-        <div class="review-name">Bridget Bowers</div>
-        <div class="review-meta">Google Review · 4 reviews</div>
-        <div class="review-response"><strong>Infinity:</strong> "Thank you so very much — we truly appreciate your kindness. God bless you!!"</div>
+        <div class="review-text">"My workplace and home were flooded. I called this company and thankfully they came within half an hour. They checked the situation and gave me a price, which was very reasonable. In half a day they thoroughly cleaned my home."</div>
+        <div class="review-name">Murat Özler</div>
+        <div class="review-meta">Google Local Guide · 57 reviews · 1 year ago</div>
+        <div class="review-response"><strong>Blue Box:</strong> "Thank you for your trust and looking forward to cooperate with you anytime."</div>
       </div>
       <div class="review-card">
         <div class="review-stars">★★★★★</div>
-        <div class="review-text">"Highly professional service. Infinity delivered exactly what they promised and the property looked incredible after they finished. Would absolutely recommend."</div>
-        <div class="review-name">Jacqueline Holman</div>
-        <div class="review-meta">Google Local Guide · 41 reviews · 3 photos</div>
+        <div class="review-text">"Great team, good quality job!"</div>
+        <div class="review-name">A. H.</div>
+        <div class="review-meta">Google Review · 2 reviews · 9 months ago</div>
+        <div class="review-response"><strong>Blue Box:</strong> "Thank you, our pleasure!"</div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- OUR WORK BANNER -->
+<div class="work-banner">
+  <div class="work-banner-title">📸 See Our Work</div>
+  <div class="work-banner-sub">Browse photos of completed jobs across Sarasota — real results from real projects.</div>
+  <a href="gallery.html" class="work-btn">📷 View Our Photo Gallery →</a>
+</div>
 
 <!-- BOOKING -->
 <section class="booking-bg" id="booking">
@@ -419,16 +371,16 @@
     <div class="contact-info">
       <div class="stag">📞 Get in Touch</div>
       <div class="contact-title">Get Your <em>Free</em> Estimate Today.</div>
-      <div class="contact-sub">Fill out the form and we'll get back to you quickly with your free personalized estimate. Or call directly — we're open until 10 PM.</div>
+      <div class="contact-sub">Fill out the form and we'll get back to you quickly. Or call directly — we're open until 5 PM and available for emergencies anytime.</div>
       <div class="clist">
-        <div class="citem"><div class="cicon">📞</div><div><div class="clabel">Phone</div><div class="cval">(941) 250-9067</div><div class="cnote">Call anytime — open until 10 PM</div><div class="open-pill">Open · Closes 10 PM</div></div></div>
-        <div class="citem"><div class="cicon">📍</div><div><div class="clabel">Address</div><div class="cval">2777 Dueby St</div><div class="cnote">Sarasota, FL 34231</div></div></div>
-        <div class="citem"><div class="cicon">⭐</div><div><div class="clabel">Rating</div><div class="cval">5.0 Stars · 3 Reviews</div><div class="cnote">"Fast, efficient and did a great job." — David</div></div></div>
-        <div class="citem"><div class="cicon">🆓</div><div><div class="clabel">Estimates</div><div class="cval">Always Free</div><div class="cnote">No obligation — contact us today</div></div></div>
+        <div class="citem"><div class="cicon">📞</div><div><div class="clabel">Phone</div><div class="cval">(941) 279-5317</div><div class="cnote">Call during business hours</div><div class="open-pill">Open · Closes 5 PM</div></div></div>
+        <div class="citem"><div class="cicon">🌐</div><div><div class="clabel">Website</div><div class="cval">blueboxhomeservice.com</div></div></div>
+        <div class="citem"><div class="cicon">📍</div><div><div class="clabel">Address</div><div class="cval">2121 Florinda St</div><div class="cnote">Sarasota, FL 34231</div></div></div>
+        <div class="citem"><div class="cicon">⭐</div><div><div class="clabel">Rating</div><div class="cval">5.0 Stars · 9 Reviews</div><div class="cnote">"Reliable, on time, and really know their work."</div></div></div>
       </div>
     </div>
     <div class="form-card">
-      <div class="form-title">💧 Get a Free Estimate</div>
+      <div class="form-title">🔧 Get a Free Estimate</div>
       <div class="form-sub">We'll get back to you quickly with your personalized quote.</div>
       <form action="https://formspree.io/f/mzdodlwk" method="POST">
       <div class="form-row">
@@ -441,17 +393,19 @@
         <label>Service Needed</label>
         <select name="service">
           <option value="">Select a service...</option>
-          <option>House Washing</option>
-          <option>Driveway Cleaning</option>
-          <option>Concrete & Paver Sealing</option>
-          <option>Pool Deck Cleaning</option>
-          <option>Sidewalk & Walkway Cleaning</option>
-          <option>Commercial Pressure Washing</option>
-          <option>Full Property Package</option>
+          <option>General Repairs</option>
+          <option>Flood & Water Damage</option>
+          <option>Painting</option>
+          <option>Windows & Doors</option>
+          <option>Drywall & Patching</option>
+          <option>Assembly & Installation</option>
+          <option>Cleanup & Hauling</option>
+          <option>Home Maintenance</option>
+          <option>Emergency Service</option>
         </select>
       </div>
-      <div class="form-group"><label>Tell Us About Your Property</label><textarea name="message" placeholder="Describe your property and what you need cleaned or sealed..."></textarea></div>
-      <button class="form-submit">💧 Send My Request</button>
+      <div class="form-group"><label>Tell Us About Your Project</label><textarea name="message" placeholder="Describe what you need done — we'll get back to you quickly..."></textarea></div>
+      <button class="form-submit">🔧 Send My Request</button>
       </form>
     </div>
   </div>
@@ -460,32 +414,265 @@
 <footer>
   <div class="footer-top">
     <div>
-      <div class="footer-brand">Infinity <span>Pressure Washing & Sealing LLC</span></div>
-      <div class="footer-brand-sub">2777 Dueby St · Sarasota, FL 34231</div>
+      <div class="footer-brand">Blue Box <span>Handyman</span></div>
+      <div class="footer-brand-sub">2121 Florinda St · Sarasota, FL 34231</div>
     </div>
     <div class="footer-col">
       <div class="footer-col-title">Services</div>
-      <a href="#services">House Washing</a>
-      <a href="#services">Driveway Cleaning</a>
-      <a href="#services">Sealing</a>
-      <a href="#services">Commercial</a>
+      <a href="#services">General Repairs</a>
+      <a href="#services">Flood & Water Damage</a>
+      <a href="#services">Painting</a>
+      <a href="#services">Home Maintenance</a>
     </div>
     <div class="footer-col">
       <div class="footer-col-title">Company</div>
       <a href="#about">About Us</a>
+      <a href="gallery.html">Our Work</a>
       <a href="#reviews">Reviews</a>
       <a href="#booking">Contact</a>
     </div>
     <div class="footer-col">
       <div class="footer-col-title">Contact</div>
-      <a href="tel:9412509067">(941) 250-9067</a>
+      <a href="tel:9412795317">(941) 279-5317</a>
+      <a href="https://blueboxhomeservice.com">blueboxhomeservice.com</a>
       <a href="#booking">Free Estimate</a>
     </div>
   </div>
   <div class="footer-bottom">
-    <div class="footer-copy">© 2026 Infinity Pressure Washing & Sealing LLC · Sarasota, FL · All Rights Reserved</div>
-    <div class="footer-tag">Infinite Clean. Every Time.</div>
+    <div class="footer-copy">© 2026 Blue Box Handyman · Sarasota, FL · All Rights Reserved</div>
+    <div class="footer-tag">Reliable. On Time. Done Right.</div>
   </div>
+</footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Work | Blue Box Handyman · Sarasota, FL</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Nunito', sans-serif; background: #0c1e30; color: #fff; }
+
+  nav {
+    background: rgba(8,32,64,0.97);
+    border-bottom: 3px solid #03a9f4;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 5%; height: 68px;
+  }
+  .nav-logo { font-size: 18px; font-weight: 900; color: #fff; text-decoration: none; }
+  .nav-logo span { color: #bbdefb; }
+  .nav-back { color: #03a9f4; text-decoration: none; font-size: 13px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+  .nav-back:hover { color: #bbdefb; }
+
+  .page-header { padding: 60px 5% 40px; }
+  .page-title { font-size: clamp(36px, 5vw, 60px); font-weight: 900; color: #fff; letter-spacing: -1px; margin-bottom: 10px; }
+  .page-title span { color: #03a9f4; }
+  .page-sub { font-size: 15px; color: rgba(255,255,255,0.5); max-width: 500px; line-height: 1.8; }
+
+  /* ============================================
+     HOW TO ADD YOUR PHOTOS:
+
+     1. Upload your photo files to your GitHub repo
+        (same folder as index.html)
+
+     2. Copy one of the <div class="photo-item"> blocks below
+
+     3. Change the src="YOUR-PHOTO-HERE.jpg" to your
+        actual filename e.g. src="job1.jpg"
+
+     4. Change the caption text to describe the job
+
+     5. Repeat for each photo
+
+     SUPPORTED FILE TYPES: .jpg .jpeg .png .webp
+
+     TO ADD A NEW CATEGORY SECTION:
+     Copy a whole <div class="photo-section"> block
+     and change the h2 title
+  ============================================ */
+
+  .photo-section { padding: 20px 5% 60px; }
+  .section-title { font-size: 22px; font-weight: 900; color: #fff; margin-bottom: 8px; padding-bottom: 12px; border-bottom: 2px solid #03a9f4; margin-bottom: 28px; display: inline-block; }
+
+  .photo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+
+  .photo-item { position: relative; overflow: hidden; border-radius: 12px; background: #162d47; border: 2px solid rgba(3,169,244,0.2); cursor: pointer; }
+  .photo-item img { width: 100%; height: 260px; object-fit: cover; display: block; transition: transform 0.4s; }
+  .photo-item:hover img { transform: scale(1.04); }
+  .photo-caption { padding: 14px 16px; font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.8); }
+
+  /* Empty placeholder styling */
+  .photo-placeholder { width: 100%; height: 260px; background: rgba(3,169,244,0.05); border: 2px dashed rgba(3,169,244,0.3); border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: rgba(3,169,244,0.5); font-size: 13px; font-weight: 700; gap: 8px; }
+  .photo-placeholder .icon { font-size: 36px; }
+
+  .cta-section { padding: 60px 5%; text-align: center; background: rgba(3,169,244,0.06); border-top: 1px solid rgba(3,169,244,0.15); }
+  .cta-title { font-size: 28px; font-weight: 900; color: #fff; margin-bottom: 10px; }
+  .cta-sub { color: rgba(255,255,255,0.5); margin-bottom: 28px; font-size: 15px; }
+  .cta-btn { background: #03a9f4; color: #fff; font-size: 14px; font-weight: 800; padding: 14px 36px; border-radius: 50px; text-decoration: none; transition: all 0.2s; display: inline-block; }
+  .cta-btn:hover { transform: translateY(-2px); }
+
+  footer { background: #082040; padding: 28px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; border-top: 3px solid #03a9f4; }
+  .footer-copy { font-size: 12px; color: rgba(255,255,255,0.25); }
+
+  @media (max-width: 560px) {
+    .photo-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Blue Box <span>Handyman</span></a>
+  <a href="index.html" class="nav-back">← Back to Home</a>
+</nav>
+
+<div class="page-header">
+  <div class="page-title">Our <span>Work</span></div>
+  <div class="page-sub">Real jobs. Real results. Browse completed projects from across Sarasota.</div>
+</div>
+
+<!-- ============================================
+     INSTRUCTIONS FOR ADDING PHOTOS:
+
+     STEP 1: Upload your photos to the GitHub repo
+             (same folder as index.html and gallery.html)
+
+     STEP 2: Find the section below that matches
+             your photo category (or add a new one)
+
+     STEP 3: Replace src="YOUR-PHOTO-HERE.jpg"
+             with your actual filename
+
+     STEP 4: Update the caption text
+
+     Example:
+     BEFORE: src="YOUR-PHOTO-HERE.jpg"
+     AFTER:  src="bathroom-repair-jan2026.jpg"
+============================================ -->
+
+<!-- ===== SECTION 1: GENERAL REPAIRS ===== -->
+<div class="photo-section">
+  <div class="section-title">🔧 General Repairs</div>
+  <div class="photo-grid">
+
+    <!-- PHOTO 1 — replace YOUR-PHOTO-HERE.jpg with your filename -->
+    <div class="photo-item">
+      <img src="YOUR-PHOTO-HERE.jpg" alt="Repair job">
+      <div class="photo-caption">Write your caption here — e.g. "Door repair, Sarasota"</div>
+    </div>
+
+    <!-- PHOTO 2 -->
+    <div class="photo-item">
+      <img src="YOUR-PHOTO-HERE.jpg" alt="Repair job">
+      <div class="photo-caption">Write your caption here</div>
+    </div>
+
+    <!-- PHOTO 3 -->
+    <div class="photo-item">
+      <img src="YOUR-PHOTO-HERE.jpg" alt="Repair job">
+      <div class="photo-caption">Write your caption here</div>
+    </div>
+
+    <!-- ADD MORE PHOTOS BY COPYING THE BLOCK ABOVE -->
+
+  </div>
+</div>
+
+<!-- ===== SECTION 2: FLOOD & WATER DAMAGE ===== -->
+<div class="photo-section">
+  <div class="section-title">💧 Flood & Water Damage</div>
+  <div class="photo-grid">
+
+    <div class="photo-item">
+      <img src="YOUR-PHOTO-HERE.jpg" alt="Flood cleanup">
+      <div class="photo-caption">Write your caption here</div>
+    </div>
+
+    <div class="photo-item">
+      <img src="YOUR-PHOTO-HERE.jpg" alt="Water damage repair">
+      <div class="photo-caption">Write your caption here</div>
+    </div>
+
+    <!-- ADD MORE PHOTOS BY COPYING THE BLOCK ABOVE -->
+
+  </div>
+</div>
+
+<!-- ===== SECTION 3: PAINTING ===== -->
+<div class="photo-section">
+  <div class="section-title">🎨 Painting</div>
+  <div class="photo-grid">
+
+    <div class="photo-item">
+      <img src="YOUR-PHOTO-HERE.jpg" alt="Painting job">
+      <div class="photo-caption">Write your caption here</div>
+    </div>
+
+    <div class="photo-item">
+      <img src="YOUR-PHOTO-HERE.jpg" alt="Painting job">
+      <div class="photo-caption">Write your caption here</div>
+    </div>
+
+    <!-- ADD MORE PHOTOS BY COPYING THE BLOCK ABOVE -->
+
+  </div>
+</div>
+
+<!-- ===== SECTION 4: OTHER WORK ===== -->
+<!-- Rename this section to whatever fits your photos -->
+<div class="photo-section">
+  <div class="section-title">🏠 Other Projects</div>
+  <div class="photo-grid">
+
+    <div class="photo-item">
+      <img src="YOUR-PHOTO-HERE.jpg" alt="Project">
+      <div class="photo-caption">Write your caption here</div>
+    </div>
+
+    <div class="photo-item">
+      <img src="YOUR-PHOTO-HERE.jpg" alt="Project">
+      <div class="photo-caption">Write your caption here</div>
+    </div>
+
+    <div class="photo-item">
+      <img src="YOUR-PHOTO-HERE.jpg" alt="Project">
+      <div class="photo-caption">Write your caption here</div>
+    </div>
+
+    <!-- ADD MORE PHOTOS BY COPYING THE BLOCK ABOVE -->
+
+  </div>
+</div>
+
+<!-- ===== ADD A NEW SECTION — COPY THIS BLOCK =====
+
+<div class="photo-section">
+  <div class="section-title">YOUR SECTION TITLE HERE</div>
+  <div class="photo-grid">
+
+    <div class="photo-item">
+      <img src="YOUR-PHOTO-HERE.jpg" alt="Job description">
+      <div class="photo-caption">Write your caption here</div>
+    </div>
+
+  </div>
+</div>
+
+===== END NEW SECTION TEMPLATE ===== -->
+
+<div class="cta-section">
+  <div class="cta-title">Ready to Get Started?</div>
+  <div class="cta-sub">Call or message us for a free estimate on your project.</div>
+  <a href="index.html#booking" class="cta-btn">🔧 Get a Free Estimate</a>
+</div>
+
+<footer>
+  <div class="footer-copy">© 2026 Blue Box Handyman · Sarasota, FL · (941) 279-5317</div>
+  <a href="index.html" style="color:rgba(255,255,255,0.4);font-size:13px;text-decoration:none;">← Back to Home</a>
 </footer>
 
 </body>
