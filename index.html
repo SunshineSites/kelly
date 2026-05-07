@@ -3,319 +3,336 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kelly's Private Home Grooming | Sarasota, FL</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<title>The Brothers That Just Do Gutters | Bradenton, FL</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-    --rose: #e07080;
-    --rose-dark: #b84d5e;
-    --rose-pale: #fce8ec;
-    --warm: #f9a84d;
-    --warm-dark: #d4782a;
-    --sage: #6b8f71;
-    --sage-light: #a8c5ac;
-    --cream: #fdf9f4;
-    --ivory: #faf6f0;
-    --sand: #f5efe5;
-    --text: #2a1f1a;
-    --muted: #7a6860;
-    --border: rgba(224,112,128,0.15);
-    --dark: #1e1410;
+    --navy: #0f2137;
+    --navy2: #162d47;
+    --blue: #1a5c8a;
+    --blue-light: #2e7fb5;
+    --blue-pale: #7db8d8;
+    --orange: #e86820;
+    --orange-light: #f08040;
+    --orange-pale: #fde8d8;
+    --cream: #fdfaf6;
+    --sand: #f8f4ee;
+    --text: #0f1e2a;
+    --muted: #4a6070;
+    --border: rgba(26,92,138,0.15);
   }
   html { scroll-behavior: smooth; }
-  body { font-family: 'Nunito', sans-serif; color: var(--text); background: var(--cream); line-height: 1.6; }
+  body { font-family: 'Barlow', sans-serif; color: var(--text); background: var(--cream); line-height: 1.6; }
   ::-webkit-scrollbar { width: 5px; }
-  ::-webkit-scrollbar-thumb { background: var(--rose); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb { background: var(--orange); border-radius: 3px; }
 
   /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    background: rgba(30,20,16,0.97); backdrop-filter: blur(16px);
-    border-bottom: 3px solid var(--rose);
+    background: rgba(15,33,55,0.98); backdrop-filter: blur(16px);
+    border-bottom: 3px solid var(--orange);
     display: flex; align-items: center; justify-content: space-between;
-    padding: 0 5%; height: 68px;
-    box-shadow: 0 2px 20px rgba(30,20,16,0.4);
+    padding: 0 5%; height: 70px;
+    box-shadow: 0 2px 20px rgba(15,33,55,0.5);
   }
-  .nav-logo { display: flex; align-items: center; gap: 10px; }
-  .nav-paw { font-size: 22px; }
-  .nav-logo-main { font-family: 'Playfair Display', serif; font-size: 19px; font-weight: 700; color: #fff; line-height: 1.2; }
-  .nav-logo-main span { color: var(--rose); font-style: italic; }
-  .nav-logo-sub { font-size: 10px; color: rgba(255,255,255,0.4); letter-spacing: 1.5px; text-transform: uppercase; }
+  .nav-logo-main { font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 800; color: #fff; text-transform: uppercase; letter-spacing: 0.5px; line-height: 1.2; }
+  .nav-logo-main span { color: var(--orange); }
+  .nav-logo-sub { font-size: 10px; color: rgba(255,255,255,0.4); letter-spacing: 2px; text-transform: uppercase; font-weight: 400; }
   .nav-links { display: flex; gap: 28px; }
-  .nav-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 12px; font-weight: 600; transition: color 0.2s; }
-  .nav-links a:hover { color: var(--rose); }
-  .nav-cta { background: var(--rose); color: #fff; font-size: 13px; font-weight: 800; padding: 10px 22px; border-radius: 50px; text-decoration: none; transition: all 0.2s; box-shadow: 0 4px 14px rgba(224,112,128,0.4); white-space: nowrap; }
-  .nav-cta:hover { transform: translateY(-1px); background: var(--rose-dark); }
+  .nav-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 12px; font-weight: 600; letter-spacing: 0.5px; transition: color 0.2s; text-transform: uppercase; }
+  .nav-links a:hover { color: var(--orange); }
+  .nav-right { display: flex; align-items: center; gap: 16px; }
+  .nav-phone { font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.8); text-decoration: none; }
+  .nav-cta { background: var(--orange); color: #fff; font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; padding: 10px 22px; text-decoration: none; transition: all 0.2s; letter-spacing: 1.5px; text-transform: uppercase; }
+  .nav-cta:hover { background: var(--orange-light); transform: translateY(-1px); }
 
-  /* HERO — dog grooming photo */
+  /* HERO */
   .hero {
     min-height: 100vh; position: relative; overflow: hidden;
     display: flex; align-items: flex-end;
-    background: var(--dark);
+    background: var(--navy);
   }
   .hero-bg {
     position: absolute; inset: 0;
-    background: url('https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1800&q=80') center/cover no-repeat;
+    background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1800&q=80') center/cover no-repeat;
+    opacity: 0.3;
   }
-  .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(30,20,16,0.97) 0%, rgba(30,20,16,0.6) 45%, rgba(30,20,16,0.2) 100%); }
+  .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,33,55,0.99) 0%, rgba(15,33,55,0.75) 40%, rgba(15,33,55,0.3) 100%); }
+  .hero-orange-glow { position: absolute; bottom: -100px; left: 50%; transform: translateX(-50%); width: 800px; height: 300px; background: radial-gradient(ellipse, rgba(232,104,32,0.1) 0%, transparent 70%); }
   .hero-wave { position: absolute; bottom: -2px; left: 0; right: 0; z-index: 2; }
   .hero-wave svg { display: block; width: 100%; }
-  .hero-content { position: relative; z-index: 3; padding: 0 5% 90px; width: 100%; }
-  .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(224,112,128,0.15); border: 1px solid rgba(224,112,128,0.35); color: var(--rose); font-size: 11px; font-weight: 700; padding: 5px 14px; border-radius: 50px; margin-bottom: 20px; letter-spacing: 1px; text-transform: uppercase; }
-  .edot { width: 6px; height: 6px; border-radius: 50%; background: var(--rose); animation: pulse 2s infinite; }
+  .hero-content { position: relative; z-index: 3; padding: 0 5% 90px; width: 100%; display: grid; grid-template-columns: 1fr 300px; gap: 60px; align-items: end; }
+  .hero-left {}
+  .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(232,104,32,0.12); border: 1px solid rgba(232,104,32,0.35); color: var(--orange); font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; padding: 5px 14px; margin-bottom: 20px; letter-spacing: 2px; text-transform: uppercase; }
+  .edot { width: 6px; height: 6px; border-radius: 50%; background: var(--orange); animation: pulse 2s infinite; }
   @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
-  h1 { font-family: 'Playfair Display', serif; font-size: clamp(46px, 7vw, 84px); font-weight: 700; color: #fff; line-height: 1.0; letter-spacing: -1px; margin-bottom: 20px; text-shadow: 0 2px 20px rgba(0,0,0,0.4); }
-  h1 em { color: var(--rose); font-style: italic; }
-  h1 .script { font-family: 'Playfair Display', serif; font-style: italic; color: rgba(255,255,255,0.6); display: block; font-size: 0.55em; font-weight: 400; margin-bottom: 6px; letter-spacing: 1px; }
-  .hero-sub { font-size: 15px; color: rgba(255,255,255,0.7); max-width: 500px; line-height: 1.85; margin-bottom: 36px; font-weight: 400; }
+  h1 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(52px, 8vw, 104px); font-weight: 900; color: #fff; line-height: 0.92; letter-spacing: -1px; margin-bottom: 22px; text-transform: uppercase; text-shadow: 0 2px 20px rgba(0,0,0,0.4); }
+  h1 .accent { color: var(--orange); display: block; }
+  .hero-sub { font-size: 16px; color: rgba(255,255,255,0.65); max-width: 520px; line-height: 1.8; margin-bottom: 36px; font-weight: 400; }
   .hero-pills { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 36px; }
-  .hero-pill { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.85); font-size: 11px; font-weight: 700; padding: 5px 14px; border-radius: 50px; }
-  .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 52px; }
-  .btn-rose { background: var(--rose); color: #fff; font-size: 13px; font-weight: 800; padding: 14px 32px; border-radius: 50px; text-decoration: none; transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 6px 20px rgba(224,112,128,0.45); }
-  .btn-rose:hover { transform: translateY(-2px); background: var(--rose-dark); }
-  .btn-ghost { background: rgba(255,255,255,0.1); color: #fff; font-size: 13px; font-weight: 700; padding: 14px 28px; border-radius: 50px; text-decoration: none; border: 2px solid rgba(255,255,255,0.3); transition: all 0.2s; }
-  .btn-ghost:hover { border-color: var(--rose); color: var(--rose); }
-  .hero-stats { display: flex; gap: 0; }
-  .hstat { padding: 20px 32px; background: rgba(30,20,16,0.75); backdrop-filter: blur(12px); border: 1px solid rgba(224,112,128,0.2); border-right: none; }
-  .hstat:last-child { border-right: 1px solid rgba(224,112,128,0.2); }
-  .hstat-num { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 700; color: #fff; line-height: 1; }
-  .hstat-num span { color: var(--rose); font-size: 16px; }
-  .hstat-label { font-size: 10px; color: rgba(255,255,255,0.4); letter-spacing: 1.5px; text-transform: uppercase; margin-top: 4px; }
+  .hero-pill { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); color: rgba(255,255,255,0.8); font-size: 11px; font-weight: 600; padding: 5px 14px; letter-spacing: 0.5px; }
+  .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn-orange { background: var(--orange); color: #fff; font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 700; padding: 15px 36px; text-decoration: none; transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; letter-spacing: 2px; text-transform: uppercase; box-shadow: 0 6px 20px rgba(232,104,32,0.4); }
+  .btn-orange:hover { background: var(--orange-light); transform: translateY(-2px); }
+  .btn-outline { background: transparent; color: #fff; font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 600; padding: 14px 28px; text-decoration: none; border: 2px solid rgba(255,255,255,0.3); transition: all 0.2s; letter-spacing: 1.5px; text-transform: uppercase; }
+  .btn-outline:hover { border-color: var(--orange); color: var(--orange); }
 
-  /* TRUST */
-  .trust { background: var(--rose); padding: 14px 5%; display: flex; align-items: center; justify-content: center; gap: 28px; flex-wrap: wrap; }
-  .trust-item { display: flex; align-items: center; gap: 8px; color: #fff; font-size: 12px; font-weight: 800; }
+  /* HERO CARD */
+  .hero-card { background: rgba(15,33,55,0.8); backdrop-filter: blur(12px); border: 1px solid rgba(232,104,32,0.2); border-top: 3px solid var(--orange); padding: 32px 28px; display: flex; flex-direction: column; gap: 0; }
+  .hero-card-label { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; color: var(--orange); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; font-weight: 700; }
+  .hstat { padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.07); display: flex; align-items: flex-end; gap: 10px; }
+  .hstat:last-child { border: none; padding-bottom: 0; }
+  .hstat-num { font-family: 'Barlow Condensed', sans-serif; font-size: 44px; font-weight: 900; color: #fff; line-height: 1; letter-spacing: -1px; }
+  .hstat-num span { color: var(--orange); font-size: 20px; }
+  .hstat-label { font-size: 11px; color: rgba(255,255,255,0.4); letter-spacing: 1px; text-transform: uppercase; line-height: 1.4; padding-bottom: 6px; font-weight: 500; }
+
+  /* TICKER */
+  .ticker { background: var(--orange); padding: 13px 0; overflow: hidden; }
+  .ticker-track { display: flex; animation: scroll 26s linear infinite; white-space: nowrap; }
+  @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .ticker-item { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #fff; padding: 0 28px; display: flex; align-items: center; gap: 14px; }
+  .tdot { width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,0.5); }
 
   /* SECTIONS */
   section { padding: 90px 5%; }
-  .stag { display: inline-flex; align-items: center; gap: 8px; background: var(--rose-pale); border: 1px solid rgba(224,112,128,0.3); color: var(--rose-dark); font-size: 11px; font-weight: 700; padding: 5px 14px; border-radius: 50px; margin-bottom: 16px; letter-spacing: 1px; text-transform: uppercase; }
-  .stitle { font-family: 'Playfair Display', serif; font-size: clamp(30px, 4vw, 48px); font-weight: 700; color: var(--text); letter-spacing: -0.5px; line-height: 1.1; margin-bottom: 14px; }
-  .stitle em { font-style: italic; color: var(--rose-dark); }
+  .stag { display: inline-flex; align-items: center; gap: 8px; background: var(--orange-pale); border-left: 3px solid var(--orange); color: var(--orange); font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; padding: 5px 14px; margin-bottom: 16px; letter-spacing: 2px; text-transform: uppercase; }
+  .stitle { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(34px, 5vw, 58px); font-weight: 900; color: var(--text); letter-spacing: -0.5px; line-height: 0.95; margin-bottom: 14px; text-transform: uppercase; }
+  .stitle .yl { color: var(--orange); }
+  .stitle .bl { color: var(--blue); }
   .ssub { color: var(--muted); font-size: 15px; max-width: 520px; line-height: 1.8; margin-bottom: 52px; font-weight: 400; }
 
-  /* ABOUT KELLY — photo bg */
-  .about-bg {
-    position: relative; overflow: hidden;
-    background: url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1800&q=80') center/cover no-repeat fixed;
-  }
-  .about-overlay { position: absolute; inset: 0; background: rgba(30,20,16,0.91); }
-  .about-inner { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
-  .about-bg .stag { background: rgba(224,112,128,0.12); border-color: rgba(224,112,128,0.3); color: var(--rose); }
-  .about-bg .stitle { color: #fff; }
-  .about-bg .stitle em { color: var(--rose); }
-  .about-bg .ssub { color: rgba(255,255,255,0.55); }
-  .reasons { display: flex; flex-direction: column; gap: 16px; }
-  .reason { display: flex; gap: 14px; align-items: flex-start; padding: 18px; background: rgba(255,255,255,0.06); border-radius: 14px; border: 1px solid rgba(255,255,255,0.08); transition: all 0.2s; }
-  .reason:hover { background: rgba(255,255,255,0.1); }
+  /* WHY */
+  .why-bg { background: #fff; }
+  .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+  .why-visual { background: var(--navy); padding: 48px 44px; position: relative; overflow: hidden; border-top: 4px solid var(--orange); }
+  .why-visual::before { content: ''; position: absolute; inset: 0; background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.015) 0px, rgba(255,255,255,0.015) 1px, transparent 1px, transparent 8px); }
+  .why-visual-title { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; color: var(--orange); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 28px; font-weight: 700; position: relative; z-index: 1; }
+  .wstat { display: flex; align-items: center; gap: 16px; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.06); position: relative; z-index: 1; }
+  .wstat:last-child { border: none; }
+  .wstat-num { font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 800; color: #fff; min-width: 70px; line-height: 1; letter-spacing: -0.5px; }
+  .wstat-num span { color: var(--orange); }
+  .wstat-label { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.5; font-weight: 400; }
+  .team-badge { margin-top: 20px; padding: 16px; background: rgba(232,104,32,0.1); border: 1px solid rgba(232,104,32,0.25); position: relative; z-index: 1; }
+  .team-badge-title { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; color: var(--orange); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; font-weight: 700; }
+  .team-badge-text { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.65; font-weight: 300; }
+  .reasons { display: flex; flex-direction: column; gap: 18px; }
+  .reason { display: flex; gap: 14px; align-items: flex-start; padding: 20px; background: var(--sand); border-left: 3px solid var(--orange); border-right: 1px solid rgba(0,0,0,0.06); border-top: 1px solid rgba(0,0,0,0.06); border-bottom: 1px solid rgba(0,0,0,0.06); transition: all 0.2s; }
+  .reason:hover { border-left-color: var(--blue); transform: translateX(4px); }
   .reason-icon { font-size: 22px; min-width: 28px; }
-  .reason-title { font-size: 14px; font-weight: 800; color: #fff; margin-bottom: 4px; }
-  .reason-text { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.65; }
-  .kelly-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(224,112,128,0.25); border-radius: 20px; padding: 44px 40px; }
-  .kelly-card-title { font-size: 12px; font-weight: 700; color: var(--rose); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 24px; }
-  .kstat { display: flex; align-items: center; gap: 16px; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.07); }
-  .kstat:last-child { border: none; }
-  .kstat-num { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 700; color: #fff; min-width: 70px; line-height: 1; }
-  .kstat-num span { color: var(--rose); font-size: 16px; }
-  .kstat-label { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.5; }
-  .kelly-quote { margin-top: 20px; padding: 16px; background: rgba(224,112,128,0.1); border: 1px solid rgba(224,112,128,0.25); border-radius: 10px; }
-  .kelly-quote-text { font-family: 'Playfair Display', serif; font-size: 14px; color: rgba(255,255,255,0.7); font-style: italic; line-height: 1.65; }
-  .kelly-quote-attr { font-size: 11px; color: var(--rose); font-weight: 700; margin-top: 8px; letter-spacing: 1px; text-transform: uppercase; }
+  .reason-title { font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .reason-text { font-size: 13px; color: var(--muted); line-height: 1.65; font-weight: 400; }
 
   /* SERVICES */
-  .services-bg { background: var(--ivory); }
-  .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-  .svc { background: #fff; border: 2px solid var(--border); border-radius: 20px; padding: 32px; transition: all 0.25s; position: relative; overflow: hidden; box-shadow: 0 4px 16px rgba(224,112,128,0.06); }
-  .svc::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--rose-dark), var(--rose)); transform: scaleX(0); transform-origin: left; transition: transform 0.3s; }
-  .svc:hover { border-color: var(--rose); transform: translateY(-4px); box-shadow: 0 16px 40px rgba(224,112,128,0.12); }
-  .svc:hover::before { transform: scaleX(1); }
-  .svc-icon { font-size: 34px; margin-bottom: 14px; }
-  .svc-name { font-family: 'Playfair Display', serif; font-size: 19px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
-  .svc-tag { font-size: 12px; color: var(--rose-dark); font-weight: 700; margin-bottom: 10px; }
-  .svc-desc { font-size: 13px; color: var(--muted); line-height: 1.7; }
+  .services-bg { background: var(--navy); position: relative; overflow: hidden; }
+  .services-bg::before { content: ''; position: absolute; inset: 0; background-image: repeating-linear-gradient(90deg, rgba(255,255,255,0.015) 0px, rgba(255,255,255,0.015) 1px, transparent 1px, transparent 60px); }
+  .services-bg .stag { background: rgba(232,104,32,0.1); border-color: var(--orange); color: var(--orange); }
+  .services-bg .stitle { color: #fff; }
+  .services-bg .ssub { color: rgba(255,255,255,0.45); }
+  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: rgba(255,255,255,0.06); position: relative; z-index: 1; }
+  .svc { background: var(--navy); padding: 36px 30px; transition: all 0.25s; border-top: 3px solid transparent; }
+  .svc:hover { background: var(--navy2); border-top-color: var(--orange); }
+  .svc-num { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; color: var(--orange); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 16px; font-weight: 700; }
+  .svc-icon { font-size: 28px; margin-bottom: 14px; }
+  .svc-name { font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 700; color: #fff; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; line-height: 1.1; }
+  .svc-desc { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.7; font-weight: 400; }
 
   /* GALLERY */
-  .gallery-bg {
-    background: var(--dark); position: relative; overflow: hidden;
-  }
-  .gallery-bg::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.02) 1px, transparent 0); background-size: 28px 28px; }
-  .gallery-bg .stag { background: rgba(224,112,128,0.1); border-color: rgba(224,112,128,0.3); color: var(--rose); }
-  .gallery-bg .stitle { color: #fff; }
-  .gallery-bg .stitle em { color: var(--rose); }
-  .gallery-bg .ssub { color: rgba(255,255,255,0.45); }
-  .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: 280px 280px; gap: 12px; position: relative; z-index: 1; }
-  .gitem { position: relative; overflow: hidden; border-radius: 16px; }
+  .gallery-bg { background: var(--sand); }
+  .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: 260px 260px; gap: 12px; }
+  .gitem { position: relative; overflow: hidden; }
   .gitem img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; display: block; }
-  .gitem:hover img { transform: scale(1.05); }
-  .gitem-label { position: absolute; bottom: 0; left: 0; right: 0; padding: 16px; background: linear-gradient(to top, rgba(30,20,16,0.92), transparent); color: #fff; font-size: 13px; font-weight: 700; }
+  .gitem:hover img { transform: scale(1.04); }
+  .gitem-label { position: absolute; bottom: 0; left: 0; right: 0; padding: 14px 16px; background: linear-gradient(to top, rgba(15,33,55,0.92), transparent); color: #fff; font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
   .gitem.tall { grid-row: span 2; }
-  .gitem.wide { grid-column: span 2; }
 
   /* REVIEWS */
   .reviews-bg {
     position: relative; overflow: hidden;
-    background: url('https://images.unsplash.com/photo-1477884213360-7e9d7dcc1e48?w=1800&q=80') center/cover no-repeat;
+    background: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1800&q=80') center/cover no-repeat;
   }
-  .reviews-overlay { position: absolute; inset: 0; background: linear-gradient(145deg, rgba(30,20,16,0.95), rgba(100,40,55,0.9)); }
+  .reviews-overlay { position: absolute; inset: 0; background: linear-gradient(145deg, rgba(15,33,55,0.96), rgba(22,45,71,0.92)); }
   .reviews-inner { position: relative; z-index: 1; }
-  .reviews-bg .stag { background: rgba(224,112,128,0.12); border-color: rgba(224,112,128,0.3); color: var(--rose); }
+  .reviews-bg .stag { background: rgba(232,104,32,0.1); border-color: var(--orange); color: var(--orange); }
   .reviews-bg .stitle { color: #fff; }
-  .reviews-bg .stitle em { color: var(--rose); }
   .reviews-top { display: flex; align-items: center; gap: 24px; margin-bottom: 40px; flex-wrap: wrap; }
-  .score-big { font-family: 'Playfair Display', serif; font-size: 72px; font-weight: 700; color: #fff; line-height: 1; letter-spacing: -2px; }
-  .score-stars { color: var(--warm); font-size: 22px; letter-spacing: 2px; }
-  .score-label { font-size: 12px; color: rgba(255,255,255,0.5); font-weight: 600; margin-top: 4px; }
-  .reviews-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 16px; }
-  .review-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 18px; padding: 30px; backdrop-filter: blur(12px); }
-  .review-stars { color: var(--warm); font-size: 14px; margin-bottom: 12px; letter-spacing: 1px; }
-  .review-text { font-family: 'Playfair Display', serif; font-size: 16px; color: rgba(255,255,255,0.9); line-height: 1.75; margin-bottom: 18px; font-style: italic; }
-  .review-name { font-size: 13px; font-weight: 800; color: var(--rose); }
-  .review-meta { font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 2px; }
+  .score-big { font-family: 'Barlow Condensed', sans-serif; font-size: 80px; font-weight: 900; color: #fff; line-height: 1; letter-spacing: -2px; }
+  .score-stars { color: var(--orange); font-size: 22px; letter-spacing: 2px; }
+  .score-label { font-size: 12px; color: rgba(255,255,255,0.5); font-weight: 600; margin-top: 4px; letter-spacing: 0.5px; }
+  .reviews-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+  .review-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); padding: 30px; transition: border-color 0.2s; border-top: 3px solid transparent; }
+  .review-card:hover { border-top-color: var(--orange); }
+  .review-stars { color: var(--orange); font-size: 14px; margin-bottom: 12px; letter-spacing: 1px; }
+  .review-text { font-size: 14px; color: rgba(255,255,255,0.85); line-height: 1.75; margin-bottom: 16px; font-style: italic; }
+  .review-name { font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 700; color: var(--blue-pale); letter-spacing: 1px; text-transform: uppercase; }
+  .review-meta { font-size: 12px; color: rgba(255,255,255,0.35); margin-top: 3px; }
+  .review-response { margin-top: 12px; padding: 12px 14px; background: rgba(232,104,32,0.08); border-left: 2px solid var(--orange); font-size: 12px; color: rgba(255,255,255,0.45); font-style: italic; line-height: 1.6; }
+  .review-response strong { color: var(--orange); font-style: normal; }
 
   /* BOOKING */
-  .booking-bg { background: var(--sand); position: relative; overflow: hidden; }
-  .booking-bg::before { content: '🐾'; position: absolute; bottom: -20px; right: 3%; font-size: 180px; opacity: 0.04; }
+  .booking-bg { background: var(--cream); position: relative; overflow: hidden; }
+  .booking-bg::before { content: ''; position: absolute; bottom: -60px; right: -60px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(232,104,32,0.06) 0%, transparent 70%); }
   .booking-layout { display: grid; grid-template-columns: 1fr 1.1fr; gap: 60px; align-items: start; position: relative; z-index: 1; }
-  .form-card { background: var(--dark); border-radius: 24px; padding: 48px 44px; box-shadow: 0 24px 64px rgba(30,20,16,0.2); }
-  .form-title { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 6px; }
-  .form-sub { font-size: 13px; color: rgba(255,255,255,0.45); margin-bottom: 30px; font-weight: 400; }
-  .form-group { margin-bottom: 18px; }
-  .form-group label { display: block; font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.4); margin-bottom: 7px; letter-spacing: 1.5px; text-transform: uppercase; }
-  .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 13px 16px; border: 1.5px solid rgba(255,255,255,0.1); border-radius: 12px; font-family: 'Nunito', sans-serif; font-size: 13px; color: #fff; background: rgba(255,255,255,0.06); outline: none; transition: border-color 0.2s; }
-  .form-group select option { background: var(--dark); }
+  .form-card { background: var(--navy); border-top: 3px solid var(--orange); padding: 44px 40px; box-shadow: 0 24px 64px rgba(15,33,55,0.2); }
+  .form-title { font-family: 'Barlow Condensed', sans-serif; font-size: 26px; font-weight: 800; color: #fff; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 1px; }
+  .form-sub { font-size: 13px; color: rgba(255,255,255,0.4); margin-bottom: 28px; font-weight: 400; }
+  .form-group { margin-bottom: 16px; }
+  .form-group label { display: block; font-size: 10px; font-weight: 600; color: rgba(255,255,255,0.4); margin-bottom: 6px; letter-spacing: 2px; text-transform: uppercase; }
+  .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 14px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); font-family: 'Barlow', sans-serif; font-size: 14px; color: #fff; outline: none; transition: border-color 0.2s; }
+  .form-group select option { background: var(--navy); }
   .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.22); }
-  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--rose); background: rgba(255,255,255,0.09); }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--orange); background: rgba(255,255,255,0.08); }
   .form-group textarea { resize: vertical; min-height: 90px; }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .form-submit { width: 100%; background: var(--rose); color: #fff; border: none; padding: 15px; border-radius: 50px; font-size: 13px; font-weight: 800; font-family: 'Nunito', sans-serif; cursor: pointer; transition: all 0.2s; margin-top: 8px; box-shadow: 0 6px 20px rgba(224,112,128,0.4); }
-  .form-submit:hover { transform: translateY(-1px); background: var(--rose-dark); }
+  .form-submit { width: 100%; background: var(--orange); color: #fff; border: none; padding: 15px; font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 700; cursor: pointer; letter-spacing: 2.5px; text-transform: uppercase; transition: all 0.2s; margin-top: 8px; }
+  .form-submit:hover { background: var(--orange-light); transform: translateY(-1px); }
   .contact-info { padding-top: 8px; }
-  .contact-title { font-family: 'Playfair Display', serif; font-size: 38px; font-weight: 700; color: var(--text); line-height: 1.1; margin-bottom: 14px; }
-  .contact-title em { font-style: italic; color: var(--rose-dark); }
+  .contact-title { font-family: 'Barlow Condensed', sans-serif; font-size: 44px; font-weight: 900; color: var(--text); line-height: 0.95; margin-bottom: 16px; text-transform: uppercase; letter-spacing: -0.5px; }
+  .contact-title .yl { color: var(--orange); }
   .contact-sub { font-size: 15px; color: var(--muted); line-height: 1.8; margin-bottom: 36px; font-weight: 400; }
   .clist { display: flex; flex-direction: column; }
   .citem { display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid var(--border); align-items: flex-start; }
   .citem:first-child { padding-top: 0; }
   .citem:last-child { border: none; }
   .cicon { font-size: 20px; min-width: 26px; margin-top: 2px; }
-  .clabel { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
-  .cval { font-size: 15px; font-weight: 700; color: var(--text); }
+  .clabel { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+  .cval { font-size: 15px; font-weight: 600; color: var(--text); }
   .cnote { font-size: 13px; color: var(--muted); margin-top: 2px; font-weight: 400; }
-  .open-pill { display: inline-flex; align-items: center; gap: 6px; margin-top: 6px; background: var(--rose-pale); border: 1px solid rgba(224,112,128,0.3); color: var(--rose-dark); font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 50px; }
+  .open-pill { display: inline-flex; align-items: center; gap: 6px; margin-top: 6px; background: #f0fdf4; border: 1px solid #bbf7d0; color: #15803d; font-size: 11px; font-weight: 700; padding: 4px 12px; letter-spacing: 1px; text-transform: uppercase; }
   .open-pill::before { content: '●'; font-size: 7px; animation: pulse 2s infinite; }
 
   /* FOOTER */
-  footer { background: var(--dark); padding: 44px 5% 32px; }
+  footer { background: #080f18; padding: 48px 5% 32px; border-top: 3px solid var(--orange); }
   .footer-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 32px; padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,0.07); margin-bottom: 28px; }
-  .footer-brand { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: rgba(255,255,255,0.7); margin-bottom: 4px; }
-  .footer-brand span { color: var(--rose); font-style: italic; }
+  .footer-brand { font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 800; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+  .footer-brand span { color: var(--orange); }
   .footer-brand-sub { font-size: 10px; color: rgba(255,255,255,0.28); letter-spacing: 2px; text-transform: uppercase; }
   .footer-col { display: flex; flex-direction: column; gap: 10px; }
-  .footer-col-title { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--rose); margin-bottom: 4px; opacity: 0.75; }
-  .footer-col a { font-size: 13px; color: rgba(255,255,255,0.32); text-decoration: none; transition: color 0.2s; }
+  .footer-col-title { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--orange); margin-bottom: 4px; }
+  .footer-col a { font-size: 13px; color: rgba(255,255,255,0.3); text-decoration: none; transition: color 0.2s; font-weight: 400; }
   .footer-col a:hover { color: rgba(255,255,255,0.8); }
   .footer-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
   .footer-copy { font-size: 12px; color: rgba(255,255,255,0.18); }
-  .footer-tag { font-family: 'Playfair Display', serif; font-size: 13px; font-style: italic; color: var(--rose); opacity: 0.4; }
+  .footer-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 600; color: var(--orange); opacity: 0.45; letter-spacing: 2px; text-transform: uppercase; }
 
-  @media (max-width: 860px) {
-    .about-inner, .booking-layout { grid-template-columns: 1fr; }
-    .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
-    .gitem.tall, .gitem.wide { grid-row: span 1; grid-column: span 1; height: 240px; }
+  @media (max-width: 960px) {
+    .hero-content { grid-template-columns: 1fr; }
+    .hero-card { display: none; }
+    .why-grid { grid-template-columns: 1fr; }
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .booking-layout { grid-template-columns: 1fr; }
     .nav-links { display: none; }
     .form-row { grid-template-columns: 1fr; }
-    .hero-stats { flex-wrap: wrap; }
+    .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+    .gitem.tall { grid-row: span 1; height: 240px; }
   }
   @media (max-width: 560px) {
-    .gallery-grid { grid-template-columns: 1fr; }
     .services-grid { grid-template-columns: 1fr; }
+    .gallery-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
 <body>
 
 <nav>
-  <div class="nav-logo">
-    <div class="nav-paw">🐾</div>
-    <div>
-      <div class="nav-logo-main">Kelly's <span>Private Home Grooming</span></div>
-      <div class="nav-logo-sub">Sarasota, FL · 5.0 Star Rated</div>
-    </div>
+  <div>
+    <div class="nav-logo-main">The Brothers That <span>Just Do Gutters</span></div>
+    <div class="nav-logo-sub">Bradenton & Sarasota, FL</div>
   </div>
   <div class="nav-links">
-    <a href="#about">About Kelly</a>
+    <a href="#why">Why Us</a>
     <a href="#services">Services</a>
     <a href="#reviews">Reviews</a>
-    <a href="#booking">Book Now</a>
+    <a href="#contact">Contact</a>
   </div>
-  <a href="tel:9412844083" class="nav-cta">🐾 Book an Appointment</a>
+  <div class="nav-right">
+    <a href="tel:9418558020" class="nav-phone">(941) 855-8020</a>
+    <a href="#contact" class="nav-cta">Free Quote</a>
+  </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero" style="padding:0;">
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
+  <div class="hero-orange-glow"></div>
   <div class="hero-content">
-    <div class="hero-eyebrow"><div class="edot"></div> Sarasota's Trusted Pet Groomer</div>
-    <h1><span class="script">Your fur baby deserves the best —</span>Careful, <em>Calm,</em><br>& Loving Grooming.</h1>
-    <p class="hero-sub">Kelly's Private Home Grooming brings a gentle, personal touch to every pet in Sarasota. Kelly is careful, calm, and genuinely loves every dog she grooms — and the dogs love her right back.</p>
-    <div class="hero-pills">
-      <div class="hero-pill">⭐ 5.0 · 9 Reviews</div>
-      <div class="hero-pill">🐕 Sarasota, FL</div>
-      <div class="hero-pill">🏠 Private Home Setting</div>
-      <div class="hero-pill">💆 Calm & Stress-Free</div>
+    <div class="hero-left">
+      <div class="hero-eyebrow"><div class="edot"></div> Bradenton & Sarasota's Gutter Experts</div>
+      <h1>Gutters Aren't<br>Just What We Do —<br><span class="accent">It's What We've Mastered.</span></h1>
+      <p class="hero-sub">The Brothers That Just Do Gutters has reinvented what it means to hire a contractor. Professional, reliable, and five-star rated across 389 reviews — from cleaning to complete installation.</p>
+      <div class="hero-pills">
+        <div class="hero-pill">⭐ 4.9 · 389 Reviews</div>
+        <div class="hero-pill">📍 Bradenton, FL</div>
+        <div class="hero-pill">🏠 Installation & Cleaning</div>
+        <div class="hero-pill">📞 Responds Same Day</div>
+      </div>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-orange">Get a Free Quote</a>
+        <a href="tel:9418558020" class="btn-outline">📞 (941) 855-8020</a>
+      </div>
     </div>
-    <div class="hero-btns">
-      <a href="#booking" class="btn-rose">🐾 Book an Appointment</a>
-      <a href="tel:9412844083" class="btn-ghost">📞 (941) 284-4083</a>
-    </div>
-    <div class="hero-stats">
-      <div class="hstat"><div class="hstat-num">5.0<span>★</span></div><div class="hstat-label">Google Rating</div></div>
-      <div class="hstat"><div class="hstat-num">9</div><div class="hstat-label">Five-Star Reviews</div></div>
-      <div class="hstat"><div class="hstat-num">Years</div><div class="hstat-label">Grooming Dogs</div></div>
+    <div class="hero-card">
+      <div class="hero-card-label">By the Numbers</div>
+      <div class="hstat"><div class="hstat-num">4.9<span>★</span></div><div class="hstat-label">Google Rating</div></div>
+      <div class="hstat"><div class="hstat-num">389</div><div class="hstat-label">Reviews</div></div>
+      <div class="hstat"><div class="hstat-num">5<span>★</span></div><div class="hstat-label">Goal Since Day One</div></div>
     </div>
   </div>
   <div class="hero-wave">
     <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg">
-      <path fill="#e07080" d="M0,48L60,42C120,37,240,26,360,28C480,30,600,44,720,50C840,55,960,51,1080,44C1200,37,1320,26,1380,21L1440,16L1440,80L0,80Z"/>
+      <path fill="#e86820" d="M0,48L60,42C120,37,240,26,360,28C480,30,600,44,720,50C840,55,960,51,1080,44C1200,37,1320,26,1380,21L1440,16L1440,80L0,80Z"/>
     </svg>
   </div>
 </section>
 
-<!-- TRUST -->
-<div class="trust">
-  <div class="trust-item">🐩 All Breeds Welcome</div>
-  <div class="trust-item">💆 Calm & Gentle</div>
-  <div class="trust-item">🏠 Private Home Setting</div>
-  <div class="trust-item">✈️ Great for Vacationing Pets</div>
-  <div class="trust-item">⭐ 5.0 Perfect Rating</div>
-  <div class="trust-item">🌴 Sarasota Local</div>
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-track">
+    <span class="ticker-item">Gutter Installation <span class="tdot"></span></span>
+    <span class="ticker-item">Gutter Cleaning <span class="tdot"></span></span>
+    <span class="ticker-item">Gutter Guards <span class="tdot"></span></span>
+    <span class="ticker-item">Downspout Replacement <span class="tdot"></span></span>
+    <span class="ticker-item">Fascia Repair <span class="tdot"></span></span>
+    <span class="ticker-item">Soffit Repair <span class="tdot"></span></span>
+    <span class="ticker-item">4.9 Stars · 389 Reviews <span class="tdot"></span></span>
+    <span class="ticker-item">Same-Day Response <span class="tdot"></span></span>
+    <span class="ticker-item">Bradenton & Sarasota <span class="tdot"></span></span>
+    <span class="ticker-item">Gutter Installation <span class="tdot"></span></span>
+    <span class="ticker-item">Gutter Cleaning <span class="tdot"></span></span>
+    <span class="ticker-item">Gutter Guards <span class="tdot"></span></span>
+    <span class="ticker-item">Downspout Replacement <span class="tdot"></span></span>
+    <span class="ticker-item">Fascia Repair <span class="tdot"></span></span>
+    <span class="ticker-item">Soffit Repair <span class="tdot"></span></span>
+    <span class="ticker-item">4.9 Stars · 389 Reviews <span class="tdot"></span></span>
+    <span class="ticker-item">Same-Day Response <span class="tdot"></span></span>
+    <span class="ticker-item">Bradenton & Sarasota <span class="tdot"></span></span>
+  </div>
 </div>
 
-<!-- ABOUT KELLY -->
-<section class="about-bg" id="about">
-  <div class="about-overlay"></div>
-  <div class="about-inner">
+<!-- WHY -->
+<section class="why-bg" id="why">
+  <div class="why-grid">
     <div>
-      <div class="stag">🐾 About Kelly</div>
-      <div class="stitle">Gentle Care from<br>a Groomer <em>Pets Love.</em></div>
-      <p class="ssub">Kelly has been grooming dogs in Sarasota for years — building a loyal base of customers whose pets genuinely love coming to see her. Even nervous dogs feel safe in Kelly's hands.</p>
+      <div class="stag">Why Brothers Gutters</div>
+      <div class="stitle">Reinventing<br><span class="yl">Contractor</span><br>Service.</div>
+      <p class="ssub">The Brothers started with a dream to be a community-loved gutter contractor — and they delivered. From quote to completion, every experience is designed to be five-star from start to finish.</p>
       <div class="reasons">
-        <div class="reason"><div class="reason-icon">💆</div><div><div class="reason-title">Calm & Careful with Every Dog</div><div class="reason-text">Kelly is known for being careful and calm — especially with nervous or anxious dogs. Customers with shy or sensitive pets trust Kelly completely.</div></div></div>
-        <div class="reason"><div class="reason-icon">❤️</div><div><div class="reason-title">Dogs Genuinely Love Her</div><div class="reason-text">"My dog loves to see her." That says everything. Kelly builds real bonds with the pets she grooms — they're excited to visit.</div></div></div>
-        <div class="reason"><div class="reason-icon">🏠</div><div><div class="reason-title">Private, Personal Setting</div><div class="reason-text">Not a chaotic salon — a private, calm environment that keeps pets relaxed and comfortable throughout their grooming experience.</div></div></div>
-        <div class="reason"><div class="reason-icon">✈️</div><div><div class="reason-title">Perfect for Visiting Pets Too</div><div class="reason-text">In Sarasota with your fur baby and need grooming? Kelly has welcomed vacationing dogs and delivered the same loving care.</div></div></div>
+        <div class="reason"><div class="reason-icon">⚡</div><div><div class="reason-title">Same-Day Response</div><div class="reason-text">Text on a Sunday, get a call before noon that same day. The Brothers respond faster than any other contractor in the area.</div></div></div>
+        <div class="reason"><div class="reason-icon">📋</div><div><div class="reason-title">No-Pressure Quotes</div><div class="reason-text">Tommy listens and includes everything you ask for. A detailed, honest estimate — no pressure, no surprises.</div></div></div>
+        <div class="reason"><div class="reason-icon">👷</div><div><div class="reason-title">Professional from Start to Finish</div><div class="reason-text">Walk-arounds before and after every job. The team — Nick, Tommy, Kylie, Mark, Henry — are professional at every step.</div></div></div>
+        <div class="reason"><div class="reason-icon">⭐</div><div><div class="reason-title">Five-Star Rated Every Time</div><div class="reason-text">4.9 stars across 389 reviews. That's not luck — it's a culture of excellence built into every single job.</div></div></div>
       </div>
     </div>
-    <div class="kelly-card">
-      <div class="kelly-card-title">Why Customers Choose Kelly</div>
-      <div class="kstat"><div class="kstat-num">5.0<span>★</span></div><div class="kstat-label">Perfect Google rating — 9 verified five-star reviews</div></div>
-      <div class="kstat"><div class="kstat-num">Years</div><div class="kstat-label">Grooming dogs in Sarasota — loyal returning customers</div></div>
-      <div class="kstat"><div class="kstat-num">All</div><div class="kstat-label">Breeds welcome — ShiZu, Malshi, Maltese, English Setter & more</div></div>
-      <div class="kstat"><div class="kstat-num">Calm</div><div class="kstat-label">Even nervous dogs feel safe and relaxed with Kelly</div></div>
-      <div class="kelly-quote">
-        <div class="kelly-quote-text">"We have a nervous English Setter and Kelly did a fabulous job on him."</div>
-        <div class="kelly-quote-attr">— Verified Google Customer</div>
+    <div class="why-visual">
+      <div class="why-visual-title">The Brothers at a Glance</div>
+      <div class="wstat"><div class="wstat-num">4.9<span>★</span></div><div class="wstat-label">Google rating across 389 verified reviews</div></div>
+      <div class="wstat"><div class="wstat-num">389</div><div class="wstat-label">Five-star reviews from real customers</div></div>
+      <div class="wstat"><div class="wstat-num">Same<span> day</span></div><div class="wstat-label">Response time — even on Sundays</div></div>
+      <div class="wstat"><div class="wstat-num">Free</div><div class="wstat-label">No-pressure quotes on every job</div></div>
+      <div class="team-badge">
+        <div class="team-badge-title">👷 Meet the Team</div>
+        <div class="team-badge-text">Nick, Tommy, Kylie, Mark, and Henry — each one professional, reliable, and committed to your five-star experience.</div>
       </div>
     </div>
   </div>
@@ -323,40 +340,44 @@
 
 <!-- SERVICES -->
 <section class="services-bg" id="services">
-  <div class="stag">✂️ Services</div>
-  <div class="stitle">Full Grooming Care<br>for Your <em>Fur Baby.</em></div>
-  <p class="ssub">From a simple bath and brush to a full groom — Kelly handles every breed with the same gentle, thorough attention to detail.</p>
+  <div class="stag">Services</div>
+  <div class="stitle">Everything<br><span class="yl">Gutters</span> Need.</div>
+  <p class="ssub">From cleaning out debris to complete new installations — The Brothers handle it all with precision, experience, and true craftsmanship.</p>
   <div class="services-grid">
-    <div class="svc"><div class="svc-icon">✂️</div><div class="svc-name">Full Grooming</div><div class="svc-tag">Bath, cut, dry & style.</div><div class="svc-desc">Complete grooming including bath, blow dry, breed-appropriate haircut, ear cleaning, nail trim, and finishing touches. Kelly takes her time and does it right.</div></div>
-    <div class="svc"><div class="svc-icon">🛁</div><div class="svc-name">Bath & Brush</div><div class="svc-tag">Fresh, clean & fluffy.</div><div class="svc-desc">Professional bath, blow dry, and thorough brush-out. Perfect for maintenance between full grooms. Leaves your dog smelling amazing.</div></div>
-    <div class="svc"><div class="svc-icon">💅</div><div class="svc-name">Nail Trim</div><div class="svc-tag">Quick, safe & painless.</div><div class="svc-desc">Careful nail trimming and filing. Kelly's calm approach makes even nail-shy dogs comfortable throughout the process.</div></div>
-    <div class="svc"><div class="svc-icon">👂</div><div class="svc-name">Ear Cleaning</div><div class="svc-tag">Healthy ears, happy dog.</div><div class="svc-desc">Gentle ear cleaning to remove buildup and prevent infections. Essential for long-eared and floppy-eared breeds especially in Florida's humid climate.</div></div>
-    <div class="svc"><div class="svc-icon">🐾</div><div class="svc-name">Paw Treatment</div><div class="svc-tag">Soft paws, every time.</div><div class="svc-desc">Paw pad trimming and conditioning. Keeps paws healthy and comfortable, especially on Florida's hot pavement.</div></div>
-    <div class="svc"><div class="svc-icon">🌸</div><div class="svc-name">Breed-Specific Styling</div><div class="svc-tag">Looking their best.</div><div class="svc-desc">Expert styling for all breeds — ShiZu, Maltese, Malshi, English Setter, and more. Kelly knows how to make every dog look and feel their best.</div></div>
+    <div class="svc"><div class="svc-num">01 — Cleaning</div><div class="svc-icon">🍂</div><div class="svc-name">Gutter Cleaning</div><div class="svc-desc">Keep your gutters clear of leaves, debris, and clogs. Blocked gutters cause costly damage to your foundation, roof, and landscaping. Fast, efficient, and done right.</div></div>
+    <div class="svc"><div class="svc-num">02 — Installation</div><div class="svc-icon">🏗️</div><div class="svc-name">Gutter Installation</div><div class="svc-desc">New gutter installation from start to finish. The Brothers source the best products and use precision techniques — including specialty radius gutters that require true craftsmanship.</div></div>
+    <div class="svc"><div class="svc-num">03 — Guards</div><div class="svc-icon">🛡️</div><div class="svc-name">Gutter Guards</div><div class="svc-desc">Prevent clogs before they start. Professional gutter guard installation that keeps debris out while letting water flow freely — less cleaning, more protection.</div></div>
+    <div class="svc"><div class="svc-num">04 — Downspouts</div><div class="svc-icon">💧</div><div class="svc-name">Downspout Replacement</div><div class="svc-desc">Cracked, damaged, or poorly positioned downspouts lead to water damage. The Brothers replace and reposition downspouts for proper drainage every time.</div></div>
+    <div class="svc"><div class="svc-num">05 — Fascia</div><div class="svc-icon">🪵</div><div class="svc-name">Fascia Repair</div><div class="svc-desc">Rotted or damaged fascia boards are repaired or replaced before new gutters go up — ensuring a solid, lasting installation that performs and looks great.</div></div>
+    <div class="svc"><div class="svc-num">06 — Soffit</div><div class="svc-icon">🔧</div><div class="svc-name">Soffit Repair</div><div class="svc-desc">Damaged soffits let pests and moisture into your home. The Brothers identify and repair soffit issues as part of a complete exterior protection service.</div></div>
   </div>
 </section>
 
 <!-- GALLERY -->
 <section class="gallery-bg" id="gallery">
-  <div class="stag">🐾 Happy Dogs</div>
-  <div class="stitle">Every Dog Leaves<br><em>Looking Beautiful.</em></div>
-  <p class="ssub">From fluffed-up Malteses to freshly groomed setters — every dog gets Kelly's full attention and care.</p>
+  <div class="stag">Our Work</div>
+  <div class="stitle">Clean Gutters,<br><span class="bl">Protected Homes.</span></div>
+  <p class="ssub">From gutter cleaning to full installations — every job gets the same walk-around inspection before and after.</p>
   <div class="gallery-grid">
     <div class="gitem tall">
-      <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800&q=80" alt="Dog being groomed">
-      <div class="gitem-label">Gentle & Careful Every Time</div>
+      <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&q=80" alt="Florida home exterior">
+      <div class="gitem-label">Protected From Top to Bottom</div>
     </div>
     <div class="gitem">
-      <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=800&q=80" alt="Happy groomed dog">
-      <div class="gitem-label">Dogs Love Coming to See Kelly</div>
+      <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80" alt="Home exterior gutters">
+      <div class="gitem-label">Professional Installation</div>
     </div>
     <div class="gitem">
-      <img src="https://images.unsplash.com/photo-1615751072497-5f5169febe17?w=800&q=80" alt="Professional dog grooming">
-      <div class="gitem-label">Professional Results Every Visit</div>
+      <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&q=80" alt="Clean home exterior">
+      <div class="gitem-label">5-Star Results Every Time</div>
     </div>
-    <div class="gitem wide">
-      <img src="https://images.unsplash.com/photo-1534361960057-19f4434a337d?w=1200&q=80" alt="Clean happy dog after grooming">
-      <div class="gitem-label">Your Fur Baby Deserves the Best</div>
+    <div class="gitem">
+      <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80" alt="Beautiful Florida home">
+      <div class="gitem-label">Bradenton & Sarasota Area</div>
+    </div>
+    <div class="gitem">
+      <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80" alt="Home with gutters">
+      <div class="gitem-label">Keeping Your Home Safe</div>
     </div>
   </div>
 </section>
@@ -365,78 +386,81 @@
 <section class="reviews-bg" id="reviews">
   <div class="reviews-overlay"></div>
   <div class="reviews-inner">
-    <div class="stag">⭐ Reviews</div>
-    <div class="stitle">What Pet Parents<br><em>Are Saying.</em></div>
+    <div class="stag">Customer Reviews</div>
+    <div class="stitle" style="color:#fff;">What Customers<br><span style="color:var(--orange);">Are Saying.</span></div>
     <div class="reviews-top">
-      <div class="score-big">5.0</div>
+      <div class="score-big">4.9</div>
       <div>
         <div class="score-stars">★★★★★</div>
-        <div style="font-family:'Playfair Display',serif; font-size:18px; font-weight:700; color:#fff; margin-top:4px;">9 Google Reviews · Perfect Rating</div>
-        <div class="score-label">Sarasota, FL · Verified</div>
+        <div style="font-family:'Barlow Condensed',sans-serif; font-size:18px; font-weight:800; color:#fff; margin-top:4px; text-transform:uppercase; letter-spacing:1px;">389 Google Reviews</div>
+        <div class="score-label">Bradenton, FL · Verified</div>
       </div>
     </div>
     <div class="reviews-grid">
       <div class="review-card">
         <div class="review-stars">★★★★★</div>
-        <div class="review-text">"Kelly does an amazing job on my dog. She is very careful and calm. My dog loves to see her. I am very happy with her."</div>
-        <div class="review-name">Dee Palacious</div>
-        <div class="review-meta">Google Review · 8 reviews · 1 year ago</div>
+        <div class="review-text">"From quote to completion, our experience with Brothers That Just Do Gutters was friendly, professional and expeditious. The gutters look amazing and we were super impressed with our walk around both before and after the work was done."</div>
+        <div class="review-name">Denell Loges</div>
+        <div class="review-meta">Google Review · 6 reviews · 6 months ago</div>
+        <div class="review-response"><strong>The Brothers:</strong> "Thanks so much for sharing your experience! We're thrilled to hear everything went smoothly from start to finish!"</div>
       </div>
       <div class="review-card">
         <div class="review-stars">★★★★★</div>
-        <div class="review-text">"We were on vacation this summer and Kelly did a great job with our ShiZu. If you are in Sarasota with your fur baby and need some tender loving care, don't hesitate — give her a call."</div>
-        <div class="review-name">Christine McEachern</div>
-        <div class="review-meta">Google Review · 3 reviews · 10 months ago</div>
+        <div class="review-text">"I texted on a Sunday and had a call before noon that same day — Sunday! Nick came out, did an estimate and quoted the job. Henry and Mark came out to install and did an excellent job."</div>
+        <div class="review-name">Tom Harshman</div>
+        <div class="review-meta">Google Review · 6 reviews · 2 months ago</div>
+        <div class="review-response"><strong>The Brothers:</strong> "Tom, we're glad our team could respond quickly — even on a Sunday — and deliver a smooth experience from estimate to installation."</div>
       </div>
       <div class="review-card">
         <div class="review-stars">★★★★★</div>
-        <div class="review-text">"She did a beautiful job on my Malshi — very pleased. I'm going back today. Having my Maltese and my Malshi groomed."</div>
-        <div class="review-name">Mary Beth Wise</div>
-        <div class="review-meta">Google Review · 4 reviews · 5 months ago</div>
+        <div class="review-text">"Professionals from start to finish. Tommy gave a no-pressure quote and listened to everything we asked for. Kylie was fantastic dealing with our questions and HOA challenges. Last but certainly not least — the installation was perfect."</div>
+        <div class="review-name">Glenn D</div>
+        <div class="review-meta">Google Review · 8 reviews · 3 months ago</div>
+        <div class="review-response"><strong>The Brothers:</strong> "Thank you Glenn! Tommy, Kylie, Mark, and Henry will be thrilled to hear your kind words."</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- BOOKING -->
-<section class="booking-bg" id="booking">
+<!-- CONTACT -->
+<section class="booking-bg" id="contact">
   <div class="booking-layout">
     <div class="contact-info">
-      <div class="stag">📞 Book an Appointment</div>
-      <div class="contact-title">Ready to Book Your<br><em>Fur Baby In?</em></div>
-      <div class="contact-sub">Fill out the form and Kelly will be in touch to schedule your appointment. Or call directly during business hours.</div>
+      <div class="stag">Get a Free Quote</div>
+      <div class="contact-title">PROTECT YOUR<br>HOME <span class="yl">TODAY.</span></div>
+      <div class="contact-sub">Blocked gutters cause costly damage to your foundation, roof, and landscaping. Get a free no-pressure quote from The Brothers — same-day response guaranteed.</div>
       <div class="clist">
-        <div class="citem"><div class="cicon">📞</div><div><div class="clabel">Phone</div><div class="cval">(941) 284-4083</div><div class="cnote">Call during business hours</div><div class="open-pill">Open · Closes 3:30 PM</div></div></div>
-        <div class="citem"><div class="cicon">📍</div><div><div class="clabel">Location</div><div class="cval">Sarasota, FL 34231</div><div class="cnote">Private home grooming — address provided on booking</div></div></div>
-        <div class="citem"><div class="cicon">⭐</div><div><div class="clabel">Rating</div><div class="cval">5.0 Stars · 9 Reviews</div><div class="cnote">"My dog loves to see her." — Verified Google Customer</div></div></div>
-        <div class="citem"><div class="cicon">🐾</div><div><div class="clabel">Breeds</div><div class="cval">All Breeds Welcome</div><div class="cnote">ShiZu, Maltese, Malshi, English Setter & more</div></div></div>
+        <div class="citem"><div class="cicon">📞</div><div><div class="clabel">Phone</div><div class="cval">(941) 855-8020</div><div class="cnote">Call or text anytime</div><div class="open-pill">Open · Closes 8 PM</div></div></div>
+        <div class="citem"><div class="cicon">🌐</div><div><div class="clabel">Website</div><div class="cval">brothersgutters.com</div></div></div>
+        <div class="citem"><div class="cicon">📍</div><div><div class="clabel">Address</div><div class="cval">4301 32nd St W, Suite B-7</div><div class="cnote">Bradenton, FL 34205 · Lakewood Business Park</div></div></div>
+        <div class="citem"><div class="cicon">⭐</div><div><div class="clabel">Rating</div><div class="cval">4.9 Stars · 389 Reviews</div><div class="cnote">"Great company, good prices, great staff and service."</div></div></div>
       </div>
     </div>
     <div class="form-card">
-      <div class="form-title">🐾 Book an Appointment</div>
-      <div class="form-sub">Tell Kelly about your pup and she'll be in touch to confirm.</div>
+      <div class="form-title">Get a Free Quote</div>
+      <div class="form-sub">We'll respond same day — often within hours.</div>
       <form action="https://formspree.io/f/mzdodlwk" method="POST">
       <div class="form-row">
-        <div class="form-group"><label>Your Name</label><input type="text" name="first_name" placeholder="Jane Smith"></div>
-        <div class="form-group"><label>Phone Number</label><input type="tel" name="phone" placeholder="(941) 555-0000"></div>
+        <div class="form-group"><label>First Name</label><input type="text" name="first_name" placeholder="John"></div>
+        <div class="form-group"><label>Last Name</label><input type="text" name="last_name" placeholder="Smith"></div>
       </div>
-      <div class="form-group"><label>Your Dog's Name</label><input type="text" name="dog_name" placeholder="Biscuit"></div>
-      <div class="form-group"><label>Breed</label><input type="text" name="breed" placeholder="e.g. Maltese, ShiZu, Mixed"></div>
+      <div class="form-group"><label>Phone Number</label><input type="tel" name="phone" placeholder="(941) 555-0000"></div>
+      <div class="form-group"><label>Property Address</label><input type="text" name="address" placeholder="123 Main St, Bradenton FL"></div>
       <div class="form-group">
         <label>Service Needed</label>
         <select name="service">
           <option value="">Select a service...</option>
-          <option>Full Grooming</option>
-          <option>Bath & Brush</option>
-          <option>Nail Trim</option>
-          <option>Ear Cleaning</option>
-          <option>Paw Treatment</option>
-          <option>Full Package (All Services)</option>
+          <option>Gutter Cleaning</option>
+          <option>Gutter Installation</option>
+          <option>Gutter Guards</option>
+          <option>Downspout Replacement</option>
+          <option>Fascia Repair</option>
+          <option>Soffit Repair</option>
+          <option>Full Inspection & Quote</option>
         </select>
       </div>
-      <div class="form-group"><label>Preferred Date & Time</label><input type="text" name="preferred_time" placeholder="e.g. Monday morning, Friday afternoon"></div>
-      <div class="form-group"><label>Anything Kelly Should Know?</label><textarea name="message" placeholder="Nervous dog? Special coat? Visiting Sarasota? Let Kelly know..."></textarea></div>
-      <button class="form-submit">🐾 Send Booking Request</button>
+      <div class="form-group"><label>Tell Us About Your Project</label><textarea name="message" placeholder="Describe your home, current gutter issues, or what you need..."></textarea></div>
+      <button class="form-submit">Get My Free Quote</button>
       </form>
     </div>
   </div>
@@ -445,31 +469,32 @@
 <footer>
   <div class="footer-top">
     <div>
-      <div class="footer-brand">Kelly's <span>Private Home Grooming</span></div>
-      <div class="footer-brand-sub">Sarasota, FL 34231 · (941) 284-4083</div>
+      <div class="footer-brand">The Brothers That <span>Just Do Gutters</span></div>
+      <div class="footer-brand-sub">4301 32nd St W · Bradenton, FL 34205</div>
     </div>
     <div class="footer-col">
       <div class="footer-col-title">Services</div>
-      <a href="#services">Full Grooming</a>
-      <a href="#services">Bath & Brush</a>
-      <a href="#services">Nail Trim</a>
-      <a href="#services">Breed Styling</a>
+      <a href="#services">Gutter Cleaning</a>
+      <a href="#services">Gutter Installation</a>
+      <a href="#services">Gutter Guards</a>
+      <a href="#services">Fascia & Soffit Repair</a>
     </div>
     <div class="footer-col">
       <div class="footer-col-title">Company</div>
-      <a href="#about">About Kelly</a>
+      <a href="#why">Why The Brothers</a>
       <a href="#reviews">Reviews</a>
-      <a href="#booking">Book Now</a>
+      <a href="#contact">Get a Quote</a>
+      <a href="https://brothersgutters.com">brothersgutters.com</a>
     </div>
     <div class="footer-col">
       <div class="footer-col-title">Contact</div>
-      <a href="tel:9412844083">(941) 284-4083</a>
-      <a href="#booking">Book an Appointment</a>
+      <a href="tel:9418558020">(941) 855-8020</a>
+      <a href="#contact">Free Quote</a>
     </div>
   </div>
   <div class="footer-bottom">
-    <div class="footer-copy">© 2026 Kelly's Private Home Grooming · Sarasota, FL · All Rights Reserved</div>
-    <div class="footer-tag">Calm, Careful & Loving — Every Visit.</div>
+    <div class="footer-copy">© 2026 The Brothers That Just Do Gutters · Bradenton, FL · All Rights Reserved</div>
+    <div class="footer-tag">Gutters Aren't Just What We Do — It's What We've Mastered.</div>
   </div>
 </footer>
 
