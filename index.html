@@ -3,207 +3,196 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Stu's Roof & Window Cleaning | Sarasota, FL</title>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<title>Kelly's Private Home Grooming | Sarasota, FL</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-    --sky: #06b6d4;
-    --sky-dark: #0891b2;
-    --sky-deep: #0c4a6e;
-    --sky-pale: #a5f3fc;
-    --sun: #f59e0b;
-    --palm: #166534;
-    --cream: #fdfaf4;
-    --sand: #fef9ee;
-    --text: #0c2340;
-    --muted: #3d6070;
-    --border: rgba(6,182,212,0.15);
+    --rose: #e07080;
+    --rose-dark: #b84d5e;
+    --rose-pale: #fce8ec;
+    --warm: #f9a84d;
+    --warm-dark: #d4782a;
+    --sage: #6b8f71;
+    --sage-light: #a8c5ac;
+    --cream: #fdf9f4;
+    --ivory: #faf6f0;
+    --sand: #f5efe5;
+    --text: #2a1f1a;
+    --muted: #7a6860;
+    --border: rgba(224,112,128,0.15);
+    --dark: #1e1410;
   }
   html { scroll-behavior: smooth; }
   body { font-family: 'Nunito', sans-serif; color: var(--text); background: var(--cream); line-height: 1.6; }
   ::-webkit-scrollbar { width: 5px; }
-  ::-webkit-scrollbar-thumb { background: var(--sky); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb { background: var(--rose); border-radius: 3px; }
 
   /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    background: rgba(12,74,110,0.97); backdrop-filter: blur(16px);
-    border-bottom: 3px solid var(--sky);
+    background: rgba(30,20,16,0.97); backdrop-filter: blur(16px);
+    border-bottom: 3px solid var(--rose);
     display: flex; align-items: center; justify-content: space-between;
     padding: 0 5%; height: 68px;
-    box-shadow: 0 2px 20px rgba(12,74,110,0.4);
+    box-shadow: 0 2px 20px rgba(30,20,16,0.4);
   }
-  .nav-logo-main { font-size: 18px; font-weight: 900; color: #fff; line-height: 1.2; }
-  .nav-logo-main span { color: var(--sky-pale); }
+  .nav-logo { display: flex; align-items: center; gap: 10px; }
+  .nav-paw { font-size: 22px; }
+  .nav-logo-main { font-family: 'Playfair Display', serif; font-size: 19px; font-weight: 700; color: #fff; line-height: 1.2; }
+  .nav-logo-main span { color: var(--rose); font-style: italic; }
   .nav-logo-sub { font-size: 10px; color: rgba(255,255,255,0.4); letter-spacing: 1.5px; text-transform: uppercase; }
-  .nav-links { display: flex; gap: 24px; }
-  .nav-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 12px; font-weight: 600; transition: color 0.2s; letter-spacing: 0.3px; }
-  .nav-links a:hover { color: var(--sky-pale); }
-  .nav-cta { background: var(--sun); color: var(--sky-deep); font-size: 13px; font-weight: 800; padding: 10px 22px; border-radius: 50px; text-decoration: none; transition: all 0.2s; box-shadow: 0 4px 14px rgba(245,158,11,0.4); white-space: nowrap; }
-  .nav-cta:hover { transform: translateY(-1px); }
+  .nav-links { display: flex; gap: 28px; }
+  .nav-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 12px; font-weight: 600; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--rose); }
+  .nav-cta { background: var(--rose); color: #fff; font-size: 13px; font-weight: 800; padding: 10px 22px; border-radius: 50px; text-decoration: none; transition: all 0.2s; box-shadow: 0 4px 14px rgba(224,112,128,0.4); white-space: nowrap; }
+  .nav-cta:hover { transform: translateY(-1px); background: var(--rose-dark); }
 
-  /* HERO — window cleaning photo */
+  /* HERO — dog grooming photo */
   .hero {
     min-height: 100vh; position: relative; overflow: hidden;
     display: flex; align-items: flex-end;
-    background: var(--sky-deep);
+    background: var(--dark);
   }
   .hero-bg {
     position: absolute; inset: 0;
-    background: url('https://images.unsplash.com/photo-1593260654732-df52bea15d63?q=80&w=1050&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+    background: url('https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1800&q=80') center/cover no-repeat;
   }
-  .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(12,74,110,0.97) 0%, rgba(12,74,110,0.65) 45%, rgba(12,74,110,0.2) 100%); }
+  .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(30,20,16,0.97) 0%, rgba(30,20,16,0.6) 45%, rgba(30,20,16,0.2) 100%); }
   .hero-wave { position: absolute; bottom: -2px; left: 0; right: 0; z-index: 2; }
   .hero-wave svg { display: block; width: 100%; }
   .hero-content { position: relative; z-index: 3; padding: 0 5% 90px; width: 100%; }
-  .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); color: #fff; font-size: 11px; font-weight: 700; padding: 5px 14px; border-radius: 50px; margin-bottom: 20px; letter-spacing: 1px; text-transform: uppercase; }
-  .edot { width: 6px; height: 6px; border-radius: 50%; background: #90ff90; animation: pulse 2s infinite; }
+  .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(224,112,128,0.15); border: 1px solid rgba(224,112,128,0.35); color: var(--rose); font-size: 11px; font-weight: 700; padding: 5px 14px; border-radius: 50px; margin-bottom: 20px; letter-spacing: 1px; text-transform: uppercase; }
+  .edot { width: 6px; height: 6px; border-radius: 50%; background: var(--rose); animation: pulse 2s infinite; }
   @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
-  h1 { font-size: clamp(42px, 6.5vw, 80px); font-weight: 900; color: #fff; line-height: 1.0; letter-spacing: -1px; margin-bottom: 20px; text-shadow: 0 2px 20px rgba(0,0,0,0.3); }
-  h1 .script { font-family: 'Lora', serif; font-style: italic; color: var(--sky-pale); display: block; font-size: 0.62em; font-weight: 600; margin-bottom: 4px; }
-  .hero-sub { font-size: 15px; color: rgba(255,255,255,0.75); max-width: 520px; line-height: 1.85; margin-bottom: 36px; }
+  h1 { font-family: 'Playfair Display', serif; font-size: clamp(46px, 7vw, 84px); font-weight: 700; color: #fff; line-height: 1.0; letter-spacing: -1px; margin-bottom: 20px; text-shadow: 0 2px 20px rgba(0,0,0,0.4); }
+  h1 em { color: var(--rose); font-style: italic; }
+  h1 .script { font-family: 'Playfair Display', serif; font-style: italic; color: rgba(255,255,255,0.6); display: block; font-size: 0.55em; font-weight: 400; margin-bottom: 6px; letter-spacing: 1px; }
+  .hero-sub { font-size: 15px; color: rgba(255,255,255,0.7); max-width: 500px; line-height: 1.85; margin-bottom: 36px; font-weight: 400; }
   .hero-pills { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 36px; }
-  .hero-pill { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); color: rgba(255,255,255,0.9); font-size: 11px; font-weight: 700; padding: 5px 14px; border-radius: 50px; }
+  .hero-pill { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.85); font-size: 11px; font-weight: 700; padding: 5px 14px; border-radius: 50px; }
   .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 52px; }
-  .btn-sun { background: var(--sun); color: var(--sky-deep); font-size: 13px; font-weight: 800; padding: 14px 32px; border-radius: 50px; text-decoration: none; transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 6px 20px rgba(245,158,11,0.4); }
-  .btn-sun:hover { transform: translateY(-2px); }
-  .btn-ghost { background: rgba(255,255,255,0.12); color: #fff; font-size: 13px; font-weight: 700; padding: 14px 28px; border-radius: 50px; text-decoration: none; border: 2px solid rgba(255,255,255,0.3); transition: all 0.2s; }
-  .btn-ghost:hover { border-color: #fff; }
+  .btn-rose { background: var(--rose); color: #fff; font-size: 13px; font-weight: 800; padding: 14px 32px; border-radius: 50px; text-decoration: none; transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 6px 20px rgba(224,112,128,0.45); }
+  .btn-rose:hover { transform: translateY(-2px); background: var(--rose-dark); }
+  .btn-ghost { background: rgba(255,255,255,0.1); color: #fff; font-size: 13px; font-weight: 700; padding: 14px 28px; border-radius: 50px; text-decoration: none; border: 2px solid rgba(255,255,255,0.3); transition: all 0.2s; }
+  .btn-ghost:hover { border-color: var(--rose); color: var(--rose); }
   .hero-stats { display: flex; gap: 0; }
-  .hstat { padding: 20px 32px; background: rgba(12,74,110,0.75); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); border-right: none; }
-  .hstat:last-child { border-right: 1px solid rgba(255,255,255,0.1); }
-  .hstat-num { font-size: 30px; font-weight: 900; color: #fff; line-height: 1; }
-  .hstat-num span { color: var(--sky-pale); font-size: 16px; }
-  .hstat-label { font-size: 10px; color: rgba(255,255,255,0.45); letter-spacing: 1.5px; text-transform: uppercase; margin-top: 4px; }
+  .hstat { padding: 20px 32px; background: rgba(30,20,16,0.75); backdrop-filter: blur(12px); border: 1px solid rgba(224,112,128,0.2); border-right: none; }
+  .hstat:last-child { border-right: 1px solid rgba(224,112,128,0.2); }
+  .hstat-num { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 700; color: #fff; line-height: 1; }
+  .hstat-num span { color: var(--rose); font-size: 16px; }
+  .hstat-label { font-size: 10px; color: rgba(255,255,255,0.4); letter-spacing: 1.5px; text-transform: uppercase; margin-top: 4px; }
 
   /* TRUST */
-  .trust { background: var(--sky); padding: 14px 5%; display: flex; align-items: center; justify-content: center; gap: 28px; flex-wrap: wrap; }
-  .trust-item { display: flex; align-items: center; gap: 8px; color: var(--sky-deep); font-size: 12px; font-weight: 800; }
+  .trust { background: var(--rose); padding: 14px 5%; display: flex; align-items: center; justify-content: center; gap: 28px; flex-wrap: wrap; }
+  .trust-item { display: flex; align-items: center; gap: 8px; color: #fff; font-size: 12px; font-weight: 800; }
 
   /* SECTIONS */
   section { padding: 90px 5%; }
-  .stag { display: inline-flex; align-items: center; gap: 8px; background: rgba(6,182,212,0.08); border: 1px solid var(--border); color: var(--sky-dark); font-size: 11px; font-weight: 700; padding: 5px 14px; border-radius: 50px; margin-bottom: 16px; letter-spacing: 1px; text-transform: uppercase; }
-  .stitle { font-size: clamp(28px, 4vw, 46px); font-weight: 900; color: var(--text); letter-spacing: -0.5px; line-height: 1.1; margin-bottom: 14px; }
-  .stitle em { font-family: 'Lora', serif; font-style: italic; color: var(--sky-dark); }
-  .ssub { color: var(--muted); font-size: 15px; max-width: 520px; line-height: 1.8; margin-bottom: 52px; }
+  .stag { display: inline-flex; align-items: center; gap: 8px; background: var(--rose-pale); border: 1px solid rgba(224,112,128,0.3); color: var(--rose-dark); font-size: 11px; font-weight: 700; padding: 5px 14px; border-radius: 50px; margin-bottom: 16px; letter-spacing: 1px; text-transform: uppercase; }
+  .stitle { font-family: 'Playfair Display', serif; font-size: clamp(30px, 4vw, 48px); font-weight: 700; color: var(--text); letter-spacing: -0.5px; line-height: 1.1; margin-bottom: 14px; }
+  .stitle em { font-style: italic; color: var(--rose-dark); }
+  .ssub { color: var(--muted); font-size: 15px; max-width: 520px; line-height: 1.8; margin-bottom: 52px; font-weight: 400; }
 
-  /* SERVICES */
-  .services-bg { background: var(--sand); }
-  .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-  .svc { background: #fff; border: 2px solid var(--border); border-radius: 16px; padding: 28px; transition: all 0.25s; position: relative; overflow: hidden; }
-  .svc::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--sky-dark), var(--sky)); transform: scaleX(0); transform-origin: left; transition: transform 0.3s; }
-  .svc:hover { border-color: var(--sky); transform: translateY(-4px); box-shadow: 0 16px 40px rgba(6,182,212,0.12); }
-  .svc:hover::before { transform: scaleX(1); }
-  .svc-icon { font-size: 32px; margin-bottom: 14px; }
-  .svc-name { font-size: 17px; font-weight: 800; color: var(--text); margin-bottom: 6px; }
-  .svc-tag { font-size: 12px; color: var(--sky-dark); font-weight: 700; margin-bottom: 10px; }
-  .svc-desc { font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 14px; }
-  .svc-price { font-size: 15px; font-weight: 900; color: var(--text); }
-  .svc-price span { font-size: 12px; font-weight: 400; color: var(--muted); }
-
-  /* PRICING */
-  .pricing-bg { background: var(--sky-deep); position: relative; overflow: hidden; }
-  .pricing-bg::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.025) 1px, transparent 0); background-size: 28px 28px; }
-  .pricing-bg .stag { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color: var(--sky-pale); }
-  .pricing-bg .stitle { color: #fff; }
-  .pricing-bg .stitle em { color: var(--sky-pale); }
-  .pricing-bg .ssub { color: rgba(255,255,255,0.5); }
-  .pricing-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; position: relative; z-index: 1; }
-  .price-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 28px; transition: all 0.2s; border-top: 3px solid rgba(255,255,255,0.1); }
-  .price-card:hover { background: rgba(255,255,255,0.1); border-top-color: var(--sky); }
-  .price-card.featured { background: rgba(6,182,212,0.1); border: 1px solid rgba(6,182,212,0.3); border-top: 3px solid var(--sky); }
-  .price-badge { display: inline-flex; align-items: center; gap: 4px; background: rgba(6,182,212,0.2); border: 1px solid rgba(6,182,212,0.35); color: var(--sky-pale); font-size: 10px; font-weight: 700; padding: 3px 10px; border-radius: 50px; margin-bottom: 12px; letter-spacing: 1px; text-transform: uppercase; }
-  .price-label { font-size: 11px; font-weight: 700; color: rgba(255,255,255,0.45); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
-  .price-service { font-size: 17px; font-weight: 800; color: #fff; margin-bottom: 10px; line-height: 1.2; }
-  .price-amount { font-size: 36px; font-weight: 900; color: var(--sun); line-height: 1; margin-bottom: 4px; letter-spacing: -1px; }
-  .price-amount span { font-size: 16px; color: rgba(255,255,255,0.45); font-weight: 400; }
-  .price-note { font-size: 12px; color: rgba(255,255,255,0.4); line-height: 1.6; margin-top: 10px; }
-  .price-disclaimer { position: relative; z-index: 1; margin-top: 32px; padding: 16px 20px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; font-size: 12px; color: rgba(255,255,255,0.35); line-height: 1.7; }
-
-  /* ABOUT — exterior home bg */
+  /* ABOUT KELLY — photo bg */
   .about-bg {
     position: relative; overflow: hidden;
-    background: url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1800&q=80') center/cover no-repeat fixed;
+    background: url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1800&q=80') center/cover no-repeat fixed;
   }
-  .about-overlay { position: absolute; inset: 0; background: rgba(12,74,110,0.91); }
+  .about-overlay { position: absolute; inset: 0; background: rgba(30,20,16,0.91); }
   .about-inner { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
-  .about-bg .stag { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color: var(--sky-pale); }
+  .about-bg .stag { background: rgba(224,112,128,0.12); border-color: rgba(224,112,128,0.3); color: var(--rose); }
   .about-bg .stitle { color: #fff; }
-  .about-bg .stitle em { color: var(--sky-pale); }
+  .about-bg .stitle em { color: var(--rose); }
   .about-bg .ssub { color: rgba(255,255,255,0.55); }
   .reasons { display: flex; flex-direction: column; gap: 16px; }
-  .reason { display: flex; gap: 14px; align-items: flex-start; padding: 18px; background: rgba(255,255,255,0.06); border-radius: 14px; border: 1px solid rgba(255,255,255,0.08); }
+  .reason { display: flex; gap: 14px; align-items: flex-start; padding: 18px; background: rgba(255,255,255,0.06); border-radius: 14px; border: 1px solid rgba(255,255,255,0.08); transition: all 0.2s; }
   .reason:hover { background: rgba(255,255,255,0.1); }
   .reason-icon { font-size: 22px; min-width: 28px; }
   .reason-title { font-size: 14px; font-weight: 800; color: #fff; margin-bottom: 4px; }
   .reason-text { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.65; }
-  .about-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(6,182,212,0.25); border-radius: 20px; padding: 44px 40px; }
-  .about-card-title { font-size: 12px; font-weight: 700; color: var(--sky-pale); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 24px; }
-  .astat { display: flex; align-items: center; gap: 16px; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.07); }
-  .astat:last-child { border: none; }
-  .astat-num { font-size: 30px; font-weight: 900; color: #fff; min-width: 70px; line-height: 1; }
-  .astat-num span { color: var(--sky-pale); font-size: 16px; }
-  .astat-label { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.5; }
-  .michael-badge { margin-top: 20px; padding: 16px; background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.25); border-radius: 10px; }
-  .michael-title { font-size: 12px; font-weight: 700; color: var(--sun); margin-bottom: 6px; }
-  .michael-text { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.65; }
+  .kelly-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(224,112,128,0.25); border-radius: 20px; padding: 44px 40px; }
+  .kelly-card-title { font-size: 12px; font-weight: 700; color: var(--rose); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 24px; }
+  .kstat { display: flex; align-items: center; gap: 16px; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.07); }
+  .kstat:last-child { border: none; }
+  .kstat-num { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 700; color: #fff; min-width: 70px; line-height: 1; }
+  .kstat-num span { color: var(--rose); font-size: 16px; }
+  .kstat-label { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.5; }
+  .kelly-quote { margin-top: 20px; padding: 16px; background: rgba(224,112,128,0.1); border: 1px solid rgba(224,112,128,0.25); border-radius: 10px; }
+  .kelly-quote-text { font-family: 'Playfair Display', serif; font-size: 14px; color: rgba(255,255,255,0.7); font-style: italic; line-height: 1.65; }
+  .kelly-quote-attr { font-size: 11px; color: var(--rose); font-weight: 700; margin-top: 8px; letter-spacing: 1px; text-transform: uppercase; }
+
+  /* SERVICES */
+  .services-bg { background: var(--ivory); }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+  .svc { background: #fff; border: 2px solid var(--border); border-radius: 20px; padding: 32px; transition: all 0.25s; position: relative; overflow: hidden; box-shadow: 0 4px 16px rgba(224,112,128,0.06); }
+  .svc::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--rose-dark), var(--rose)); transform: scaleX(0); transform-origin: left; transition: transform 0.3s; }
+  .svc:hover { border-color: var(--rose); transform: translateY(-4px); box-shadow: 0 16px 40px rgba(224,112,128,0.12); }
+  .svc:hover::before { transform: scaleX(1); }
+  .svc-icon { font-size: 34px; margin-bottom: 14px; }
+  .svc-name { font-family: 'Playfair Display', serif; font-size: 19px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+  .svc-tag { font-size: 12px; color: var(--rose-dark); font-weight: 700; margin-bottom: 10px; }
+  .svc-desc { font-size: 13px; color: var(--muted); line-height: 1.7; }
 
   /* GALLERY */
-  .gallery-bg { background: var(--cream); }
-  .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: 260px 260px; gap: 12px; }
-  .gitem { position: relative; overflow: hidden; border-radius: 12px; }
+  .gallery-bg {
+    background: var(--dark); position: relative; overflow: hidden;
+  }
+  .gallery-bg::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.02) 1px, transparent 0); background-size: 28px 28px; }
+  .gallery-bg .stag { background: rgba(224,112,128,0.1); border-color: rgba(224,112,128,0.3); color: var(--rose); }
+  .gallery-bg .stitle { color: #fff; }
+  .gallery-bg .stitle em { color: var(--rose); }
+  .gallery-bg .ssub { color: rgba(255,255,255,0.45); }
+  .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: 280px 280px; gap: 12px; position: relative; z-index: 1; }
+  .gitem { position: relative; overflow: hidden; border-radius: 16px; }
   .gitem img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; display: block; }
-  .gitem:hover img { transform: scale(1.04); }
-  .gitem-label { position: absolute; bottom: 0; left: 0; right: 0; padding: 14px 16px; background: linear-gradient(to top, rgba(12,74,110,0.9), transparent); color: #fff; font-size: 13px; font-weight: 700; }
+  .gitem:hover img { transform: scale(1.05); }
+  .gitem-label { position: absolute; bottom: 0; left: 0; right: 0; padding: 16px; background: linear-gradient(to top, rgba(30,20,16,0.92), transparent); color: #fff; font-size: 13px; font-weight: 700; }
   .gitem.tall { grid-row: span 2; }
+  .gitem.wide { grid-column: span 2; }
 
   /* REVIEWS */
   .reviews-bg {
     position: relative; overflow: hidden;
-    background: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1800&q=80') center/cover no-repeat;
+    background: url('https://images.unsplash.com/photo-1477884213360-7e9d7dcc1e48?w=1800&q=80') center/cover no-repeat;
   }
-  .reviews-overlay { position: absolute; inset: 0; background: linear-gradient(145deg, rgba(12,74,110,0.94), rgba(8,145,178,0.88)); }
+  .reviews-overlay { position: absolute; inset: 0; background: linear-gradient(145deg, rgba(30,20,16,0.95), rgba(100,40,55,0.9)); }
   .reviews-inner { position: relative; z-index: 1; }
-  .reviews-bg .stag { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color: var(--sky-pale); }
+  .reviews-bg .stag { background: rgba(224,112,128,0.12); border-color: rgba(224,112,128,0.3); color: var(--rose); }
   .reviews-bg .stitle { color: #fff; }
-  .reviews-bg .stitle em { color: var(--sky-pale); }
+  .reviews-bg .stitle em { color: var(--rose); }
   .reviews-top { display: flex; align-items: center; gap: 24px; margin-bottom: 40px; flex-wrap: wrap; }
-  .score-big { font-size: 72px; font-weight: 900; color: #fff; line-height: 1; letter-spacing: -2px; }
-  .score-stars { color: var(--sun); font-size: 22px; letter-spacing: 2px; }
+  .score-big { font-family: 'Playfair Display', serif; font-size: 72px; font-weight: 700; color: #fff; line-height: 1; letter-spacing: -2px; }
+  .score-stars { color: var(--warm); font-size: 22px; letter-spacing: 2px; }
   .score-label { font-size: 12px; color: rgba(255,255,255,0.5); font-weight: 600; margin-top: 4px; }
-  .reviews-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
-  .review-card { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 28px; backdrop-filter: blur(12px); }
-  .review-stars { color: var(--sun); font-size: 14px; margin-bottom: 12px; letter-spacing: 1px; }
-  .review-text { font-size: 14px; color: rgba(255,255,255,0.9); line-height: 1.75; margin-bottom: 16px; font-style: italic; font-family: 'Lora', serif; }
-  .review-name { font-size: 13px; font-weight: 800; color: var(--sky-pale); }
+  .reviews-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 16px; }
+  .review-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 18px; padding: 30px; backdrop-filter: blur(12px); }
+  .review-stars { color: var(--warm); font-size: 14px; margin-bottom: 12px; letter-spacing: 1px; }
+  .review-text { font-family: 'Playfair Display', serif; font-size: 16px; color: rgba(255,255,255,0.9); line-height: 1.75; margin-bottom: 18px; font-style: italic; }
+  .review-name { font-size: 13px; font-weight: 800; color: var(--rose); }
   .review-meta { font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 2px; }
 
   /* BOOKING */
-  .booking-bg {
-    background: url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1800&q=80') center/cover no-repeat;
-    position: relative;
-  }
-  .booking-overlay { position: absolute; inset: 0; background: rgba(254,249,238,0.96); }
-  .booking-inner { position: relative; z-index: 1; }
-  .booking-layout { display: grid; grid-template-columns: 1fr 1.1fr; gap: 60px; align-items: start; }
-  .form-card { background: var(--sky-deep); border-radius: 20px; padding: 44px 40px; }
-  .form-title { font-size: 22px; font-weight: 900; color: #fff; margin-bottom: 6px; }
-  .form-sub { font-size: 13px; color: rgba(255,255,255,0.5); margin-bottom: 28px; }
-  .form-group { margin-bottom: 16px; }
-  .form-group label { display: block; font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.45); margin-bottom: 6px; letter-spacing: 1.5px; text-transform: uppercase; }
-  .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 14px; border: 1.5px solid rgba(255,255,255,0.12); border-radius: 10px; font-family: 'Nunito', sans-serif; font-size: 13px; color: #fff; background: rgba(255,255,255,0.07); outline: none; transition: border-color 0.2s; }
-  .form-group select option { background: var(--sky-deep); }
-  .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.25); }
-  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--sky); }
+  .booking-bg { background: var(--sand); position: relative; overflow: hidden; }
+  .booking-bg::before { content: '🐾'; position: absolute; bottom: -20px; right: 3%; font-size: 180px; opacity: 0.04; }
+  .booking-layout { display: grid; grid-template-columns: 1fr 1.1fr; gap: 60px; align-items: start; position: relative; z-index: 1; }
+  .form-card { background: var(--dark); border-radius: 24px; padding: 48px 44px; box-shadow: 0 24px 64px rgba(30,20,16,0.2); }
+  .form-title { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+  .form-sub { font-size: 13px; color: rgba(255,255,255,0.45); margin-bottom: 30px; font-weight: 400; }
+  .form-group { margin-bottom: 18px; }
+  .form-group label { display: block; font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.4); margin-bottom: 7px; letter-spacing: 1.5px; text-transform: uppercase; }
+  .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 13px 16px; border: 1.5px solid rgba(255,255,255,0.1); border-radius: 12px; font-family: 'Nunito', sans-serif; font-size: 13px; color: #fff; background: rgba(255,255,255,0.06); outline: none; transition: border-color 0.2s; }
+  .form-group select option { background: var(--dark); }
+  .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.22); }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--rose); background: rgba(255,255,255,0.09); }
   .form-group textarea { resize: vertical; min-height: 90px; }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .form-submit { width: 100%; background: var(--sun); color: var(--sky-deep); border: none; padding: 15px; border-radius: 50px; font-size: 13px; font-weight: 800; font-family: 'Nunito', sans-serif; cursor: pointer; transition: all 0.2s; margin-top: 8px; box-shadow: 0 6px 20px rgba(245,158,11,0.4); }
-  .form-submit:hover { transform: translateY(-1px); }
+  .form-submit { width: 100%; background: var(--rose); color: #fff; border: none; padding: 15px; border-radius: 50px; font-size: 13px; font-weight: 800; font-family: 'Nunito', sans-serif; cursor: pointer; transition: all 0.2s; margin-top: 8px; box-shadow: 0 6px 20px rgba(224,112,128,0.4); }
+  .form-submit:hover { transform: translateY(-1px); background: var(--rose-dark); }
   .contact-info { padding-top: 8px; }
-  .contact-title { font-size: 38px; font-weight: 900; color: var(--text); line-height: 1.1; margin-bottom: 14px; }
-  .contact-title em { font-family: 'Lora', serif; font-style: italic; color: var(--sky-dark); }
-  .contact-sub { font-size: 15px; color: var(--muted); line-height: 1.8; margin-bottom: 36px; }
+  .contact-title { font-family: 'Playfair Display', serif; font-size: 38px; font-weight: 700; color: var(--text); line-height: 1.1; margin-bottom: 14px; }
+  .contact-title em { font-style: italic; color: var(--rose-dark); }
+  .contact-sub { font-size: 15px; color: var(--muted); line-height: 1.8; margin-bottom: 36px; font-weight: 400; }
   .clist { display: flex; flex-direction: column; }
   .citem { display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid var(--border); align-items: flex-start; }
   .citem:first-child { padding-top: 0; }
@@ -211,52 +200,55 @@
   .cicon { font-size: 20px; min-width: 26px; margin-top: 2px; }
   .clabel { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
   .cval { font-size: 15px; font-weight: 700; color: var(--text); }
-  .cnote { font-size: 13px; color: var(--muted); margin-top: 2px; }
-  .open-pill { display: inline-flex; align-items: center; gap: 6px; margin-top: 6px; background: #f0fdf4; border: 1px solid #bbf7d0; color: #15803d; font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 50px; }
+  .cnote { font-size: 13px; color: var(--muted); margin-top: 2px; font-weight: 400; }
+  .open-pill { display: inline-flex; align-items: center; gap: 6px; margin-top: 6px; background: var(--rose-pale); border: 1px solid rgba(224,112,128,0.3); color: var(--rose-dark); font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 50px; }
   .open-pill::before { content: '●'; font-size: 7px; animation: pulse 2s infinite; }
 
   /* FOOTER */
-  footer { background: var(--sky-deep); padding: 44px 5% 32px; }
+  footer { background: var(--dark); padding: 44px 5% 32px; }
   .footer-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 32px; padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,0.07); margin-bottom: 28px; }
-  .footer-brand { font-size: 18px; font-weight: 900; color: rgba(255,255,255,0.7); margin-bottom: 4px; }
-  .footer-brand span { color: var(--sky-pale); }
+  .footer-brand { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: rgba(255,255,255,0.7); margin-bottom: 4px; }
+  .footer-brand span { color: var(--rose); font-style: italic; }
   .footer-brand-sub { font-size: 10px; color: rgba(255,255,255,0.28); letter-spacing: 2px; text-transform: uppercase; }
   .footer-col { display: flex; flex-direction: column; gap: 10px; }
-  .footer-col-title { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--sky-pale); margin-bottom: 4px; opacity: 0.75; }
+  .footer-col-title { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--rose); margin-bottom: 4px; opacity: 0.75; }
   .footer-col a { font-size: 13px; color: rgba(255,255,255,0.32); text-decoration: none; transition: color 0.2s; }
   .footer-col a:hover { color: rgba(255,255,255,0.8); }
   .footer-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
   .footer-copy { font-size: 12px; color: rgba(255,255,255,0.18); }
-  .footer-tag { font-family: 'Lora', serif; font-size: 13px; font-style: italic; color: var(--sky-pale); opacity: 0.4; }
+  .footer-tag { font-family: 'Playfair Display', serif; font-size: 13px; font-style: italic; color: var(--rose); opacity: 0.4; }
 
   @media (max-width: 860px) {
     .about-inner, .booking-layout { grid-template-columns: 1fr; }
     .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
-    .gitem.tall { grid-row: span 1; height: 240px; }
+    .gitem.tall, .gitem.wide { grid-row: span 1; grid-column: span 1; height: 240px; }
     .nav-links { display: none; }
     .form-row { grid-template-columns: 1fr; }
     .hero-stats { flex-wrap: wrap; }
   }
   @media (max-width: 560px) {
     .gallery-grid { grid-template-columns: 1fr; }
+    .services-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
 <body>
 
 <nav>
-  <div>
-    <div class="nav-logo-main">Stu's Roof & <span>Window Cleaning</span></div>
-    <div class="nav-logo-sub">Sarasota, FL · Open Now</div>
+  <div class="nav-logo">
+    <div class="nav-paw">🐾</div>
+    <div>
+      <div class="nav-logo-main">Kelly's <span>Private Home Grooming</span></div>
+      <div class="nav-logo-sub">Sarasota, FL · 5.0 Star Rated</div>
+    </div>
   </div>
   <div class="nav-links">
+    <a href="#about">About Kelly</a>
     <a href="#services">Services</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#about">About</a>
     <a href="#reviews">Reviews</a>
-    <a href="#booking">Contact</a>
+    <a href="#booking">Book Now</a>
   </div>
-  <a href="tel:9413573023" class="nav-cta">☀️ Free Estimate</a>
+  <a href="tel:9412844083" class="nav-cta">🐾 Book an Appointment</a>
 </nav>
 
 <!-- HERO -->
@@ -264,176 +256,107 @@
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="hero-eyebrow"><div class="edot"></div> Sarasota's Cleaning Specialists</div>
-    <h1><span class="script">Best Price in Town —</span>Roofs, Windows &<br>More. Done <br>Right.</h1>
-    <p class="hero-sub">Stu's Roof & Window Cleaning Services delivers professional, reliable results across Sarasota. Michael and the team are on time, courteous, and the best price in town — every single time.</p>
+    <div class="hero-eyebrow"><div class="edot"></div> Sarasota's Trusted Pet Groomer</div>
+    <h1><span class="script">Your fur baby deserves the best —</span>Careful, <em>Calm,</em><br>& Loving Grooming.</h1>
+    <p class="hero-sub">Kelly's Private Home Grooming brings a gentle, personal touch to every pet in Sarasota. Kelly is careful, calm, and genuinely loves every dog she grooms — and the dogs love her right back.</p>
     <div class="hero-pills">
-      <div class="hero-pill">⭐ 5.0 · 4 Reviews</div>
-      <div class="hero-pill">🌴 Sarasota, FL</div>
-      <div class="hero-pill">🏠 Roof · Window · Pressure</div>
-      <div class="hero-pill">🆓 Free Estimates</div>
+      <div class="hero-pill">⭐ 5.0 · 9 Reviews</div>
+      <div class="hero-pill">🐕 Sarasota, FL</div>
+      <div class="hero-pill">🏠 Private Home Setting</div>
+      <div class="hero-pill">💆 Calm & Stress-Free</div>
     </div>
     <div class="hero-btns">
-      <a href="#booking" class="btn-sun">💧 Get a Free Estimate</a>
-      <a href="tel:9413573023" class="btn-ghost">📞 (941) 357-3023</a>
+      <a href="#booking" class="btn-rose">🐾 Book an Appointment</a>
+      <a href="tel:9412844083" class="btn-ghost">📞 (941) 284-4083</a>
     </div>
     <div class="hero-stats">
       <div class="hstat"><div class="hstat-num">5.0<span>★</span></div><div class="hstat-label">Google Rating</div></div>
-      <div class="hstat"><div class="hstat-num">Best</div><div class="hstat-label">Price in Town</div></div>
-      <div class="hstat"><div class="hstat-num">Free</div><div class="hstat-label">Estimates</div></div>
+      <div class="hstat"><div class="hstat-num">9</div><div class="hstat-label">Five-Star Reviews</div></div>
+      <div class="hstat"><div class="hstat-num">Years</div><div class="hstat-label">Grooming Dogs</div></div>
     </div>
   </div>
   <div class="hero-wave">
     <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg">
-      <path fill="#06b6d4" d="M0,48L60,42C120,37,240,26,360,28C480,30,600,44,720,50C840,55,960,51,1080,44C1200,37,1320,26,1380,21L1440,16L1440,80L0,80Z"/>
+      <path fill="#e07080" d="M0,48L60,42C120,37,240,26,360,28C480,30,600,44,720,50C840,55,960,51,1080,44C1200,37,1320,26,1380,21L1440,16L1440,80L0,80Z"/>
     </svg>
   </div>
 </section>
 
 <!-- TRUST -->
 <div class="trust">
-  <div class="trust-item">🏠 Roof Cleaning</div>
-  <div class="trust-item">🪟 Window Cleaning</div>
-  <div class="trust-item">💦 Pressure Washing</div>
-  <div class="trust-item">🌿 Softwash</div>
-  <div class="trust-item">☀️ Solar Panel Cleaning</div>
+  <div class="trust-item">🐩 All Breeds Welcome</div>
+  <div class="trust-item">💆 Calm & Gentle</div>
+  <div class="trust-item">🏠 Private Home Setting</div>
+  <div class="trust-item">✈️ Great for Vacationing Pets</div>
+  <div class="trust-item">⭐ 5.0 Perfect Rating</div>
   <div class="trust-item">🌴 Sarasota Local</div>
 </div>
 
-<!-- SERVICES -->
-<section class="services-bg" id="services">
-  <div class="stag">🧹 What We Do</div>
-  <div class="stitle">Complete Exterior<br><em>Cleaning Services.</em></div>
-  <p class="ssub">From roof cleaning to window washing and everything in between — Stu's handles it all with professional results and the best prices in Sarasota.</p>
-  <div class="services-grid">
-    <div class="svc"><div class="svc-icon">🏠</div><div class="svc-name">Roof Cleaning</div><div class="svc-tag">Florida roofs need regular care.</div><div class="svc-desc">Professional roof cleaning removes algae, mold, mildew, and black streaks. Protects your investment and boosts curb appeal.</div><div class="svc-price">From $250 <span>· avg home</span></div></div>
-    <div class="svc"><div class="svc-icon">🪟</div><div class="svc-name">Window Cleaning</div><div class="svc-tag">Crystal clear, streak free.</div><div class="svc-desc">Interior and exterior window cleaning for Sarasota homes. Frames, sills, tracks, and screens — done thoroughly without rushing.</div><div class="svc-price">From $150 <span>· avg home</span></div></div>
-    <div class="svc"><div class="svc-icon">💦</div><div class="svc-name">Pressure Washing</div><div class="svc-tag">Powerful, fast, effective.</div><div class="svc-desc">High-pressure washing for driveways, sidewalks, pool decks, patios, and home exteriors. Remove years of built-up grime in one visit.</div><div class="svc-price">From $100 <span>· driveway</span></div></div>
-    <div class="svc"><div class="svc-icon">🌿</div><div class="svc-name">Softwash</div><div class="svc-tag">Safe for delicate surfaces.</div><div class="svc-desc">Low-pressure softwash for roofs, painted surfaces, and screens. Kills mold and algae at the root without damaging your home.</div><div class="svc-price">From $200 <span>· avg home</span></div></div>
-    <div class="svc"><div class="svc-icon">☀️</div><div class="svc-name">Solar Panel Cleaning</div><div class="svc-tag">Dirty panels lose efficiency.</div><div class="svc-desc">Professional solar panel cleaning restores efficiency and maximizes your energy output. Florida dust and pollen build up fast.</div><div class="svc-price">From $10 <span>· per panel</span></div></div>
-    <div class="svc"><div class="svc-icon">🏢</div><div class="svc-name">Commercial Cleaning</div><div class="svc-tag">Professional results for business.</div><div class="svc-desc">Office buildings, storefronts, and commercial properties. Pressure washing, window cleaning, and janitorial services for businesses.</div><div class="svc-price">Custom <span>· free quote</span></div></div>
-    <div class="svc"><div class="svc-icon">🍂</div><div class="svc-name">Gutter Cleaning</div><div class="svc-tag">Protect your home from water damage.</div><div class="svc-desc">Full gutter cleaning and flush to prevent blockages, water damage, and pest nesting. Keeps your drainage system flowing.</div><div class="svc-price">From $75 <span>· avg home</span></div></div>
-    <div class="svc"><div class="svc-icon">🧴</div><div class="svc-name">House Washing</div><div class="svc-tag">Fresh exterior, every time.</div><div class="svc-desc">Full exterior house washing removes mold, mildew, dirt, and algae from siding, stucco, and painted surfaces.</div><div class="svc-price">From $150 <span>· avg home</span></div></div>
-    <div class="svc"><div class="svc-icon">🪨</div><div class="svc-name">Awning & Screen Cleaning</div><div class="svc-tag">Details that make the difference.</div><div class="svc-desc">Professional cleaning of awnings, pool enclosures, and window screens. Florida weather takes a toll — we bring them back to life.</div><div class="svc-price">From $50 <span>· per area</span></div></div>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section class="pricing-bg" id="pricing">
-  <div class="stag">💰 Pricing Guide</div>
-  <div class="stitle">Transparent, <em>Fair</em> Pricing.</div>
-  <p class="ssub">Best price in town — guaranteed. These ranges reflect 2026 market averages. Contact us for a free personalized estimate.</p>
-  <div class="pricing-grid">
-    <div class="price-card">
-      <div class="price-label">Per Window</div>
-      <div class="price-service">Standard Window</div>
-      <div class="price-amount">$8<span>–$15</span></div>
-      <div class="price-note">Per window exterior only. Most common pricing for residential homes.</div>
-    </div>
-    <div class="price-card featured">
-      <div class="price-badge">⭐ Most Popular</div>
-      <div class="price-label">Full Home</div>
-      <div class="price-service">Interior & Exterior</div>
-      <div class="price-amount">$150<span>–$302</span></div>
-      <div class="price-note">Both sides, frames, and sills. Most homeowners pay around $220.</div>
-    </div>
-    <div class="price-card">
-      <div class="price-label">Roof Cleaning</div>
-      <div class="price-service">Softwash Roof Clean</div>
-      <div class="price-amount">$250<span>–$600</span></div>
-      <div class="price-note">Depends on roof size, pitch, and material. Removes algae, mold, and black streaks.</div>
-    </div>
-    <div class="price-card">
-      <div class="price-label">Pressure Washing</div>
-      <div class="price-service">Driveway & Surfaces</div>
-      <div class="price-amount">$100<span>–$300</span></div>
-      <div class="price-note">Driveways, sidewalks, pool decks, and patios. Priced by area.</div>
-    </div>
-    <div class="price-card featured">
-      <div class="price-badge">💰 Best Value</div>
-      <div class="price-label">Bundle Package</div>
-      <div class="price-service">Roof + Windows + Pressure</div>
-      <div class="price-amount">Save<span> big</span></div>
-      <div class="price-note">Bundle multiple services in one visit for significant savings. Ask about our package deals.</div>
-    </div>
-    <div class="price-card">
-      <div class="price-label">Solar Panels</div>
-      <div class="price-service">Solar Panel Cleaning</div>
-      <div class="price-amount">$10<span>–$15/panel</span></div>
-      <div class="price-note">Per panel. Restores efficiency and maximizes energy output.</div>
-    </div>
-    <div class="price-card">
-      <div class="price-label">Gutters</div>
-      <div class="price-service">Gutter Cleaning</div>
-      <div class="price-amount">$75<span>–$200</span></div>
-      <div class="price-note">Full clean and flush. Depends on linear footage and stories.</div>
-    </div>
-    <div class="price-card">
-      <div class="price-label">Screens</div>
-      <div class="price-service">Screen Cleaning</div>
-      <div class="price-amount">$3<span>–$5/screen</span></div>
-      <div class="price-note">Per screen. Often bundled into full packages at a discount.</div>
-    </div>
-  </div>
-  <div class="price-disclaimer">
-    <strong style="color:rgba(255,255,255,0.6);">📋 Note:</strong> Pricing above reflects 2026 national market averages for reference. Stu's is known for the best price in town — contact Michael for your free personalized estimate, no obligation.
-  </div>
-</section>
-
-<!-- ABOUT -->
+<!-- ABOUT KELLY -->
 <section class="about-bg" id="about">
   <div class="about-overlay"></div>
   <div class="about-inner">
     <div>
-      <div class="stag">🌴 About Us</div>
-      <div class="stitle">Reliable, <em>Professional,</em><br>Best Price in Town.</div>
-      <p class="ssub">Stu's Roof & Window Cleaning has built a reputation in Sarasota for showing up on time, delivering outstanding results, and always offering the most competitive pricing around.</p>
+      <div class="stag">🐾 About Kelly</div>
+      <div class="stitle">Gentle Care from<br>a Groomer <em>Pets Love.</em></div>
+      <p class="ssub">Kelly has been grooming dogs in Sarasota for years — building a loyal base of customers whose pets genuinely love coming to see her. Even nervous dogs feel safe in Kelly's hands.</p>
       <div class="reasons">
-        <div class="reason"><div class="reason-icon">⏰</div><div><div class="reason-title">Always On Time</div><div class="reason-text">Michael is punctual and reliable. Customers consistently highlight his promptness and respect for their time.</div></div></div>
-        <div class="reason"><div class="reason-icon">💰</div><div><div class="reason-title">Best Price in Town</div><div class="reason-text">Competitive pricing without cutting corners on quality. Customers say it directly — best price in Sarasota.</div></div></div>
-        <div class="reason"><div class="reason-icon">🤝</div><div><div class="reason-title">Courteous & Professional</div><div class="reason-text">Customer service second to none. Michael is courteous, professional, and genuinely cares about the job he delivers.</div></div></div>
-        <div class="reason"><div class="reason-icon">🔁</div><div><div class="reason-title">Customers Come Back</div><div class="reason-text">Customers don't just recommend Stu's — they rehire. That's the clearest sign of quality work done right.</div></div></div>
+        <div class="reason"><div class="reason-icon">💆</div><div><div class="reason-title">Calm & Careful with Every Dog</div><div class="reason-text">Kelly is known for being careful and calm — especially with nervous or anxious dogs. Customers with shy or sensitive pets trust Kelly completely.</div></div></div>
+        <div class="reason"><div class="reason-icon">❤️</div><div><div class="reason-title">Dogs Genuinely Love Her</div><div class="reason-text">"My dog loves to see her." That says everything. Kelly builds real bonds with the pets she grooms — they're excited to visit.</div></div></div>
+        <div class="reason"><div class="reason-icon">🏠</div><div><div class="reason-title">Private, Personal Setting</div><div class="reason-text">Not a chaotic salon — a private, calm environment that keeps pets relaxed and comfortable throughout their grooming experience.</div></div></div>
+        <div class="reason"><div class="reason-icon">✈️</div><div><div class="reason-title">Perfect for Visiting Pets Too</div><div class="reason-text">In Sarasota with your fur baby and need grooming? Kelly has welcomed vacationing dogs and delivered the same loving care.</div></div></div>
       </div>
     </div>
-    <div class="about-card">
-      <div class="about-card-title">Why Choose Stu's</div>
-      <div class="astat"><div class="astat-num">5.0<span>★</span></div><div class="astat-label">Perfect Google rating from verified Sarasota customers</div></div>
-      <div class="astat"><div class="astat-num">Best</div><div class="astat-label">Price in town — always competitive, never cheap quality</div></div>
-      <div class="astat"><div class="astat-num">9+</div><div class="astat-label">Services offered — one call handles your whole exterior</div></div>
-      <div class="astat"><div class="astat-num">Free</div><div class="astat-label">Personalized estimate for every job — no obligation</div></div>
-      <div class="michael-badge">
-        <div class="michael-title">⭐ "Best price in town. I strongly recommend Mr. Michael."</div>
-        <div class="michael-text">— Latoya Jackson, Google Local Guide · 15 reviews</div>
+    <div class="kelly-card">
+      <div class="kelly-card-title">Why Customers Choose Kelly</div>
+      <div class="kstat"><div class="kstat-num">5.0<span>★</span></div><div class="kstat-label">Perfect Google rating — 9 verified five-star reviews</div></div>
+      <div class="kstat"><div class="kstat-num">Years</div><div class="kstat-label">Grooming dogs in Sarasota — loyal returning customers</div></div>
+      <div class="kstat"><div class="kstat-num">All</div><div class="kstat-label">Breeds welcome — ShiZu, Malshi, Maltese, English Setter & more</div></div>
+      <div class="kstat"><div class="kstat-num">Calm</div><div class="kstat-label">Even nervous dogs feel safe and relaxed with Kelly</div></div>
+      <div class="kelly-quote">
+        <div class="kelly-quote-text">"We have a nervous English Setter and Kelly did a fabulous job on him."</div>
+        <div class="kelly-quote-attr">— Verified Google Customer</div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services-bg" id="services">
+  <div class="stag">✂️ Services</div>
+  <div class="stitle">Full Grooming Care<br>for Your <em>Fur Baby.</em></div>
+  <p class="ssub">From a simple bath and brush to a full groom — Kelly handles every breed with the same gentle, thorough attention to detail.</p>
+  <div class="services-grid">
+    <div class="svc"><div class="svc-icon">✂️</div><div class="svc-name">Full Grooming</div><div class="svc-tag">Bath, cut, dry & style.</div><div class="svc-desc">Complete grooming including bath, blow dry, breed-appropriate haircut, ear cleaning, nail trim, and finishing touches. Kelly takes her time and does it right.</div></div>
+    <div class="svc"><div class="svc-icon">🛁</div><div class="svc-name">Bath & Brush</div><div class="svc-tag">Fresh, clean & fluffy.</div><div class="svc-desc">Professional bath, blow dry, and thorough brush-out. Perfect for maintenance between full grooms. Leaves your dog smelling amazing.</div></div>
+    <div class="svc"><div class="svc-icon">💅</div><div class="svc-name">Nail Trim</div><div class="svc-tag">Quick, safe & painless.</div><div class="svc-desc">Careful nail trimming and filing. Kelly's calm approach makes even nail-shy dogs comfortable throughout the process.</div></div>
+    <div class="svc"><div class="svc-icon">👂</div><div class="svc-name">Ear Cleaning</div><div class="svc-tag">Healthy ears, happy dog.</div><div class="svc-desc">Gentle ear cleaning to remove buildup and prevent infections. Essential for long-eared and floppy-eared breeds especially in Florida's humid climate.</div></div>
+    <div class="svc"><div class="svc-icon">🐾</div><div class="svc-name">Paw Treatment</div><div class="svc-tag">Soft paws, every time.</div><div class="svc-desc">Paw pad trimming and conditioning. Keeps paws healthy and comfortable, especially on Florida's hot pavement.</div></div>
+    <div class="svc"><div class="svc-icon">🌸</div><div class="svc-name">Breed-Specific Styling</div><div class="svc-tag">Looking their best.</div><div class="svc-desc">Expert styling for all breeds — ShiZu, Maltese, Malshi, English Setter, and more. Kelly knows how to make every dog look and feel their best.</div></div>
   </div>
 </section>
 
 <!-- GALLERY -->
 <section class="gallery-bg" id="gallery">
-  <div class="stag">🌴 Our Work</div>
-  <div class="stitle">Florida Homes,<br><em>Spotless Results.</em></div>
-  <p class="ssub">From Sarasota driveways to rooftops — every job gets the same professional treatment and best-in-town results.</p>
+  <div class="stag">🐾 Happy Dogs</div>
+  <div class="stitle">Every Dog Leaves<br><em>Looking Beautiful.</em></div>
+  <p class="ssub">From fluffed-up Malteses to freshly groomed setters — every dog gets Kelly's full attention and care.</p>
   <div class="gallery-grid">
     <div class="gitem tall">
-      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Florida home exterior">
-      <div class="gitem-label">Spotless Florida Homes</div>
+      <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800&q=80" alt="Dog being groomed">
+      <div class="gitem-label">Gentle & Careful Every Time</div>
     </div>
     <div class="gitem">
-      <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80" alt="Clean home exterior">
-      <div class="gitem-label">Crystal Clear Windows</div>
+      <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=800&q=80" alt="Happy groomed dog">
+      <div class="gitem-label">Dogs Love Coming to See Kelly</div>
     </div>
     <div class="gitem">
-      <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&q=80" alt="Beautiful Florida home">
-      <div class="gitem-label">Best Price in Town</div>
+      <img src="https://images.unsplash.com/photo-1615751072497-5f5169febe17?w=800&q=80" alt="Professional dog grooming">
+      <div class="gitem-label">Professional Results Every Visit</div>
     </div>
-    <div class="gitem">
-      <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80" alt="Florida house exterior">
-      <div class="gitem-label">Professional Results</div>
-    </div>
-    <div class="gitem">
-      <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&q=80" alt="Sarasota home">
-      <div class="gitem-label">Sarasota's Trusted Cleaners</div>
+    <div class="gitem wide">
+      <img src="https://images.unsplash.com/photo-1534361960057-19f4434a337d?w=1200&q=80" alt="Clean happy dog after grooming">
+      <div class="gitem-label">Your Fur Baby Deserves the Best</div>
     </div>
   </div>
 </section>
@@ -443,33 +366,33 @@
   <div class="reviews-overlay"></div>
   <div class="reviews-inner">
     <div class="stag">⭐ Reviews</div>
-    <div class="stitle">What Sarasota<br><em>Customers Say.</em></div>
+    <div class="stitle">What Pet Parents<br><em>Are Saying.</em></div>
     <div class="reviews-top">
       <div class="score-big">5.0</div>
       <div>
         <div class="score-stars">★★★★★</div>
-        <div style="font-size:16px; font-weight:800; color:#fff; margin-top:4px;">4 Google Reviews · Perfect Rating</div>
+        <div style="font-family:'Playfair Display',serif; font-size:18px; font-weight:700; color:#fff; margin-top:4px;">9 Google Reviews · Perfect Rating</div>
         <div class="score-label">Sarasota, FL · Verified</div>
       </div>
     </div>
     <div class="reviews-grid">
       <div class="review-card">
         <div class="review-stars">★★★★★</div>
-        <div class="review-text">"Very professional — best price in town. I strongly recommend Mr. Michael for the job again. Thanks Michael."</div>
-        <div class="review-name">Latoya Jackson</div>
-        <div class="review-meta">Google Local Guide · 15 reviews · 22 photos</div>
+        <div class="review-text">"Kelly does an amazing job on my dog. She is very careful and calm. My dog loves to see her. I am very happy with her."</div>
+        <div class="review-name">Dee Palacious</div>
+        <div class="review-meta">Google Review · 8 reviews · 1 year ago</div>
       </div>
       <div class="review-card">
         <div class="review-stars">★★★★★</div>
-        <div class="review-text">"The business's customer service is second to none — he was on time, courteous and the job he did was the best! I will definitely rehire!"</div>
-        <div class="review-name">WERT</div>
-        <div class="review-meta">Google Review · 9 reviews</div>
+        <div class="review-text">"We were on vacation this summer and Kelly did a great job with our ShiZu. If you are in Sarasota with your fur baby and need some tender loving care, don't hesitate — give her a call."</div>
+        <div class="review-name">Christine McEachern</div>
+        <div class="review-meta">Google Review · 3 reviews · 10 months ago</div>
       </div>
       <div class="review-card">
         <div class="review-stars">★★★★★</div>
-        <div class="review-text">"Great and reliable work. Would recommend to anyone. Prompt, very reasonable on price. Everything looks fantastic. Awesome job."</div>
-        <div class="review-name">Kody Okes</div>
-        <div class="review-meta">Google Review · 2 reviews</div>
+        <div class="review-text">"She did a beautiful job on my Malshi — very pleased. I'm going back today. Having my Maltese and my Malshi groomed."</div>
+        <div class="review-name">Mary Beth Wise</div>
+        <div class="review-meta">Google Review · 4 reviews · 5 months ago</div>
       </div>
     </div>
   </div>
@@ -477,50 +400,44 @@
 
 <!-- BOOKING -->
 <section class="booking-bg" id="booking">
-  <div class="booking-overlay"></div>
-  <div class="booking-inner">
-    <div class="booking-layout">
-      <div class="contact-info">
-        <div class="stag">📞 Get in Touch</div>
-        <div class="contact-title">Get Your <em>Free</em> Estimate Today.</div>
-        <div class="contact-sub">Fill out the form and Michael will be in touch to arrange your free estimate. Or call directly — open until 6 PM.</div>
-        <div class="clist">
-          <div class="citem"><div class="cicon">📞</div><div><div class="clabel">Phone</div><div class="cval">(941) 357-3023</div><div class="cnote">Call during business hours</div><div class="open-pill">Open · Closes 6 PM</div></div></div>
-          <div class="citem"><div class="cicon">📍</div><div><div class="clabel">Location</div><div class="cval">Sarasota, FL</div><div class="cnote">Serving Sarasota and surrounding areas</div></div></div>
-          <div class="citem"><div class="cicon">⭐</div><div><div class="clabel">Rating</div><div class="cval">5.0 Stars · 4 Reviews</div><div class="cnote">"Best price in town. Customer service second to none."</div></div></div>
-          <div class="citem"><div class="cicon">🆓</div><div><div class="clabel">Estimates</div><div class="cval">Always Free</div><div class="cnote">No obligation — contact us today</div></div></div>
-        </div>
+  <div class="booking-layout">
+    <div class="contact-info">
+      <div class="stag">📞 Book an Appointment</div>
+      <div class="contact-title">Ready to Book Your<br><em>Fur Baby In?</em></div>
+      <div class="contact-sub">Fill out the form and Kelly will be in touch to schedule your appointment. Or call directly during business hours.</div>
+      <div class="clist">
+        <div class="citem"><div class="cicon">📞</div><div><div class="clabel">Phone</div><div class="cval">(941) 284-4083</div><div class="cnote">Call during business hours</div><div class="open-pill">Open · Closes 3:30 PM</div></div></div>
+        <div class="citem"><div class="cicon">📍</div><div><div class="clabel">Location</div><div class="cval">Sarasota, FL 34231</div><div class="cnote">Private home grooming — address provided on booking</div></div></div>
+        <div class="citem"><div class="cicon">⭐</div><div><div class="clabel">Rating</div><div class="cval">5.0 Stars · 9 Reviews</div><div class="cnote">"My dog loves to see her." — Verified Google Customer</div></div></div>
+        <div class="citem"><div class="cicon">🐾</div><div><div class="clabel">Breeds</div><div class="cval">All Breeds Welcome</div><div class="cnote">ShiZu, Maltese, Malshi, English Setter & more</div></div></div>
       </div>
-      <div class="form-card">
-        <div class="form-title">🧹 Get a Free Estimate</div>
-        <div class="form-sub">We'll get back to you quickly with your personalized quote.</div>
-        <form action="https://formspree.io/f/mzdodlwk" method="POST">
-        <div class="form-row">
-          <div class="form-group"><label>First Name</label><input type="text" name="first_name" placeholder="John"></div>
-          <div class="form-group"><label>Last Name</label><input type="text" name="last_name" placeholder="Smith"></div>
-        </div>
+    </div>
+    <div class="form-card">
+      <div class="form-title">🐾 Book an Appointment</div>
+      <div class="form-sub">Tell Kelly about your pup and she'll be in touch to confirm.</div>
+      <form action="https://formspree.io/f/mzdodlwk" method="POST">
+      <div class="form-row">
+        <div class="form-group"><label>Your Name</label><input type="text" name="first_name" placeholder="Jane Smith"></div>
         <div class="form-group"><label>Phone Number</label><input type="tel" name="phone" placeholder="(941) 555-0000"></div>
-        <div class="form-group"><label>Property Address</label><input type="text" name="address" placeholder="123 Main St, Sarasota FL"></div>
-        <div class="form-group">
-          <label>Service Needed</label>
-          <select name="service">
-            <option value="">Select a service...</option>
-            <option>Roof Cleaning</option>
-            <option>Window Cleaning</option>
-            <option>Pressure Washing</option>
-            <option>Softwash</option>
-            <option>Solar Panel Cleaning</option>
-            <option>Gutter Cleaning</option>
-            <option>House Washing</option>
-            <option>Awning & Screen Cleaning</option>
-            <option>Commercial Cleaning</option>
-            <option>Full Bundle Package</option>
-          </select>
-        </div>
-        <div class="form-group"><label>Tell Us About Your Property</label><textarea name="message" placeholder="Describe your home, services needed, any special considerations..."></textarea></div>
-        <button class="form-submit">☀️ Send My Request</button>
-        </form>
       </div>
+      <div class="form-group"><label>Your Dog's Name</label><input type="text" name="dog_name" placeholder="Biscuit"></div>
+      <div class="form-group"><label>Breed</label><input type="text" name="breed" placeholder="e.g. Maltese, ShiZu, Mixed"></div>
+      <div class="form-group">
+        <label>Service Needed</label>
+        <select name="service">
+          <option value="">Select a service...</option>
+          <option>Full Grooming</option>
+          <option>Bath & Brush</option>
+          <option>Nail Trim</option>
+          <option>Ear Cleaning</option>
+          <option>Paw Treatment</option>
+          <option>Full Package (All Services)</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Preferred Date & Time</label><input type="text" name="preferred_time" placeholder="e.g. Monday morning, Friday afternoon"></div>
+      <div class="form-group"><label>Anything Kelly Should Know?</label><textarea name="message" placeholder="Nervous dog? Special coat? Visiting Sarasota? Let Kelly know..."></textarea></div>
+      <button class="form-submit">🐾 Send Booking Request</button>
+      </form>
     </div>
   </div>
 </section>
@@ -528,32 +445,31 @@
 <footer>
   <div class="footer-top">
     <div>
-      <div class="footer-brand">Stu's Roof & <span>Window Cleaning</span></div>
-      <div class="footer-brand-sub">Sarasota, FL · (941) 357-3023</div>
+      <div class="footer-brand">Kelly's <span>Private Home Grooming</span></div>
+      <div class="footer-brand-sub">Sarasota, FL 34231 · (941) 284-4083</div>
     </div>
     <div class="footer-col">
       <div class="footer-col-title">Services</div>
-      <a href="#services">Roof Cleaning</a>
-      <a href="#services">Window Cleaning</a>
-      <a href="#services">Pressure Washing</a>
-      <a href="#services">Solar Panel Cleaning</a>
+      <a href="#services">Full Grooming</a>
+      <a href="#services">Bath & Brush</a>
+      <a href="#services">Nail Trim</a>
+      <a href="#services">Breed Styling</a>
     </div>
     <div class="footer-col">
       <div class="footer-col-title">Company</div>
-      <a href="#about">About Us</a>
-      <a href="#pricing">Pricing</a>
+      <a href="#about">About Kelly</a>
       <a href="#reviews">Reviews</a>
-      <a href="#booking">Contact</a>
+      <a href="#booking">Book Now</a>
     </div>
     <div class="footer-col">
       <div class="footer-col-title">Contact</div>
-      <a href="tel:9413573023">(941) 357-3023</a>
-      <a href="#booking">Free Estimate</a>
+      <a href="tel:9412844083">(941) 284-4083</a>
+      <a href="#booking">Book an Appointment</a>
     </div>
   </div>
   <div class="footer-bottom">
-    <div class="footer-copy">© 2026 Stu's Roof & Window Cleaning Services · Sarasota, FL · All Rights Reserved</div>
-    <div class="footer-tag">Best Price in Town. Professional Results. Every Time.</div>
+    <div class="footer-copy">© 2026 Kelly's Private Home Grooming · Sarasota, FL · All Rights Reserved</div>
+    <div class="footer-tag">Calm, Careful & Loving — Every Visit.</div>
   </div>
 </footer>
 
