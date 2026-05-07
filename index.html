@@ -3,201 +3,242 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tranquil Waters Pool Care | Venice, FL</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<title>Stu's Roof & Window Cleaning | Sarasota, FL</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-    --dark: #08141e;
-    --dark2: #0e1c28;
-    --teal: #0d7a8a;
-    --teal-mid: #159aae;
-    --teal-light: #4ec9da;
-    --silver: #c0d8e0;
-    --cream: #f4f2ee;
-    --warm: #f9f7f3;
-    --text: #111e28;
-    --muted: #627080;
-    --border: rgba(0,0,0,0.08);
-    --border-light: rgba(78,201,218,0.18);
+    --sky: #06b6d4;
+    --sky-dark: #0891b2;
+    --sky-deep: #0c4a6e;
+    --sky-pale: #a5f3fc;
+    --sun: #f59e0b;
+    --palm: #166534;
+    --cream: #fdfaf4;
+    --sand: #fef9ee;
+    --text: #0c2340;
+    --muted: #3d6070;
+    --border: rgba(6,182,212,0.15);
   }
   html { scroll-behavior: smooth; }
-  body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--warm); line-height: 1.6; }
-  ::-webkit-scrollbar { width: 4px; }
-  ::-webkit-scrollbar-thumb { background: var(--teal-light); border-radius: 2px; }
+  body { font-family: 'Nunito', sans-serif; color: var(--text); background: var(--cream); line-height: 1.6; }
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-thumb { background: var(--sky); border-radius: 3px; }
 
+  /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    background: rgba(8,20,30,0.96); backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(78,201,218,0.08);
+    background: rgba(12,74,110,0.97); backdrop-filter: blur(16px);
+    border-bottom: 3px solid var(--sky);
     display: flex; align-items: center; justify-content: space-between;
-    padding: 0 6%; height: 72px;
+    padding: 0 5%; height: 68px;
+    box-shadow: 0 2px 20px rgba(12,74,110,0.4);
   }
-  .nav-logo-main { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: #fff; letter-spacing: 0.5px; line-height: 1.2; }
-  .nav-logo-sub { font-size: 10px; color: var(--silver); letter-spacing: 2px; text-transform: uppercase; font-weight: 400; opacity: 0.55; }
-  .nav-center { display: flex; gap: 36px; }
-  .nav-center a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 12px; font-weight: 400; letter-spacing: 1px; text-transform: uppercase; transition: color 0.2s; }
-  .nav-center a:hover { color: var(--silver); }
-  .nav-right { display: flex; align-items: center; gap: 20px; }
-  .nav-phone { font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.75); text-decoration: none; }
-  .nav-cta { background: var(--teal-light); color: var(--dark); font-size: 11px; font-weight: 500; padding: 10px 24px; letter-spacing: 1.5px; text-decoration: none; text-transform: uppercase; transition: all 0.3s; border: 1px solid var(--teal-light); }
-  .nav-cta:hover { background: transparent; color: var(--teal-light); }
+  .nav-logo-main { font-size: 18px; font-weight: 900; color: #fff; line-height: 1.2; }
+  .nav-logo-main span { color: var(--sky-pale); }
+  .nav-logo-sub { font-size: 10px; color: rgba(255,255,255,0.4); letter-spacing: 1.5px; text-transform: uppercase; }
+  .nav-links { display: flex; gap: 24px; }
+  .nav-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 12px; font-weight: 600; transition: color 0.2s; letter-spacing: 0.3px; }
+  .nav-links a:hover { color: var(--sky-pale); }
+  .nav-cta { background: var(--sun); color: var(--sky-deep); font-size: 13px; font-weight: 800; padding: 10px 22px; border-radius: 50px; text-decoration: none; transition: all 0.2s; box-shadow: 0 4px 14px rgba(245,158,11,0.4); white-space: nowrap; }
+  .nav-cta:hover { transform: translateY(-1px); }
 
+  /* HERO — window cleaning photo */
   .hero {
     min-height: 100vh; position: relative; overflow: hidden;
     display: flex; align-items: flex-end;
-    background: var(--dark);
+    background: var(--sky-deep);
   }
-  .hero-bg { position: absolute; inset: 0; background: linear-gradient(145deg, #050e16 0%, #081420 50%, #0a1c2e 100%); }
-  .hero-glow { position: absolute; top: -100px; right: -100px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(13,122,138,0.2) 0%, transparent 65%); pointer-events: none; }
-  .hero-glow2 { position: absolute; bottom: -150px; left: -80px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(78,201,218,0.07) 0%, transparent 65%); pointer-events: none; }
-  .hero-lines { position: absolute; inset: 0; opacity: 0.025; background-image: repeating-linear-gradient(90deg, transparent, transparent 80px, #fff 80px, #fff 81px); }
-  .hero-wave { position: absolute; bottom: -2px; left: 0; right: 0; }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background: url('https://images.unsplash.com/photo-1593260654732-df52bea15d63?q=80&w=1050&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+  }
+  .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(12,74,110,0.97) 0%, rgba(12,74,110,0.65) 45%, rgba(12,74,110,0.2) 100%); }
+  .hero-wave { position: absolute; bottom: -2px; left: 0; right: 0; z-index: 2; }
   .hero-wave svg { display: block; width: 100%; }
-  .hero-content { position: relative; z-index: 2; padding: 0 6% 100px; width: 100%; }
-  .hero-overline { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
-  .overline-bar { width: 40px; height: 1px; background: var(--teal-light); }
-  .overline-text { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--teal-light); font-weight: 500; }
-  h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(56px, 8vw, 104px); font-weight: 600; color: #fff; line-height: 0.92; letter-spacing: -1.5px; margin-bottom: 28px; }
-  h1 em { color: var(--silver); font-style: italic; }
-  .hero-sub { font-size: 15px; color: rgba(255,255,255,0.48); font-weight: 300; max-width: 500px; line-height: 1.85; margin-bottom: 44px; }
-  .hero-actions { display: flex; align-items: center; gap: 32px; margin-bottom: 60px; flex-wrap: wrap; }
-  .btn-hero { background: var(--teal-light); color: var(--dark); font-size: 11px; font-weight: 500; padding: 16px 40px; letter-spacing: 2px; text-decoration: none; text-transform: uppercase; transition: all 0.3s; border: 1px solid var(--teal-light); display: inline-block; }
-  .btn-hero:hover { background: transparent; color: var(--teal-light); }
-  .hero-link { color: rgba(255,255,255,0.4); font-size: 13px; text-decoration: none; display: flex; align-items: center; gap: 8px; transition: color 0.2s; }
-  .hero-link:hover { color: #fff; }
-  .hero-link span { transition: transform 0.2s; }
-  .hero-link:hover span { transform: translateX(4px); }
-  .hero-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.05); }
-  .hstat { padding: 24px 28px; background: rgba(8,20,30,0.85); backdrop-filter: blur(8px); }
-  .hstat-num { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 600; color: #fff; line-height: 1; }
-  .hstat-num span { color: var(--teal-light); }
-  .hstat-label { font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 1px; text-transform: uppercase; margin-top: 6px; }
+  .hero-content { position: relative; z-index: 3; padding: 0 5% 90px; width: 100%; }
+  .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); color: #fff; font-size: 11px; font-weight: 700; padding: 5px 14px; border-radius: 50px; margin-bottom: 20px; letter-spacing: 1px; text-transform: uppercase; }
+  .edot { width: 6px; height: 6px; border-radius: 50%; background: #90ff90; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+  h1 { font-size: clamp(42px, 6.5vw, 80px); font-weight: 900; color: #fff; line-height: 1.0; letter-spacing: -1px; margin-bottom: 20px; text-shadow: 0 2px 20px rgba(0,0,0,0.3); }
+  h1 .script { font-family: 'Lora', serif; font-style: italic; color: var(--sky-pale); display: block; font-size: 0.62em; font-weight: 600; margin-bottom: 4px; }
+  .hero-sub { font-size: 15px; color: rgba(255,255,255,0.75); max-width: 520px; line-height: 1.85; margin-bottom: 36px; }
+  .hero-pills { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 36px; }
+  .hero-pill { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); color: rgba(255,255,255,0.9); font-size: 11px; font-weight: 700; padding: 5px 14px; border-radius: 50px; }
+  .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 52px; }
+  .btn-sun { background: var(--sun); color: var(--sky-deep); font-size: 13px; font-weight: 800; padding: 14px 32px; border-radius: 50px; text-decoration: none; transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 6px 20px rgba(245,158,11,0.4); }
+  .btn-sun:hover { transform: translateY(-2px); }
+  .btn-ghost { background: rgba(255,255,255,0.12); color: #fff; font-size: 13px; font-weight: 700; padding: 14px 28px; border-radius: 50px; text-decoration: none; border: 2px solid rgba(255,255,255,0.3); transition: all 0.2s; }
+  .btn-ghost:hover { border-color: #fff; }
+  .hero-stats { display: flex; gap: 0; }
+  .hstat { padding: 20px 32px; background: rgba(12,74,110,0.75); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); border-right: none; }
+  .hstat:last-child { border-right: 1px solid rgba(255,255,255,0.1); }
+  .hstat-num { font-size: 30px; font-weight: 900; color: #fff; line-height: 1; }
+  .hstat-num span { color: var(--sky-pale); font-size: 16px; }
+  .hstat-label { font-size: 10px; color: rgba(255,255,255,0.45); letter-spacing: 1.5px; text-transform: uppercase; margin-top: 4px; }
 
-  .ticker { background: var(--teal); padding: 13px 0; overflow: hidden; }
-  .ticker-track { display: flex; animation: scroll 30s linear infinite; white-space: nowrap; }
-  @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-  .ticker-item { font-size: 11px; font-weight: 400; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(255,255,255,0.65); padding: 0 32px; display: flex; align-items: center; gap: 16px; }
-  .tdot { width: 3px; height: 3px; border-radius: 50%; background: var(--teal-light); opacity: 0.7; }
+  /* TRUST */
+  .trust { background: var(--sky); padding: 14px 5%; display: flex; align-items: center; justify-content: center; gap: 28px; flex-wrap: wrap; }
+  .trust-item { display: flex; align-items: center; gap: 8px; color: var(--sky-deep); font-size: 12px; font-weight: 800; }
 
-  section { padding: 100px 6%; }
-  .eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
-  .ebar { width: 28px; height: 1px; background: var(--teal-light); }
-  .etag { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--teal-light); font-weight: 500; }
-  .sec-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 4vw, 54px); font-weight: 600; color: var(--text); letter-spacing: -0.5px; line-height: 1.1; margin-bottom: 16px; }
-  .sec-title em { font-style: italic; color: var(--teal); }
-  .sec-sub { color: var(--muted); font-size: 15px; max-width: 500px; line-height: 1.85; margin-bottom: 56px; font-weight: 300; }
+  /* SECTIONS */
+  section { padding: 90px 5%; }
+  .stag { display: inline-flex; align-items: center; gap: 8px; background: rgba(6,182,212,0.08); border: 1px solid var(--border); color: var(--sky-dark); font-size: 11px; font-weight: 700; padding: 5px 14px; border-radius: 50px; margin-bottom: 16px; letter-spacing: 1px; text-transform: uppercase; }
+  .stitle { font-size: clamp(28px, 4vw, 46px); font-weight: 900; color: var(--text); letter-spacing: -0.5px; line-height: 1.1; margin-bottom: 14px; }
+  .stitle em { font-family: 'Lora', serif; font-style: italic; color: var(--sky-dark); }
+  .ssub { color: var(--muted); font-size: 15px; max-width: 520px; line-height: 1.8; margin-bottom: 52px; }
 
-  .services-bg { background: var(--cream); }
-  .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
-  .svc { background: var(--warm); padding: 36px 28px; transition: all 0.3s; position: relative; overflow: hidden; }
-  .svc::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--teal-light); transition: width 0.4s; }
-  .svc:hover { background: #fff; }
-  .svc:hover::after { width: 100%; }
-  .svc-num { font-family: 'Cormorant Garamond', serif; font-size: 11px; color: var(--teal-light); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px; }
-  .svc-icon { font-size: 26px; margin-bottom: 14px; opacity: 0.9; }
-  .svc-name { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--text); margin-bottom: 10px; line-height: 1.2; }
-  .svc-desc { font-size: 13px; color: var(--muted); line-height: 1.75; font-weight: 300; }
+  /* SERVICES */
+  .services-bg { background: var(--sand); }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+  .svc { background: #fff; border: 2px solid var(--border); border-radius: 16px; padding: 28px; transition: all 0.25s; position: relative; overflow: hidden; }
+  .svc::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--sky-dark), var(--sky)); transform: scaleX(0); transform-origin: left; transition: transform 0.3s; }
+  .svc:hover { border-color: var(--sky); transform: translateY(-4px); box-shadow: 0 16px 40px rgba(6,182,212,0.12); }
+  .svc:hover::before { transform: scaleX(1); }
+  .svc-icon { font-size: 32px; margin-bottom: 14px; }
+  .svc-name { font-size: 17px; font-weight: 800; color: var(--text); margin-bottom: 6px; }
+  .svc-tag { font-size: 12px; color: var(--sky-dark); font-weight: 700; margin-bottom: 10px; }
+  .svc-desc { font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 14px; }
+  .svc-price { font-size: 15px; font-weight: 900; color: var(--text); }
+  .svc-price span { font-size: 12px; font-weight: 400; color: var(--muted); }
 
-  .plan-bg { background: var(--dark); position: relative; overflow: hidden; }
-  .plan-bg::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.02) 1px, transparent 0); background-size: 32px 32px; }
-  .plan-bg .sec-title { color: #fff; }
-  .plan-bg .sec-title em { color: var(--silver); }
-  .plan-bg .sec-sub { color: rgba(255,255,255,0.42); }
-  .points-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.05); position: relative; z-index: 1; }
-  .point-group { background: rgba(8,20,30,0.8); padding: 36px 32px; }
-  .point-group-title { font-family: 'Cormorant Garamond', serif; font-size: 13px; color: var(--teal-light); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px; opacity: 0.8; }
-  .point-list { display: flex; flex-direction: column; gap: 10px; }
-  .point-item { display: flex; gap: 12px; align-items: flex-start; }
-  .point-num { font-family: 'Cormorant Garamond', serif; font-size: 13px; color: var(--teal-light); opacity: 0.5; min-width: 22px; line-height: 1.6; }
-  .point-text { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.6; font-weight: 300; }
+  /* PRICING */
+  .pricing-bg { background: var(--sky-deep); position: relative; overflow: hidden; }
+  .pricing-bg::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.025) 1px, transparent 0); background-size: 28px 28px; }
+  .pricing-bg .stag { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color: var(--sky-pale); }
+  .pricing-bg .stitle { color: #fff; }
+  .pricing-bg .stitle em { color: var(--sky-pale); }
+  .pricing-bg .ssub { color: rgba(255,255,255,0.5); }
+  .pricing-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; position: relative; z-index: 1; }
+  .price-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 28px; transition: all 0.2s; border-top: 3px solid rgba(255,255,255,0.1); }
+  .price-card:hover { background: rgba(255,255,255,0.1); border-top-color: var(--sky); }
+  .price-card.featured { background: rgba(6,182,212,0.1); border: 1px solid rgba(6,182,212,0.3); border-top: 3px solid var(--sky); }
+  .price-badge { display: inline-flex; align-items: center; gap: 4px; background: rgba(6,182,212,0.2); border: 1px solid rgba(6,182,212,0.35); color: var(--sky-pale); font-size: 10px; font-weight: 700; padding: 3px 10px; border-radius: 50px; margin-bottom: 12px; letter-spacing: 1px; text-transform: uppercase; }
+  .price-label { font-size: 11px; font-weight: 700; color: rgba(255,255,255,0.45); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
+  .price-service { font-size: 17px; font-weight: 800; color: #fff; margin-bottom: 10px; line-height: 1.2; }
+  .price-amount { font-size: 36px; font-weight: 900; color: var(--sun); line-height: 1; margin-bottom: 4px; letter-spacing: -1px; }
+  .price-amount span { font-size: 16px; color: rgba(255,255,255,0.45); font-weight: 400; }
+  .price-note { font-size: 12px; color: rgba(255,255,255,0.4); line-height: 1.6; margin-top: 10px; }
+  .price-disclaimer { position: relative; z-index: 1; margin-top: 32px; padding: 16px 20px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; font-size: 12px; color: rgba(255,255,255,0.35); line-height: 1.7; }
 
-  .about-bg { background: var(--warm); }
-  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-  .about-card { border: 1px solid var(--border-light); padding: 48px 40px; background: var(--dark); }
-  .about-card-title { font-family: 'Cormorant Garamond', serif; font-size: 12px; color: var(--silver); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 28px; opacity: 0.6; }
-  .astat { display: flex; align-items: center; gap: 20px; padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  /* ABOUT — exterior home bg */
+  .about-bg {
+    position: relative; overflow: hidden;
+    background: url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1800&q=80') center/cover no-repeat fixed;
+  }
+  .about-overlay { position: absolute; inset: 0; background: rgba(12,74,110,0.91); }
+  .about-inner { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+  .about-bg .stag { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color: var(--sky-pale); }
+  .about-bg .stitle { color: #fff; }
+  .about-bg .stitle em { color: var(--sky-pale); }
+  .about-bg .ssub { color: rgba(255,255,255,0.55); }
+  .reasons { display: flex; flex-direction: column; gap: 16px; }
+  .reason { display: flex; gap: 14px; align-items: flex-start; padding: 18px; background: rgba(255,255,255,0.06); border-radius: 14px; border: 1px solid rgba(255,255,255,0.08); }
+  .reason:hover { background: rgba(255,255,255,0.1); }
+  .reason-icon { font-size: 22px; min-width: 28px; }
+  .reason-title { font-size: 14px; font-weight: 800; color: #fff; margin-bottom: 4px; }
+  .reason-text { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.65; }
+  .about-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(6,182,212,0.25); border-radius: 20px; padding: 44px 40px; }
+  .about-card-title { font-size: 12px; font-weight: 700; color: var(--sky-pale); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 24px; }
+  .astat { display: flex; align-items: center; gap: 16px; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.07); }
   .astat:last-child { border: none; }
-  .astat-num { font-family: 'Cormorant Garamond', serif; font-size: 30px; font-weight: 600; color: #fff; min-width: 80px; line-height: 1; }
-  .astat-num span { color: var(--teal-light); }
-  .astat-label { font-size: 13px; color: rgba(255,255,255,0.4); font-weight: 300; line-height: 1.5; }
-  .brands-row { margin-top: 20px; padding: 18px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); }
-  .brands-title { font-size: 10px; color: rgba(255,255,255,0.3); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
-  .brands-list { font-size: 13px; color: rgba(255,255,255,0.5); font-weight: 300; }
-  .values { display: flex; flex-direction: column; }
-  .val { display: flex; gap: 20px; padding: 22px 0; border-bottom: 1px solid rgba(0,0,0,0.06); align-items: flex-start; }
-  .val:first-child { padding-top: 0; }
-  .val:last-child { border: none; }
-  .val-num { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: var(--teal-light); opacity: 0.45; line-height: 1; min-width: 28px; }
-  .val-title { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 600; color: var(--text); margin-bottom: 5px; }
-  .val-text { font-size: 13px; color: var(--muted); line-height: 1.7; font-weight: 300; }
+  .astat-num { font-size: 30px; font-weight: 900; color: #fff; min-width: 70px; line-height: 1; }
+  .astat-num span { color: var(--sky-pale); font-size: 16px; }
+  .astat-label { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.5; }
+  .michael-badge { margin-top: 20px; padding: 16px; background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.25); border-radius: 10px; }
+  .michael-title { font-size: 12px; font-weight: 700; color: var(--sun); margin-bottom: 6px; }
+  .michael-text { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.65; }
 
-  .reviews-bg { background: var(--cream); }
-  .reviews-header { display: flex; align-items: center; gap: 28px; margin-bottom: 48px; flex-wrap: wrap; }
-  .score-num { font-family: 'Cormorant Garamond', serif; font-size: 80px; font-weight: 600; color: var(--text); line-height: 1; letter-spacing: -2px; }
-  .score-stars { color: #c8a84c; font-size: 22px; letter-spacing: 3px; }
-  .score-label { font-size: 12px; color: var(--muted); margin-top: 4px; }
-  .reviews-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); }
-  .review-card { background: var(--warm); padding: 36px; position: relative; overflow: hidden; }
-  .review-card::before { content: '"'; font-family: 'Cormorant Garamond', serif; font-size: 72px; color: var(--teal-light); opacity: 0.12; position: absolute; top: 8px; left: 24px; line-height: 1; }
-  .review-stars { color: #c8a84c; font-size: 13px; margin-bottom: 14px; letter-spacing: 1px; }
-  .review-text { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-style: italic; color: var(--text); line-height: 1.7; margin-bottom: 20px; padding-left: 6px; }
-  .review-author { font-size: 13px; font-weight: 500; color: var(--teal); }
-  .review-meta { font-size: 12px; color: var(--muted); margin-top: 2px; font-weight: 300; }
+  /* GALLERY */
+  .gallery-bg { background: var(--cream); }
+  .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: 260px 260px; gap: 12px; }
+  .gitem { position: relative; overflow: hidden; border-radius: 12px; }
+  .gitem img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; display: block; }
+  .gitem:hover img { transform: scale(1.04); }
+  .gitem-label { position: absolute; bottom: 0; left: 0; right: 0; padding: 14px 16px; background: linear-gradient(to top, rgba(12,74,110,0.9), transparent); color: #fff; font-size: 13px; font-weight: 700; }
+  .gitem.tall { grid-row: span 2; }
 
-  .contact-bg { background: var(--warm); }
-  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-  .form-wrap { background: var(--dark); padding: 48px; }
-  .form-title { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 600; color: #fff; margin-bottom: 6px; }
-  .form-sub { font-size: 13px; color: rgba(255,255,255,0.35); margin-bottom: 28px; font-weight: 300; }
-  .form-group { margin-bottom: 18px; }
-  .form-group label { display: block; font-size: 10px; font-weight: 500; color: rgba(255,255,255,0.3); margin-bottom: 7px; letter-spacing: 1.5px; text-transform: uppercase; }
-  .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 13px 16px; border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.04); font-family: 'DM Sans', sans-serif; font-size: 14px; color: #fff; outline: none; transition: border-color 0.2s; }
-  .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.18); }
-  .form-group select option { background: var(--dark); }
-  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--teal-light); background: rgba(255,255,255,0.06); }
-  .form-group textarea { resize: vertical; min-height: 100px; }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-  .form-submit { width: 100%; background: var(--teal-light); color: var(--dark); border: none; padding: 16px; font-size: 11px; font-weight: 500; font-family: 'DM Sans', sans-serif; cursor: pointer; letter-spacing: 2px; text-transform: uppercase; transition: all 0.3s; margin-top: 8px; border: 1px solid var(--teal-light); }
-  .form-submit:hover { background: transparent; color: var(--teal-light); }
+  /* REVIEWS */
+  .reviews-bg {
+    position: relative; overflow: hidden;
+    background: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1800&q=80') center/cover no-repeat;
+  }
+  .reviews-overlay { position: absolute; inset: 0; background: linear-gradient(145deg, rgba(12,74,110,0.94), rgba(8,145,178,0.88)); }
+  .reviews-inner { position: relative; z-index: 1; }
+  .reviews-bg .stag { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color: var(--sky-pale); }
+  .reviews-bg .stitle { color: #fff; }
+  .reviews-bg .stitle em { color: var(--sky-pale); }
+  .reviews-top { display: flex; align-items: center; gap: 24px; margin-bottom: 40px; flex-wrap: wrap; }
+  .score-big { font-size: 72px; font-weight: 900; color: #fff; line-height: 1; letter-spacing: -2px; }
+  .score-stars { color: var(--sun); font-size: 22px; letter-spacing: 2px; }
+  .score-label { font-size: 12px; color: rgba(255,255,255,0.5); font-weight: 600; margin-top: 4px; }
+  .reviews-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+  .review-card { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 28px; backdrop-filter: blur(12px); }
+  .review-stars { color: var(--sun); font-size: 14px; margin-bottom: 12px; letter-spacing: 1px; }
+  .review-text { font-size: 14px; color: rgba(255,255,255,0.9); line-height: 1.75; margin-bottom: 16px; font-style: italic; font-family: 'Lora', serif; }
+  .review-name { font-size: 13px; font-weight: 800; color: var(--sky-pale); }
+  .review-meta { font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 2px; }
+
+  /* BOOKING */
+  .booking-bg {
+    background: url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1800&q=80') center/cover no-repeat;
+    position: relative;
+  }
+  .booking-overlay { position: absolute; inset: 0; background: rgba(254,249,238,0.96); }
+  .booking-inner { position: relative; z-index: 1; }
+  .booking-layout { display: grid; grid-template-columns: 1fr 1.1fr; gap: 60px; align-items: start; }
+  .form-card { background: var(--sky-deep); border-radius: 20px; padding: 44px 40px; }
+  .form-title { font-size: 22px; font-weight: 900; color: #fff; margin-bottom: 6px; }
+  .form-sub { font-size: 13px; color: rgba(255,255,255,0.5); margin-bottom: 28px; }
+  .form-group { margin-bottom: 16px; }
+  .form-group label { display: block; font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.45); margin-bottom: 6px; letter-spacing: 1.5px; text-transform: uppercase; }
+  .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 14px; border: 1.5px solid rgba(255,255,255,0.12); border-radius: 10px; font-family: 'Nunito', sans-serif; font-size: 13px; color: #fff; background: rgba(255,255,255,0.07); outline: none; transition: border-color 0.2s; }
+  .form-group select option { background: var(--sky-deep); }
+  .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.25); }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--sky); }
+  .form-group textarea { resize: vertical; min-height: 90px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .form-submit { width: 100%; background: var(--sun); color: var(--sky-deep); border: none; padding: 15px; border-radius: 50px; font-size: 13px; font-weight: 800; font-family: 'Nunito', sans-serif; cursor: pointer; transition: all 0.2s; margin-top: 8px; box-shadow: 0 6px 20px rgba(245,158,11,0.4); }
+  .form-submit:hover { transform: translateY(-1px); }
   .contact-info { padding-top: 8px; }
-  .contact-title { font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 600; color: var(--text); line-height: 1.1; margin-bottom: 14px; letter-spacing: -0.5px; }
-  .contact-title em { font-style: italic; color: var(--teal); }
-  .contact-sub { font-size: 15px; color: var(--muted); line-height: 1.85; margin-bottom: 40px; font-weight: 300; }
+  .contact-title { font-size: 38px; font-weight: 900; color: var(--text); line-height: 1.1; margin-bottom: 14px; }
+  .contact-title em { font-family: 'Lora', serif; font-style: italic; color: var(--sky-dark); }
+  .contact-sub { font-size: 15px; color: var(--muted); line-height: 1.8; margin-bottom: 36px; }
   .clist { display: flex; flex-direction: column; }
-  .citem { display: flex; gap: 18px; padding: 20px 0; border-bottom: 1px solid var(--border); align-items: flex-start; }
+  .citem { display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid var(--border); align-items: flex-start; }
   .citem:first-child { padding-top: 0; }
   .citem:last-child { border: none; }
-  .cicon { font-size: 17px; min-width: 24px; margin-top: 2px; }
-  .clabel { font-size: 10px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 5px; }
-  .cval { font-size: 15px; font-weight: 500; color: var(--text); }
-  .cnote { font-size: 13px; color: var(--muted); margin-top: 2px; font-weight: 300; }
-  .open-tag { display: inline-flex; align-items: center; gap: 6px; margin-top: 6px; background: #f0fdf4; border: 1px solid #bbf7d0; color: #15803d; font-size: 11px; font-weight: 500; padding: 4px 12px; }
-  .open-tag::before { content: '●'; font-size: 7px; animation: blink 2s infinite; }
-  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+  .cicon { font-size: 20px; min-width: 26px; margin-top: 2px; }
+  .clabel { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+  .cval { font-size: 15px; font-weight: 700; color: var(--text); }
+  .cnote { font-size: 13px; color: var(--muted); margin-top: 2px; }
+  .open-pill { display: inline-flex; align-items: center; gap: 6px; margin-top: 6px; background: #f0fdf4; border: 1px solid #bbf7d0; color: #15803d; font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 50px; }
+  .open-pill::before { content: '●'; font-size: 7px; animation: pulse 2s infinite; }
 
-  footer { background: var(--dark2); padding: 52px 6% 36px; }
-  .footer-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px; padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,0.06); margin-bottom: 32px; }
-  .footer-brand { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: rgba(255,255,255,0.55); margin-bottom: 6px; }
-  .footer-brand-sub { font-size: 10px; color: rgba(255,255,255,0.22); letter-spacing: 2px; text-transform: uppercase; }
+  /* FOOTER */
+  footer { background: var(--sky-deep); padding: 44px 5% 32px; }
+  .footer-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 32px; padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,0.07); margin-bottom: 28px; }
+  .footer-brand { font-size: 18px; font-weight: 900; color: rgba(255,255,255,0.7); margin-bottom: 4px; }
+  .footer-brand span { color: var(--sky-pale); }
+  .footer-brand-sub { font-size: 10px; color: rgba(255,255,255,0.28); letter-spacing: 2px; text-transform: uppercase; }
   .footer-col { display: flex; flex-direction: column; gap: 10px; }
-  .footer-col-title { font-size: 10px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--teal-light); margin-bottom: 4px; opacity: 0.75; }
-  .footer-col a { font-size: 13px; color: rgba(255,255,255,0.3); text-decoration: none; font-weight: 300; transition: color 0.2s; }
-  .footer-col a:hover { color: rgba(255,255,255,0.7); }
-  .footer-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; align-items: center; }
-  .footer-copy { font-size: 12px; color: rgba(255,255,255,0.16); }
-  .footer-tagline { font-family: 'Cormorant Garamond', serif; font-size: 13px; font-style: italic; color: var(--silver); opacity: 0.35; }
+  .footer-col-title { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--sky-pale); margin-bottom: 4px; opacity: 0.75; }
+  .footer-col a { font-size: 13px; color: rgba(255,255,255,0.32); text-decoration: none; transition: color 0.2s; }
+  .footer-col a:hover { color: rgba(255,255,255,0.8); }
+  .footer-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .footer-copy { font-size: 12px; color: rgba(255,255,255,0.18); }
+  .footer-tag { font-family: 'Lora', serif; font-size: 13px; font-style: italic; color: var(--sky-pale); opacity: 0.4; }
 
-  @media (max-width: 960px) {
-    .hero-stats { grid-template-columns: repeat(2, 1fr); }
-    .services-grid, .points-grid { grid-template-columns: repeat(2, 1fr); }
-    .about-grid, .contact-grid { grid-template-columns: 1fr; }
-    .nav-center { display: none; }
+  @media (max-width: 860px) {
+    .about-inner, .booking-layout { grid-template-columns: 1fr; }
+    .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+    .gitem.tall { grid-row: span 1; height: 240px; }
+    .nav-links { display: none; }
     .form-row { grid-template-columns: 1fr; }
+    .hero-stats { flex-wrap: wrap; }
   }
   @media (max-width: 560px) {
-    .services-grid, .points-grid { grid-template-columns: 1fr; }
-    .hero-stats { grid-template-columns: repeat(2, 1fr); }
+    .gallery-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -205,347 +246,281 @@
 
 <nav>
   <div>
-    <div class="nav-logo-main">Tranquil Waters Pool Care</div>
-    <div class="nav-logo-sub">Venice, Florida</div>
+    <div class="nav-logo-main">Stu's Roof & <span>Window Cleaning</span></div>
+    <div class="nav-logo-sub">Sarasota, FL · Open Now</div>
   </div>
-  <div class="nav-center">
+  <div class="nav-links">
     <a href="#services">Services</a>
-    <a href="#plan">23-Point Plan</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#about">About</a>
     <a href="#reviews">Reviews</a>
-    <a href="#contact">Contact</a>
+    <a href="#booking">Contact</a>
   </div>
-  <div class="nav-right">
-    <a href="tel:9413401779" class="nav-phone">(941) 340-1779</a>
-    <a href="#contact" class="nav-cta">Get a Quote</a>
-  </div>
+  <a href="tel:9413573023" class="nav-cta">☀️ Free Estimate</a>
 </nav>
 
+<!-- HERO -->
 <section class="hero" style="padding:0;">
   <div class="hero-bg"></div>
-  <div class="hero-glow"></div>
-  <div class="hero-glow2"></div>
-  <div class="hero-lines"></div>
+  <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="hero-overline">
-      <div class="overline-bar"></div>
-      <div class="overline-text">Venice & Sarasota Area Pool Specialists</div>
+    <div class="hero-eyebrow"><div class="edot"></div> Sarasota's Cleaning Specialists</div>
+    <h1><span class="script">Best Price in Town —</span>Roofs, Windows &<br>More. Done <br>Right.</h1>
+    <p class="hero-sub">Stu's Roof & Window Cleaning Services delivers professional, reliable results across Sarasota. Michael and the team are on time, courteous, and the best price in town — every single time.</p>
+    <div class="hero-pills">
+      <div class="hero-pill">⭐ 5.0 · 4 Reviews</div>
+      <div class="hero-pill">🌴 Sarasota, FL</div>
+      <div class="hero-pill">🏠 Roof · Window · Pressure</div>
+      <div class="hero-pill">🆓 Free Estimates</div>
     </div>
-    <h1>Clean Blue Water,<br><em>Every Single</em><br>Week.</h1>
-    <p class="hero-sub">Tranquil Waters Pool Care is Venice's most trusted professional pool service — licensed, bonded, insured, and backed by a 100% satisfaction guarantee on every visit.</p>
-    <div class="hero-actions">
-      <a href="#contact" class="btn-hero">Get a Free Quote</a>
-      <a href="tel:9413401779" class="hero-link">Call (941) 340-1779 <span>→</span></a>
+    <div class="hero-btns">
+      <a href="#booking" class="btn-sun">💧 Get a Free Estimate</a>
+      <a href="tel:9413573023" class="btn-ghost">📞 (941) 357-3023</a>
     </div>
     <div class="hero-stats">
-      <div class="hstat">
-        <div class="hstat-num">4.8<span>★</span></div>
-        <div class="hstat-label">Google Rating</div>
-      </div>
-      <div class="hstat">
-        <div class="hstat-num">32</div>
-        <div class="hstat-label">Five-Star Reviews</div>
-      </div>
-      <div class="hstat">
-        <div class="hstat-num">23<span>pt</span></div>
-        <div class="hstat-label">Weekly Service Plan</div>
-      </div>
-      <div class="hstat">
-        <div class="hstat-num">100<span>%</span></div>
-        <div class="hstat-label">Satisfaction Guarantee</div>
-      </div>
+      <div class="hstat"><div class="hstat-num">5.0<span>★</span></div><div class="hstat-label">Google Rating</div></div>
+      <div class="hstat"><div class="hstat-num">Best</div><div class="hstat-label">Price in Town</div></div>
+      <div class="hstat"><div class="hstat-num">Free</div><div class="hstat-label">Estimates</div></div>
     </div>
   </div>
   <div class="hero-wave">
     <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg">
-      <path fill="#f9f7f3" d="M0,40L60,45C120,51,240,58,360,55C480,52,600,38,720,32C840,26,960,34,1080,42C1200,50,1320,56,1380,59L1440,61L1440,80L0,80Z"/>
+      <path fill="#06b6d4" d="M0,48L60,42C120,37,240,26,360,28C480,30,600,44,720,50C840,55,960,51,1080,44C1200,37,1320,26,1380,21L1440,16L1440,80L0,80Z"/>
     </svg>
   </div>
 </section>
 
-<div class="ticker">
-  <div class="ticker-track">
-    <span class="ticker-item">Weekly Pool Service <span class="tdot"></span></span>
-    <span class="ticker-item">Pool Equipment Repairs <span class="tdot"></span></span>
-    <span class="ticker-item">Smart Pool Upgrades <span class="tdot"></span></span>
-    <span class="ticker-item">Pebble Tec Finishes <span class="tdot"></span></span>
-    <span class="ticker-item">Pool Deck Renovation <span class="tdot"></span></span>
-    <span class="ticker-item">Licensed · Bonded · Insured <span class="tdot"></span></span>
-    <span class="ticker-item">100% Satisfaction Guarantee <span class="tdot"></span></span>
-    <span class="ticker-item">Pentair · Jandy · Hayward · Polaris <span class="tdot"></span></span>
-    <span class="ticker-item">Venice Chamber Member <span class="tdot"></span></span>
-    <span class="ticker-item">Weekly Pool Service <span class="tdot"></span></span>
-    <span class="ticker-item">Pool Equipment Repairs <span class="tdot"></span></span>
-    <span class="ticker-item">Smart Pool Upgrades <span class="tdot"></span></span>
-    <span class="ticker-item">Pebble Tec Finishes <span class="tdot"></span></span>
-    <span class="ticker-item">Pool Deck Renovation <span class="tdot"></span></span>
-    <span class="ticker-item">Licensed · Bonded · Insured <span class="tdot"></span></span>
-    <span class="ticker-item">100% Satisfaction Guarantee <span class="tdot"></span></span>
-    <span class="ticker-item">Pentair · Jandy · Hayward · Polaris <span class="tdot"></span></span>
-    <span class="ticker-item">Venice Chamber Member <span class="tdot"></span></span>
-  </div>
+<!-- TRUST -->
+<div class="trust">
+  <div class="trust-item">🏠 Roof Cleaning</div>
+  <div class="trust-item">🪟 Window Cleaning</div>
+  <div class="trust-item">💦 Pressure Washing</div>
+  <div class="trust-item">🌿 Softwash</div>
+  <div class="trust-item">☀️ Solar Panel Cleaning</div>
+  <div class="trust-item">🌴 Sarasota Local</div>
 </div>
 
+<!-- SERVICES -->
 <section class="services-bg" id="services">
-  <div class="eyebrow"><div class="ebar"></div><div class="etag">Our Services</div></div>
-  <div class="sec-title">Complete Pool Care,<br><em>Expertly Delivered.</em></div>
-  <p class="sec-sub">From weekly maintenance to full pool renovations — Jonah and the team handle everything with the same professionalism and personal attention on every job.</p>
+  <div class="stag">🧹 What We Do</div>
+  <div class="stitle">Complete Exterior<br><em>Cleaning Services.</em></div>
+  <p class="ssub">From roof cleaning to window washing and everything in between — Stu's handles it all with professional results and the best prices in Sarasota.</p>
   <div class="services-grid">
-    <div class="svc">
-      <div class="svc-num">01 — Weekly</div>
-      <div class="svc-icon">🏊</div>
-      <div class="svc-name">Complete Pool Service</div>
-      <div class="svc-desc">Full 23-point weekly service including chemical balancing, vacuuming, brushing, debris removal, and complete equipment checks. Protecting your investment every single week.</div>
-    </div>
-    <div class="svc">
-      <div class="svc-num">02 — Regular</div>
-      <div class="svc-icon">🔵</div>
-      <div class="svc-name">Regular Pool Service</div>
-      <div class="svc-desc">Essential weekly maintenance covering chemical management, equipment checks, and basket cleaning. A streamlined plan for pools that need reliable routine care.</div>
-    </div>
-    <div class="svc">
-      <div class="svc-num">03 — Repairs</div>
-      <div class="svc-icon">🔧</div>
-      <div class="svc-name">Pool Equipment Repairs</div>
-      <div class="svc-desc">Valves, filters, timers, motors, and pump repairs. We charge a $99 diagnosis fee applied toward any approved repair. Fast, reliable, done right every time.</div>
-    </div>
-    <div class="svc">
-      <div class="svc-num">04 — Renovation</div>
-      <div class="svc-icon">✨</div>
-      <div class="svc-name">Pool Renovation & Upgrades</div>
-      <div class="svc-desc">Pebble Tec finishes, smart pool automation, deck renovation and complete pool makeovers. Jonah helps you plan every detail from start to finish.</div>
-    </div>
+    <div class="svc"><div class="svc-icon">🏠</div><div class="svc-name">Roof Cleaning</div><div class="svc-tag">Florida roofs need regular care.</div><div class="svc-desc">Professional roof cleaning removes algae, mold, mildew, and black streaks. Protects your investment and boosts curb appeal.</div><div class="svc-price">From $250 <span>· avg home</span></div></div>
+    <div class="svc"><div class="svc-icon">🪟</div><div class="svc-name">Window Cleaning</div><div class="svc-tag">Crystal clear, streak free.</div><div class="svc-desc">Interior and exterior window cleaning for Sarasota homes. Frames, sills, tracks, and screens — done thoroughly without rushing.</div><div class="svc-price">From $150 <span>· avg home</span></div></div>
+    <div class="svc"><div class="svc-icon">💦</div><div class="svc-name">Pressure Washing</div><div class="svc-tag">Powerful, fast, effective.</div><div class="svc-desc">High-pressure washing for driveways, sidewalks, pool decks, patios, and home exteriors. Remove years of built-up grime in one visit.</div><div class="svc-price">From $100 <span>· driveway</span></div></div>
+    <div class="svc"><div class="svc-icon">🌿</div><div class="svc-name">Softwash</div><div class="svc-tag">Safe for delicate surfaces.</div><div class="svc-desc">Low-pressure softwash for roofs, painted surfaces, and screens. Kills mold and algae at the root without damaging your home.</div><div class="svc-price">From $200 <span>· avg home</span></div></div>
+    <div class="svc"><div class="svc-icon">☀️</div><div class="svc-name">Solar Panel Cleaning</div><div class="svc-tag">Dirty panels lose efficiency.</div><div class="svc-desc">Professional solar panel cleaning restores efficiency and maximizes your energy output. Florida dust and pollen build up fast.</div><div class="svc-price">From $10 <span>· per panel</span></div></div>
+    <div class="svc"><div class="svc-icon">🏢</div><div class="svc-name">Commercial Cleaning</div><div class="svc-tag">Professional results for business.</div><div class="svc-desc">Office buildings, storefronts, and commercial properties. Pressure washing, window cleaning, and janitorial services for businesses.</div><div class="svc-price">Custom <span>· free quote</span></div></div>
+    <div class="svc"><div class="svc-icon">🍂</div><div class="svc-name">Gutter Cleaning</div><div class="svc-tag">Protect your home from water damage.</div><div class="svc-desc">Full gutter cleaning and flush to prevent blockages, water damage, and pest nesting. Keeps your drainage system flowing.</div><div class="svc-price">From $75 <span>· avg home</span></div></div>
+    <div class="svc"><div class="svc-icon">🧴</div><div class="svc-name">House Washing</div><div class="svc-tag">Fresh exterior, every time.</div><div class="svc-desc">Full exterior house washing removes mold, mildew, dirt, and algae from siding, stucco, and painted surfaces.</div><div class="svc-price">From $150 <span>· avg home</span></div></div>
+    <div class="svc"><div class="svc-icon">🪨</div><div class="svc-name">Awning & Screen Cleaning</div><div class="svc-tag">Details that make the difference.</div><div class="svc-desc">Professional cleaning of awnings, pool enclosures, and window screens. Florida weather takes a toll — we bring them back to life.</div><div class="svc-price">From $50 <span>· per area</span></div></div>
   </div>
 </section>
 
-<section class="plan-bg" id="plan">
-  <div class="eyebrow" style="position:relative;z-index:1;"><div class="ebar"></div><div class="etag">The 23-Point Plan</div></div>
-  <div class="sec-title">Every Week,<br><em>Without Exception.</em></div>
-  <p class="sec-sub">Our Complete Pool Service Plan covers 23 essential checks and operations on every single visit — so your pool is always clean, balanced, and protected.</p>
-  <div class="points-grid">
-    <div class="point-group">
-      <div class="point-group-title">Chemical & Water Balancing</div>
-      <div class="point-list">
-        <div class="point-item"><div class="point-num">01</div><div class="point-text">Cyanuric Acid — stabilizer check</div></div>
-        <div class="point-item"><div class="point-num">02</div><div class="point-text">Salt Content — saltwater pools managed</div></div>
-        <div class="point-item"><div class="point-num">03</div><div class="point-text">Chlorine — pool water sanitized</div></div>
-        <div class="point-item"><div class="point-num">04</div><div class="point-text">Total Alkalinity — managed</div></div>
-        <div class="point-item"><div class="point-num">05</div><div class="point-text">Saturation Index — calcium check</div></div>
-        <div class="point-item"><div class="point-num">06</div><div class="point-text">Chloramines — checked and removed</div></div>
-        <div class="point-item"><div class="point-num">07</div><div class="point-text">Total Dissolved Solids — measured</div></div>
-        <div class="point-item"><div class="point-num">08</div><div class="point-text">Total Chlorine including chloramines</div></div>
-        <div class="point-item"><div class="point-num">09</div><div class="point-text">Temperature — for accurate pH calculations</div></div>
-        <div class="point-item"><div class="point-num">10</div><div class="point-text">pH Factor — managed</div></div>
-        <div class="point-item"><div class="point-num">11</div><div class="point-text">Calcium Hardness — checked</div></div>
-      </div>
+<!-- PRICING -->
+<section class="pricing-bg" id="pricing">
+  <div class="stag">💰 Pricing Guide</div>
+  <div class="stitle">Transparent, <em>Fair</em> Pricing.</div>
+  <p class="ssub">Best price in town — guaranteed. These ranges reflect 2026 market averages. Contact us for a free personalized estimate.</p>
+  <div class="pricing-grid">
+    <div class="price-card">
+      <div class="price-label">Per Window</div>
+      <div class="price-service">Standard Window</div>
+      <div class="price-amount">$8<span>–$15</span></div>
+      <div class="price-note">Per window exterior only. Most common pricing for residential homes.</div>
     </div>
-    <div class="point-group">
-      <div class="point-group-title">Equipment Checks</div>
-      <div class="point-list">
-        <div class="point-item"><div class="point-num">12</div><div class="point-text">Sweep finger screen / wall screen cleaned</div></div>
-        <div class="point-item"><div class="point-num">13</div><div class="point-text">Pump strainer baskets — checked & emptied</div></div>
-        <div class="point-item"><div class="point-num">14</div><div class="point-text">Skimmer baskets — checked & emptied</div></div>
-        <div class="point-item"><div class="point-num">15</div><div class="point-text">Filter backwashes — DE monthly, sand weekly</div></div>
-        <div class="point-item"><div class="point-num">16</div><div class="point-text">Sweep finger screen — inspected</div></div>
-        <div class="point-item"><div class="point-num">17</div><div class="point-text">Sweep debris bags — checked & emptied</div></div>
-        <div class="point-item"><div class="point-num">18</div><div class="point-text">Valves adjusted</div></div>
-      </div>
+    <div class="price-card featured">
+      <div class="price-badge">⭐ Most Popular</div>
+      <div class="price-label">Full Home</div>
+      <div class="price-service">Interior & Exterior</div>
+      <div class="price-amount">$150<span>–$302</span></div>
+      <div class="price-note">Both sides, frames, and sills. Most homeowners pay around $220.</div>
     </div>
-    <div class="point-group">
-      <div class="point-group-title">General Pool Service</div>
-      <div class="point-list">
-        <div class="point-item"><div class="point-num">19</div><div class="point-text">Net pool surface and pool bottom *</div></div>
-        <div class="point-item"><div class="point-num">20</div><div class="point-text">Weekly hose vacuum *</div></div>
-        <div class="point-item"><div class="point-num">21</div><div class="point-text">Brush spa</div></div>
-        <div class="point-item"><div class="point-num">22</div><div class="point-text">Weekly leaf & debris vacuuming *</div></div>
-        <div class="point-item"><div class="point-num">23</div><div class="point-text">Brush walls and steps</div></div>
-      </div>
-      <div style="margin-top:24px; padding:16px; background:rgba(78,201,218,0.05); border:1px solid rgba(78,201,218,0.1);">
-        <div style="font-size:10px; color:rgba(255,255,255,0.28); letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px;">* Complete Plan Only</div>
-        <div style="font-size:13px; color:rgba(255,255,255,0.4); line-height:1.65; font-weight:300;">Items marked * are included in the Complete Pool Service Plan only. All 23 points performed on every visit — no exceptions.</div>
-      </div>
+    <div class="price-card">
+      <div class="price-label">Roof Cleaning</div>
+      <div class="price-service">Softwash Roof Clean</div>
+      <div class="price-amount">$250<span>–$600</span></div>
+      <div class="price-note">Depends on roof size, pitch, and material. Removes algae, mold, and black streaks.</div>
     </div>
+    <div class="price-card">
+      <div class="price-label">Pressure Washing</div>
+      <div class="price-service">Driveway & Surfaces</div>
+      <div class="price-amount">$100<span>–$300</span></div>
+      <div class="price-note">Driveways, sidewalks, pool decks, and patios. Priced by area.</div>
+    </div>
+    <div class="price-card featured">
+      <div class="price-badge">💰 Best Value</div>
+      <div class="price-label">Bundle Package</div>
+      <div class="price-service">Roof + Windows + Pressure</div>
+      <div class="price-amount">Save<span> big</span></div>
+      <div class="price-note">Bundle multiple services in one visit for significant savings. Ask about our package deals.</div>
+    </div>
+    <div class="price-card">
+      <div class="price-label">Solar Panels</div>
+      <div class="price-service">Solar Panel Cleaning</div>
+      <div class="price-amount">$10<span>–$15/panel</span></div>
+      <div class="price-note">Per panel. Restores efficiency and maximizes energy output.</div>
+    </div>
+    <div class="price-card">
+      <div class="price-label">Gutters</div>
+      <div class="price-service">Gutter Cleaning</div>
+      <div class="price-amount">$75<span>–$200</span></div>
+      <div class="price-note">Full clean and flush. Depends on linear footage and stories.</div>
+    </div>
+    <div class="price-card">
+      <div class="price-label">Screens</div>
+      <div class="price-service">Screen Cleaning</div>
+      <div class="price-amount">$3<span>–$5/screen</span></div>
+      <div class="price-note">Per screen. Often bundled into full packages at a discount.</div>
+    </div>
+  </div>
+  <div class="price-disclaimer">
+    <strong style="color:rgba(255,255,255,0.6);">📋 Note:</strong> Pricing above reflects 2026 national market averages for reference. Stu's is known for the best price in town — contact Michael for your free personalized estimate, no obligation.
   </div>
 </section>
 
+<!-- ABOUT -->
 <section class="about-bg" id="about">
-  <div class="about-grid">
+  <div class="about-overlay"></div>
+  <div class="about-inner">
     <div>
-      <div class="eyebrow"><div class="ebar"></div><div class="etag">Who We Are</div></div>
-      <div class="sec-title">Venice's <em>Most Trusted</em><br>Pool Company.</div>
-      <p class="sec-sub">Tranquil Waters Pool Care has earned the trust of Venice homeowners through transparent communication, meticulous planning, and results that consistently exceed expectations.</p>
-      <div class="values">
-        <div class="val">
-          <div class="val-num">I</div>
-          <div>
-            <div class="val-title">Transparent from Start to Finish</div>
-            <div class="val-text">Jonah helps you plan every detail, answering all questions and making sure you understand each step before anything begins.</div>
-          </div>
-        </div>
-        <div class="val">
-          <div class="val-num">II</div>
-          <div>
-            <div class="val-title">Faster Than You Expect</div>
-            <div class="val-text">When urgency is needed — like a damaged pool deck — the team delivers even faster than promised. Reliability that earns repeat customers.</div>
-          </div>
-        </div>
-        <div class="val">
-          <div class="val-num">III</div>
-          <div>
-            <div class="val-title">100% Satisfaction Guarantee</div>
-            <div class="val-text">Every service plan and renovation is backed by our workmanship guarantee. We stand behind everything we do.</div>
-          </div>
-        </div>
-        <div class="val">
-          <div class="val-num">IV</div>
-          <div>
-            <div class="val-title">Licensed · Bonded · Insured</div>
-            <div class="val-text">Fully licensed, bonded, and insured. A proud member of the Venice Chamber of Commerce serving zip codes 34293, 34285, and 34292.</div>
-          </div>
-        </div>
+      <div class="stag">🌴 About Us</div>
+      <div class="stitle">Reliable, <em>Professional,</em><br>Best Price in Town.</div>
+      <p class="ssub">Stu's Roof & Window Cleaning has built a reputation in Sarasota for showing up on time, delivering outstanding results, and always offering the most competitive pricing around.</p>
+      <div class="reasons">
+        <div class="reason"><div class="reason-icon">⏰</div><div><div class="reason-title">Always On Time</div><div class="reason-text">Michael is punctual and reliable. Customers consistently highlight his promptness and respect for their time.</div></div></div>
+        <div class="reason"><div class="reason-icon">💰</div><div><div class="reason-title">Best Price in Town</div><div class="reason-text">Competitive pricing without cutting corners on quality. Customers say it directly — best price in Sarasota.</div></div></div>
+        <div class="reason"><div class="reason-icon">🤝</div><div><div class="reason-title">Courteous & Professional</div><div class="reason-text">Customer service second to none. Michael is courteous, professional, and genuinely cares about the job he delivers.</div></div></div>
+        <div class="reason"><div class="reason-icon">🔁</div><div><div class="reason-title">Customers Come Back</div><div class="reason-text">Customers don't just recommend Stu's — they rehire. That's the clearest sign of quality work done right.</div></div></div>
       </div>
     </div>
     <div class="about-card">
-      <div class="about-card-title">At a Glance</div>
-      <div class="astat">
-        <div class="astat-num">4.8<span>★</span></div>
-        <div class="astat-label">Google rating — 32 verified reviews</div>
-      </div>
-      <div class="astat">
-        <div class="astat-num">23<span>pt</span></div>
-        <div class="astat-label">Points checked on every weekly visit</div>
-      </div>
-      <div class="astat">
-        <div class="astat-num">100<span>%</span></div>
-        <div class="astat-label">Satisfaction guarantee on all work</div>
-      </div>
-      <div class="astat">
-        <div class="astat-num">$99</div>
-        <div class="astat-label">Diagnosis fee — applied toward approved repairs</div>
-      </div>
-      <div class="brands-row">
-        <div class="brands-title">Brands We Service</div>
-        <div class="brands-list">Pentair · Jandy · Hayward · Polaris</div>
+      <div class="about-card-title">Why Choose Stu's</div>
+      <div class="astat"><div class="astat-num">5.0<span>★</span></div><div class="astat-label">Perfect Google rating from verified Sarasota customers</div></div>
+      <div class="astat"><div class="astat-num">Best</div><div class="astat-label">Price in town — always competitive, never cheap quality</div></div>
+      <div class="astat"><div class="astat-num">9+</div><div class="astat-label">Services offered — one call handles your whole exterior</div></div>
+      <div class="astat"><div class="astat-num">Free</div><div class="astat-label">Personalized estimate for every job — no obligation</div></div>
+      <div class="michael-badge">
+        <div class="michael-title">⭐ "Best price in town. I strongly recommend Mr. Michael."</div>
+        <div class="michael-text">— Latoya Jackson, Google Local Guide · 15 reviews</div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- GALLERY -->
+<section class="gallery-bg" id="gallery">
+  <div class="stag">🌴 Our Work</div>
+  <div class="stitle">Florida Homes,<br><em>Spotless Results.</em></div>
+  <p class="ssub">From Sarasota driveways to rooftops — every job gets the same professional treatment and best-in-town results.</p>
+  <div class="gallery-grid">
+    <div class="gitem tall">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Florida home exterior">
+      <div class="gitem-label">Spotless Florida Homes</div>
+    </div>
+    <div class="gitem">
+      <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80" alt="Clean home exterior">
+      <div class="gitem-label">Crystal Clear Windows</div>
+    </div>
+    <div class="gitem">
+      <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&q=80" alt="Beautiful Florida home">
+      <div class="gitem-label">Best Price in Town</div>
+    </div>
+    <div class="gitem">
+      <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80" alt="Florida house exterior">
+      <div class="gitem-label">Professional Results</div>
+    </div>
+    <div class="gitem">
+      <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&q=80" alt="Sarasota home">
+      <div class="gitem-label">Sarasota's Trusted Cleaners</div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
 <section class="reviews-bg" id="reviews">
-  <div class="eyebrow"><div class="ebar"></div><div class="etag">Client Reviews</div></div>
-  <div class="sec-title">What Venice Homeowners<br><em>Are Saying.</em></div>
-  <div class="reviews-header">
-    <div class="score-num">4.8</div>
-    <div>
-      <div class="score-stars">★★★★★</div>
-      <div style="font-family:'Cormorant Garamond',serif; font-weight:600; font-size:18px; color:var(--text); margin-top:4px;">32 Google Reviews</div>
-      <div class="score-label">Venice, FL · Verified</div>
+  <div class="reviews-overlay"></div>
+  <div class="reviews-inner">
+    <div class="stag">⭐ Reviews</div>
+    <div class="stitle">What Sarasota<br><em>Customers Say.</em></div>
+    <div class="reviews-top">
+      <div class="score-big">5.0</div>
+      <div>
+        <div class="score-stars">★★★★★</div>
+        <div style="font-size:16px; font-weight:800; color:#fff; margin-top:4px;">4 Google Reviews · Perfect Rating</div>
+        <div class="score-label">Sarasota, FL · Verified</div>
+      </div>
     </div>
-  </div>
-  <div class="reviews-grid">
-    <div class="review-card">
-      <div class="review-stars">★★★★★</div>
-      <div class="review-text">"We wanted a new Pebble Tec finish and to make the pool a smart pool so we could control everything from our phones. The team delivered exactly what we envisioned."</div>
-      <div class="review-author">Janet Schultz</div>
-      <div class="review-meta">Google Review · 4 months ago</div>
-    </div>
-    <div class="review-card">
-      <div class="review-stars">★★★★★</div>
-      <div class="review-text">"We hired Tranquil Pool Care for a full pool deck renovation after damage from poor workmanship by another installer. We needed it done quickly — Jonah and the team got it done even faster than expected."</div>
-      <div class="review-author">Camden Sexton</div>
-      <div class="review-meta">Google Review · 3 months ago</div>
-    </div>
-    <div class="review-card">
-      <div class="review-stars">★★★★★</div>
-      <div class="review-text">"From the very beginning, Jonah helped us plan everything out, answering all our questions and making sure we understood each step. During construction, Samuel was our main contact and kept us informed throughout."</div>
-      <div class="review-author">Cindy M</div>
-      <div class="review-meta">Google Review · 1 photo · 6 months ago</div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">"Very professional — best price in town. I strongly recommend Mr. Michael for the job again. Thanks Michael."</div>
+        <div class="review-name">Latoya Jackson</div>
+        <div class="review-meta">Google Local Guide · 15 reviews · 22 photos</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">"The business's customer service is second to none — he was on time, courteous and the job he did was the best! I will definitely rehire!"</div>
+        <div class="review-name">WERT</div>
+        <div class="review-meta">Google Review · 9 reviews</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">"Great and reliable work. Would recommend to anyone. Prompt, very reasonable on price. Everything looks fantastic. Awesome job."</div>
+        <div class="review-name">Kody Okes</div>
+        <div class="review-meta">Google Review · 2 reviews</div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="contact-bg" id="contact">
-  <div class="contact-grid">
-    <div class="contact-info">
-      <div class="eyebrow"><div class="ebar"></div><div class="etag">Get in Touch</div></div>
-      <div class="contact-title">Get a Free<br><em>Quote Today.</em></div>
-      <div class="contact-sub">Fill out the form and we'll be in touch to discuss your pool and arrange a free estimate. Or call us directly — we're available 24 hours.</div>
-      <div class="clist">
-        <div class="citem">
-          <div class="cicon">📞</div>
-          <div>
-            <div class="clabel">Phone</div>
-            <div class="cval">(941) 340-1779</div>
-            <div class="cnote">Call anytime — available 24 hours</div>
-            <div class="open-tag">Open 24 Hours</div>
-          </div>
-        </div>
-        <div class="citem">
-          <div class="cicon">🌐</div>
-          <div>
-            <div class="clabel">Website</div>
-            <div class="cval">tranquilwaterspoolcare.homes</div>
-          </div>
-        </div>
-        <div class="citem">
-          <div class="cicon">📍</div>
-          <div>
-            <div class="clabel">Address</div>
-            <div class="cval">101 Venice Palms Blvd</div>
-            <div class="cnote">Venice, FL 34292</div>
-          </div>
-        </div>
-        <div class="citem">
-          <div class="cicon">🗺️</div>
-          <div>
-            <div class="clabel">Service Area</div>
-            <div class="cval">Venice & Sarasota Area</div>
-            <div class="cnote">Zip codes 34293, 34285, 34292 & surrounding neighborhoods</div>
-          </div>
+<!-- BOOKING -->
+<section class="booking-bg" id="booking">
+  <div class="booking-overlay"></div>
+  <div class="booking-inner">
+    <div class="booking-layout">
+      <div class="contact-info">
+        <div class="stag">📞 Get in Touch</div>
+        <div class="contact-title">Get Your <em>Free</em> Estimate Today.</div>
+        <div class="contact-sub">Fill out the form and Michael will be in touch to arrange your free estimate. Or call directly — open until 6 PM.</div>
+        <div class="clist">
+          <div class="citem"><div class="cicon">📞</div><div><div class="clabel">Phone</div><div class="cval">(941) 357-3023</div><div class="cnote">Call during business hours</div><div class="open-pill">Open · Closes 6 PM</div></div></div>
+          <div class="citem"><div class="cicon">📍</div><div><div class="clabel">Location</div><div class="cval">Sarasota, FL</div><div class="cnote">Serving Sarasota and surrounding areas</div></div></div>
+          <div class="citem"><div class="cicon">⭐</div><div><div class="clabel">Rating</div><div class="cval">5.0 Stars · 4 Reviews</div><div class="cnote">"Best price in town. Customer service second to none."</div></div></div>
+          <div class="citem"><div class="cicon">🆓</div><div><div class="clabel">Estimates</div><div class="cval">Always Free</div><div class="cnote">No obligation — contact us today</div></div></div>
         </div>
       </div>
-    </div>
-    <div class="form-wrap">
-      <div class="form-title">Request a Free Quote</div>
-      <div class="form-sub">Tell us about your pool and we'll be in touch shortly.</div>
-      <form action="https://formspree.io/f/mzdodlwk" method="POST">
-      <div class="form-row">
+      <div class="form-card">
+        <div class="form-title">🧹 Get a Free Estimate</div>
+        <div class="form-sub">We'll get back to you quickly with your personalized quote.</div>
+        <form action="https://formspree.io/f/mzdodlwk" method="POST">
+        <div class="form-row">
+          <div class="form-group"><label>First Name</label><input type="text" name="first_name" placeholder="John"></div>
+          <div class="form-group"><label>Last Name</label><input type="text" name="last_name" placeholder="Smith"></div>
+        </div>
+        <div class="form-group"><label>Phone Number</label><input type="tel" name="phone" placeholder="(941) 555-0000"></div>
+        <div class="form-group"><label>Property Address</label><input type="text" name="address" placeholder="123 Main St, Sarasota FL"></div>
         <div class="form-group">
-          <label>First Name</label>
-          <input type="text" name="first_name" placeholder="John">
+          <label>Service Needed</label>
+          <select name="service">
+            <option value="">Select a service...</option>
+            <option>Roof Cleaning</option>
+            <option>Window Cleaning</option>
+            <option>Pressure Washing</option>
+            <option>Softwash</option>
+            <option>Solar Panel Cleaning</option>
+            <option>Gutter Cleaning</option>
+            <option>House Washing</option>
+            <option>Awning & Screen Cleaning</option>
+            <option>Commercial Cleaning</option>
+            <option>Full Bundle Package</option>
+          </select>
         </div>
-        <div class="form-group">
-          <label>Last Name</label>
-          <input type="text" name="last_name" placeholder="Smith">
-        </div>
+        <div class="form-group"><label>Tell Us About Your Property</label><textarea name="message" placeholder="Describe your home, services needed, any special considerations..."></textarea></div>
+        <button class="form-submit">☀️ Send My Request</button>
+        </form>
       </div>
-      <div class="form-group">
-        <label>Phone Number</label>
-        <input type="tel" name="phone" placeholder="(941) 555-0000">
-      </div>
-      <div class="form-group">
-        <label>Property Address</label>
-        <input type="text" name="address" placeholder="123 Main St, Venice FL">
-      </div>
-      <div class="form-group">
-        <label>Service Interested In</label>
-        <select name="service">
-          <option value="">Select a service...</option>
-          <option>Complete Pool Service Plan</option>
-          <option>Regular Pool Service Plan</option>
-          <option>Pool Equipment Repair</option>
-          <option>Pool Renovation / Pebble Tec</option>
-          <option>Smart Pool Upgrade</option>
-          <option>Pool Deck Renovation</option>
-          <option>Leak Detection & Repair</option>
-          <option>General Consultation</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label>Tell Us About Your Pool</label>
-        <textarea name="message" placeholder="Pool size, current issues, what you're looking to improve..."></textarea>
-      </div>
-      <button class="form-submit">Submit Request</button>
-      </form>
     </div>
   </div>
 </section>
@@ -553,33 +528,32 @@
 <footer>
   <div class="footer-top">
     <div>
-      <div class="footer-brand">Tranquil Waters Pool Care</div>
-      <div class="footer-brand-sub">101 Venice Palms Blvd · Venice, FL 34292 · Licensed · Bonded · Insured</div>
+      <div class="footer-brand">Stu's Roof & <span>Window Cleaning</span></div>
+      <div class="footer-brand-sub">Sarasota, FL · (941) 357-3023</div>
     </div>
     <div class="footer-col">
       <div class="footer-col-title">Services</div>
-      <a href="#services">Complete Pool Service</a>
-      <a href="#services">Regular Pool Service</a>
-      <a href="#services">Equipment Repairs</a>
-      <a href="#services">Pool Renovation</a>
+      <a href="#services">Roof Cleaning</a>
+      <a href="#services">Window Cleaning</a>
+      <a href="#services">Pressure Washing</a>
+      <a href="#services">Solar Panel Cleaning</a>
     </div>
     <div class="footer-col">
       <div class="footer-col-title">Company</div>
-      <a href="#plan">23-Point Plan</a>
-      <a href="#about">About</a>
+      <a href="#about">About Us</a>
+      <a href="#pricing">Pricing</a>
       <a href="#reviews">Reviews</a>
-      <a href="#contact">Contact</a>
+      <a href="#booking">Contact</a>
     </div>
     <div class="footer-col">
       <div class="footer-col-title">Contact</div>
-      <a href="tel:9413401779">(941) 340-1779</a>
-      <a href="https://tranquilwaterspoolcare.homes">tranquilwaterspoolcare.homes</a>
-      <a href="#contact">Free Quote</a>
+      <a href="tel:9413573023">(941) 357-3023</a>
+      <a href="#booking">Free Estimate</a>
     </div>
   </div>
   <div class="footer-bottom">
-    <div class="footer-copy">© 2025 Tranquil Waters Pool Care · Venice, FL · All Rights Reserved</div>
-    <div class="footer-tagline">Our Passion is Clean & Blue Pool Water.</div>
+    <div class="footer-copy">© 2026 Stu's Roof & Window Cleaning Services · Sarasota, FL · All Rights Reserved</div>
+    <div class="footer-tag">Best Price in Town. Professional Results. Every Time.</div>
   </div>
 </footer>
 
